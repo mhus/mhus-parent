@@ -50,6 +50,7 @@
 	</developers>
 	<properties>
     	<mhus-lib.version>3.6.0-SNAPSHOT</mhus-lib.version>
+    	<mhus-osgi-tools.version>1.6.0-SNAPSHOT</mhus-osgi-tools.version>
 		<scr.packages>*</scr.packages>
 		<bndlib.version>2.4.0</bndlib.version>
 		<felix.metatype.version>1.2.2</felix.metatype.version>
@@ -73,6 +74,10 @@
         <mongo.version>3.6.0</mongo.version>
         <mongo.morphia.version>1.3.2</mongo.morphia.version>
 
+        <karaf.version>4.2.3</karaf.version>
+        <karaf.tool.version>4.2.3</karaf.tool.version>
+        
+        <cxf.version>3.3.0</cxf.version>
 	</properties>
 
     <dependencyManagement>
@@ -135,6 +140,18 @@
 		        <version>1.7.0</version>
 		        <scope>test</scope>
 		    </dependency>
+           
+            <dependency>
+	            <groupId>de.mhus.osgi</groupId>
+	            <artifactId>mhu-osgi-services</artifactId>
+	            <version>${mhus-osgi-tools.version}</version>
+            </dependency>
+           
+            <dependency>
+	            <groupId>org.apache.cxf</groupId>
+	            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+	            <version>${cxf.version}</version>
+	        </dependency>
            
 	    </dependencies>
     </dependencyManagement>
@@ -237,5 +254,6 @@
     
     <modules>
         <module>mhus-oss</module>
+        <module>mhus-karaf</module>
     </modules>
 </project>
