@@ -50,6 +50,7 @@
 	</developers>
 	<properties>
     	<mhus-lib.version>3.6.0-SNAPSHOT</mhus-lib.version>
+        <mhus-ports.version>1.6.0-SNAPSHOT</mhus-ports.version>
     	<mhus-osgi-tools.version>1.6.0-SNAPSHOT</mhus-osgi-tools.version>
     	<mhus-sop.version>1.6.0-SNAPSHOT</mhus-sop.version>
     	<mhus-transform.version>1.6.0-SNAPSHOT</mhus-transform.version>
@@ -152,6 +153,11 @@
         <dependency>
             <groupId>de.mhus.cherry</groupId>
             <artifactId>web-api</artifactId>
+            <version>${cherry-web.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.cherry</groupId>
+            <artifactId>web-util</artifactId>
             <version>${cherry-web.version}</version>
         </dependency>
 
@@ -443,7 +449,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
-            <version>7.2.2.v20101205</version>
+            <version>9.4.12.v20180830</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.url</groupId>
