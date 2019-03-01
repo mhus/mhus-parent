@@ -51,6 +51,12 @@
 	<properties>
     	<mhus-lib.version>3.6.0-SNAPSHOT</mhus-lib.version>
     	<mhus-osgi-tools.version>1.6.0-SNAPSHOT</mhus-osgi-tools.version>
+    	<mhus-sop.version>1.6.0-SNAPSHOT</mhus-sop.version>
+    	<mhus-transform.version>1.6.0-SNAPSHOT</mhus-transform.version>
+    	<mhus-crypt.version>1.6.0-SNAPSHOT</mhus-crypt.version>
+    	<cherry-web.version>1.6.0-SNAPSHOT</cherry-web.version>
+    	<cherry-reactive.version>1.6.0-SNAPSHOT</cherry-reactive.version>
+    	
 		<scr.packages>*</scr.packages>
 		<bndlib.version>2.4.0</bndlib.version>
 		<felix.metatype.version>1.2.2</felix.metatype.version>
@@ -60,6 +66,7 @@
 		<activemq.version>5.15.8</activemq.version>
 		<bundle.plugin.version>4.1.0</bundle.plugin.version>
 		<vaadin.version>8.6.1</vaadin.version>
+		<vaadin.plugin.version>8.6.1</vaadin.plugin.version>
 		<servlet.version>3.1.0</servlet.version>
 		<portlet.version>2.0</portlet.version>
 		<javax.mail.version>1.4.1</javax.mail.version>
@@ -78,6 +85,9 @@
         <karaf.tool.version>4.2.3</karaf.tool.version>
         
         <cxf.version>3.3.0</cxf.version>
+        <javax.activation.version>1.1.1</javax.activation.version>
+        <hsqldb.version>2.3.2</hsqldb.version>
+        <groovy.version>2.4.16</groovy.version>
 	</properties>
 
     <dependencyManagement>
@@ -123,6 +133,48 @@
                <version>${mhus-lib.version}</version>
            </dependency>
            
+          <dependency>
+            <groupId>de.mhus.osgi</groupId>
+            <artifactId>mhu-sop-api</artifactId>
+            <version>${mhus-sop.version}</version>
+          </dependency>
+           
+        <dependency>
+            <groupId>de.mhus.osgi</groupId>
+            <artifactId>mhu-transform-api</artifactId>
+            <version>${mhus-transform.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.osgi</groupId>
+            <artifactId>mhu-osgi-crypt-api</artifactId>
+            <version>${mhus-crypt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.cherry</groupId>
+            <artifactId>web-api</artifactId>
+            <version>${cherry-web.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.mhus.cherry.reactive</groupId>
+            <artifactId>reactive-model</artifactId>
+            <version>${cherry-reactive.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.cherry.reactive</groupId>
+            <artifactId>reactive-util</artifactId>
+            <version>${cherry-reactive.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.cherry.reactive</groupId>
+            <artifactId>reactive-osgi</artifactId>
+            <version>${cherry-reactive.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.cherry.reactive</groupId>
+            <artifactId>reactive-vaadin-widgets</artifactId>
+            <version>${cherry-reactive.version}</version>
+        </dependency>
            
 		    <dependency>
 		             <groupId>org.mongodb</groupId>
@@ -152,7 +204,278 @@
 	            <artifactId>cxf-rt-frontend-jaxws</artifactId>
 	            <version>${cxf.version}</version>
 	        </dependency>
-           
+	        <dependency>
+	            <groupId>biz.aQute.bnd</groupId>
+	            <artifactId>bndlib</artifactId>
+	            <version>${bndlib.version}</version>
+	        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.shell</groupId>
+            <artifactId>org.apache.karaf.shell.console</artifactId>
+            <version>${karaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.log</groupId>
+            <artifactId>org.apache.karaf.log.core</artifactId>
+            <version>${karaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.jaas</groupId>
+            <artifactId>org.apache.karaf.jaas.config</artifactId>
+            <version>${karaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.jaas</groupId>
+            <artifactId>org.apache.karaf.jaas.modules</artifactId>
+            <version>${karaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.bundle</groupId>
+            <artifactId>org.apache.karaf.bundle.core</artifactId>
+            <version>${karaf.version}</version>
+        </dependency>
+        <!-- 
+        <dependency>
+            <groupId>org.apache.karaf.shell</groupId>
+            <artifactId>org.apache.karaf.shell.core</artifactId>
+            <version>${karaf.version}</version>
+        </dependency>
+         -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>${javax.activation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>${javax.mail.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>${osgi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>${osgi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jms_1.1_spec</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-compatibility-server</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-compatibility-shared</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-compatibility-client</artifactId>
+                <version>${vaadin.version}</version>
+            </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-compatibility-client-compiled</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-client-compiler</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-compatibility-themes</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin</groupId>
+            <artifactId>addon-test-helpers</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-sass-compiler</artifactId>
+            <version>0.9.12</version>
+        </dependency>
+            
+        <dependency>
+	        <groupId>org.apache.activemq</groupId>
+	        <artifactId>activemq-osgi</artifactId>
+            <version>${activemq.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.rpc</groupId>
+            <artifactId>javax.xml.rpc-api</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <artifactId>bcprov-jdk16</artifactId>
+            <groupId>org.bouncycastle</groupId>
+            <version>1.46</version>
+        </dependency>
+	    <dependency>
+	        <groupId>org.bouncycastle</groupId>
+	        <artifactId>bcmail-jdk16</artifactId>
+	        <version>1.46</version>
+	    </dependency>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>1.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>18.0</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.6</version>
+        </dependency>
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.3</version>
+    </dependency>
+    <dependency>
+      <groupId>net.bytebuddy</groupId>
+      <artifactId>byte-buddy</artifactId>
+      <version>1.9.4</version>
+    </dependency>
+    <dependency>
+        <groupId>net.bytebuddy</groupId>
+        <artifactId>byte-buddy-agent</artifactId>
+        <version>1.7.6</version>
+    </dependency>
+    <dependency>
+        <groupId>jline</groupId>
+        <artifactId>jline</artifactId>
+        <version>${jline.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>javax.portlet</groupId>
+        <artifactId>portlet-api</artifactId>
+        <version>${portlet.version}</version>
+    </dependency>
+  <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.openjpa</groupId>
+        <artifactId>openjpa</artifactId>
+        <version>2.2.1</version>
+        <scope>provided</scope>
+        <exclusions>
+            <exclusion>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.18</version>
+    </dependency>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.1.3</version>
+    </dependency>
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.14</version>
+        <type>jar</type>
+        <scope>compile</scope>
+    </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${groovy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>7.2.2.v20101205</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.url</groupId>
+            <artifactId>pax-url-aether</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.logging</groupId>
+            <artifactId>pax-logging-log4j2</artifactId>
+            <version>1.8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.metatype</artifactId>
+            <version>${felix.metatype.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+         <dependency>
+             <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.webconsole</artifactId>
+            <version>4.2.0</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>javax.servlet</artifactId>
+            <version>1.0.0</version>
+         </dependency>
+          
 	    </dependencies>
     </dependencyManagement>
     
@@ -160,6 +483,73 @@
 		<defaultGoal>install</defaultGoal>
 		
         <pluginManagement>
+	        <plugins>
+                <plugin>
+                    <groupId>de.mhus.lib</groupId>
+                    <artifactId>constgenerator-maven-plugin</artifactId>
+                    <version>${mhus-lib.version}</version>
+                <executions>
+                  <execution>
+                    <phase>compile</phase>
+                    <goals>
+                      <goal>const-generate</goal>
+                    </goals>
+                  </execution>
+                </executions>
+                  <dependencies>
+                    <dependency>
+                            <groupId>de.mhus.lib</groupId>
+                            <artifactId>mhu-lib-annotations</artifactId>
+                    <version>${mhus-lib.version}</version>
+                    </dependency>
+                  </dependencies>
+                </plugin>
+		        <plugin>
+		            <groupId>com.vaadin</groupId>
+		            <artifactId>vaadin-maven-plugin</artifactId>
+		            <version>${vaadin.plugin.version}</version>
+		        </plugin>
+	            <plugin>
+	                <groupId>org.apache.felix</groupId>
+	                <artifactId>maven-bundle-plugin</artifactId>
+	                <version>${bundle.plugin.version}</version>
+	            </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.3</version>
+                </plugin>
+<!-- 
+		        <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-source-plugin</artifactId>
+		        <version>2.1.2</version>
+		        <executions>
+		          <execution>
+		            <id>attach-sources</id>
+		            <phase>verify</phase>
+		            <goals>
+		              <goal>jar-no-fork</goal>
+		            </goals>
+		          </execution>
+		        </executions>
+		      </plugin>
+		      
+	      <plugin>
+	          <groupId>org.apache.maven.plugins</groupId>
+	          <artifactId>maven-release-plugin</artifactId>
+	          <version>2.2.2</version>
+	          <configuration>
+	            <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+	            
+	          </configuration>
+	        </plugin>
+		      
+ -->                
+                
+                
+	        </plugins>
+	        
         </pluginManagement>
 		<plugins>
 			<plugin>
@@ -251,6 +641,13 @@
            <scope>test</scope>
         </dependency>
      </dependencies>
+
+    <repositories>
+        <repository>
+           <id>vaadin-addons</id>
+           <url>http://maven.vaadin.com/vaadin-addons</url>
+        </repository>
+    </repositories>
     
     <modules>
         <module>mhus-oss</module>
