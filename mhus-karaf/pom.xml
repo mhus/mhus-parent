@@ -24,6 +24,7 @@
 		<groupId>de.mhus.lib</groupId>
 		<version>3.6.0-SNAPSHOT</version>
 	    <artifactId>mhus-oss</artifactId>
+	    <relativePath>../mhus-oss</relativePath>
     </parent>
 	<artifactId>mhus-karaf</artifactId>
 	<packaging>pom</packaging>
