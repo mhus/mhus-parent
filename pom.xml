@@ -92,6 +92,7 @@
         
         <junit.juniper.version>5.4.0</junit.juniper.version>
         <junit.platform.version>1.4.0</junit.platform.version>
+        <axis.version>1.4</axis.version>
 	</properties>
 
     <dependencyManagement>
@@ -356,7 +357,7 @@
         <dependency>
             <groupId>org.apache.axis</groupId>
             <artifactId>axis</artifactId>
-            <version>1.4</version>
+            <version>${axis.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.xml.rpc</groupId>
