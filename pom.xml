@@ -89,6 +89,9 @@
         <javax.activation.version>1.1.1</javax.activation.version>
         <hsqldb.version>2.3.2</hsqldb.version>
         <groovy.version>2.4.16</groovy.version>
+        
+        <junit.juniper.version>5.4.0</junit.juniper.version>
+        <junit.platform.version>1.4.0</junit.platform.version>
 	</properties>
 
     <dependencyManagement>
@@ -180,6 +183,16 @@
             <groupId>de.mhus.cherry.reactive</groupId>
             <artifactId>reactive-vaadin-widgets</artifactId>
             <version>${cherry-reactive.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.ports</groupId>
+            <artifactId>ports-javaxmail</artifactId>
+            <version>${mhus-ports.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.ports</groupId>
+            <artifactId>ports-flummi</artifactId>
+            <version>${mhus-ports.version}</version>
         </dependency>
            
 		    <dependency>
@@ -373,6 +386,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.6</version>
+        </dependency>
+        <dependency>
           <groupId>com.google.guava</groupId>
           <artifactId>guava</artifactId>
           <version>18.0</version>
@@ -385,8 +403,18 @@
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
-        <version>4.5.3</version>
+        <version>4.5.7</version>
     </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpasyncclient</artifactId>
+            <version>4.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5.7</version>
+        </dependency>
     <dependency>
       <groupId>net.bytebuddy</groupId>
       <artifactId>byte-buddy</artifactId>
@@ -481,6 +509,11 @@
             <artifactId>javax.servlet</artifactId>
             <version>1.0.0</version>
          </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180813</version>
+        </dependency>
           
 	    </dependencies>
     </dependencyManagement>
@@ -637,13 +670,25 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.3.2</version>
+            <version>${junit.juniper.version}</version>
             <scope>test</scope>
         </dependency>
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>${junit.juniper.version}</version>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.junit.platform</groupId>
+		    <artifactId>junit-platform-commons</artifactId>
+		    <version>${junit.platform.version}</version>
+            <scope>test</scope>
+		</dependency>
         <dependency>
            <groupId>org.junit.platform</groupId>
            <artifactId>junit-platform-launcher</artifactId>
-           <version>1.1.1</version>
+           <version>${junit.platform.version}</version>
            <scope>test</scope>
         </dependency>
      </dependencies>
