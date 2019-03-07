@@ -110,8 +110,11 @@
         <mongo.bwaldvogel.version>1.7.0</mongo.bwaldvogel.version>
         
         <guave.version>18.0</guave.version>
-        <httpcomponents.version>4.5.7</httpcomponents.version>
+        <httpcomponents.httpcore.version>4.4.6</httpcomponents.httpcore.version>
+        <httpcomponents.httpclient.version>4.5.7</httpcomponents.httpclient.version>
+        <httpcomponents.httpmime.version>4.5.7</httpcomponents.httpmime.version>
         <httpcomponents.httpasyncclient.version>4.1.4</httpcomponents.httpasyncclient.version>
+        
         <bytebuddy.version>1.9.4</bytebuddy.version>
         <openjpa.version>2.2.1</openjpa.version>
         <log4j.version>1.2.14</log4j.version>
@@ -452,7 +455,7 @@
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
-        <version>${httpcomponents.version}</version>
+        <version>${httpcomponents.httpclient.version}</version>
     </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -462,7 +465,7 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpmime</artifactId>
-            <version>${httpcomponents.version}</version>
+            <version>${httpcomponents.httpmime.version}</version>
         </dependency>
     <dependency>
       <groupId>net.bytebuddy</groupId>
