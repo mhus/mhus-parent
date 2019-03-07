@@ -51,7 +51,7 @@
                 <configuration>
                     <artifactInclude>.*mhu.*</artifactInclude>
                 </configuration>
-                <version>${karaf.tool.version}</version>
+                <version>${karaf.plugin}</version>
                 <executions>
                     <execution>
                         <id>service-metadata-generate</id>
@@ -72,7 +72,7 @@
                 <plugin>
                     <groupId>org.apache.karaf.tooling</groupId>
                     <artifactId>karaf-services-maven-plugin</artifactId>
-                    <version>${karaf.tool.version}</version>
+                    <version>${karaf.plugin}</version>
                     <executions>
                         <execution>
                             <id>service-metadata-generate</id>
