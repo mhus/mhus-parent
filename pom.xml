@@ -59,6 +59,7 @@
     	<mhus-crypt.version>1.6.0-SNAPSHOT</mhus-crypt.version>
     	<cherry-web.version>1.6.0-SNAPSHOT</cherry-web.version>
     	<cherry-reactive.version>1.6.0-SNAPSHOT</cherry-reactive.version>
+        <cherry-vault.version>1.6.0-SNAPSHOT</cherry-vault.version>
     	
 		<scr.packages>*</scr.packages>
 		<bndlib.version>2.4.0</bndlib.version>
