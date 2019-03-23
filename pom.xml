@@ -76,6 +76,7 @@
 		<felix.plugin.version>3.0.1</felix.plugin.version>
 		<maven.version>3.5.0</maven.version>
 		<jackson.version>2.9.8</jackson.version>
+		<jackson.asl.version>1.9.5</jackson.asl.version>
 
 		<javax.mail.version>1.4.1</javax.mail.version>
 		<jline.version>2.14.1</jline.version>
@@ -496,7 +497,7 @@
   <dependency>
         <groupId>org.codehaus.jackson</groupId>
         <artifactId>jackson-mapper-asl</artifactId>
-        <version>${jackson.version}</version>
+        <version>${jackson.asl.version}</version>
     </dependency>
     <dependency>
         <groupId>org.apache.openjpa</groupId>
