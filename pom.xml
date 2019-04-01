@@ -92,7 +92,6 @@
         
         <junit.juniper.version>5.4.0</junit.juniper.version>
         <junit.platform.version>1.4.0</junit.platform.version>
-        <axis.version>1.4</axis.version>
         <geronimo-ws-metadata.version>1.1.3</geronimo-ws-metadata.version>
         <geronimo-jms.version>1.1.1</geronimo-jms.version>
         <vaadin.vaadin-sass-compiler.version>0.9.12</vaadin.vaadin-sass-compiler.version>
@@ -414,11 +413,6 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.axis</groupId>
-            <artifactId>axis</artifactId>
-            <version>${axis.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.xml.rpc</groupId>
