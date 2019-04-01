@@ -23,7 +23,7 @@
 
 	<groupId>de.mhus.lib</groupId>
 	<artifactId>mhus-parent</artifactId>
-	<version>3.6.0</version>
+	<version>3.6.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
@@ -49,19 +49,17 @@
 		</developer>
 	</developers>
 	<properties>
-    	<mhus-lib.version>3.6.0</mhus-lib.version>
-        <mhus-ports.version>1.6.1</mhus-ports.version>
-        <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
-    	<mhus-osgi-tools.version>1.6.1</mhus-osgi-tools.version>
-    	<mhus-sop.version>1.6.0</mhus-sop.version>
-    	<mhus-transform.version>1.6.0</mhus-transform.version>
-        <mhus-osgi-servlets.version>1.6.0</mhus-osgi-servlets.version>
-    	<mhus-crypt.version>1.6.0</mhus-crypt.version>
-    	<cherry-web.version>1.6.0</cherry-web.version>
-    	<cherry-reactive.version>1.6.0</cherry-reactive.version>
-        <cherry-vault.version>1.6.0</cherry-vault.version>
-        <!-- plugins -->
-        <constgenerator.plugin>3.6.0</constgenerator.plugin>
+    	<mhus-lib.version>3.6.0-SNAPSHOT</mhus-lib.version>
+        <mhus-ports.version>1.6.0-SNAPSHOT</mhus-ports.version>
+        <mhus-ports-vaadin.version>1.6.0-SNAPSHOT</mhus-ports-vaadin.version>
+    	<mhus-osgi-tools.version>1.6.0-SNAPSHOT</mhus-osgi-tools.version>
+    	<mhus-sop.version>1.6.0-SNAPSHOT</mhus-sop.version>
+    	<mhus-transform.version>1.6.0-SNAPSHOT</mhus-transform.version>
+        <mhus-osgi-servlets.version>1.6.0-SNAPSHOT</mhus-osgi-servlets.version>
+    	<mhus-crypt.version>1.6.0-SNAPSHOT</mhus-crypt.version>
+    	<cherry-web.version>1.6.0-SNAPSHOT</cherry-web.version>
+    	<cherry-reactive.version>1.6.0-SNAPSHOT</cherry-reactive.version>
+        <cherry-vault.version>1.6.0-SNAPSHOT</cherry-vault.version>
     	
 		<scr.packages>*</scr.packages>
 		<bndlib.version>2.4.0</bndlib.version>
@@ -140,19 +138,20 @@
         <javax.xml.soap.version>1.4.0</javax.xml.soap.version>
         
         <!-- plugins -->
+        <constgenerator.plugin>${mhus-lib.version}</constgenerator.plugin>
         <karaf.plugin>${karaf.version}</karaf.plugin>
 		<vaadin.plugin>8.6.1</vaadin.plugin>
 		<bundle.plugin>4.1.0</bundle.plugin>
 		<enforcer.version>1.4.1</enforcer.version>
-		<javadoc.plugin>3.1.0</javadoc.plugin>
+		<javadoc.plugin>2.9.1</javadoc.plugin>
 		<assembly.plugin>2.1</assembly.plugin>
 		<surefire.plugin>2.22.1</surefire.plugin>
 		<compiler.plugin>3.8.0</compiler.plugin>
 		<source.plugin>2.2.1</source.plugin>
 		<war.plugin>2.3</war.plugin>
-        <gpg.plugin>1.6</gpg.plugin>
+        <gpg.plugin>1.5</gpg.plugin>
         <license.plugin>2.3</license.plugin>
-        <nexus.plugin>1.6.8</nexus.plugin>
+        <nexus.plugin>1.6.7</nexus.plugin>
         
 	</properties>
 
@@ -762,16 +761,4 @@
         <module>mhus-oss</module>
         <module>mhus-karaf</module>
     </modules>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-    
 </project>
