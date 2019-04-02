@@ -766,10 +766,10 @@
             </activation>
         </profile>
         <profile>
-            <id>release</id>
+            <id>release-mhus</id>
             <activation>
                 <property>
-                    <name>performRelease</name>
+                    <name>performMhusRelease</name>
                     <value>true</value>
                 </property>
             </activation>
@@ -813,6 +813,19 @@
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
+		            <plugin>
+		                <groupId>org.apache.maven.plugins</groupId>
+		                <artifactId>maven-source-plugin</artifactId>
+		                <version>${source.plugin}</version>
+		                <executions>
+		                    <execution>
+		                        <id>attach-sources</id>
+		                        <goals>
+		                            <goal>jar-no-fork</goal>
+		                        </goals>
+		                    </execution>
+		                </executions>
+		            </plugin>
                 </plugins>
             </build>
             
