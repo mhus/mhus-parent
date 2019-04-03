@@ -62,7 +62,7 @@
     	<cherry-reactive.version>1.6.1-SNAPSHOT</cherry-reactive.version>
         <cherry-vault.version>1.6.1-SNAPSHOT</cherry-vault.version>
         <!-- plugins -->
-        <constgenerator.plugin>3.6.0</constgenerator.plugin>
+        <constgenerator.plugin>3.6.1</constgenerator.plugin>
     	
 		<scr.packages>*</scr.packages>
 		<bndlib.version>2.4.0</bndlib.version>
