@@ -63,6 +63,7 @@
         <cherry-vault.version>1.6.1-SNAPSHOT</cherry-vault.version>
         <!-- plugins -->
         <constgenerator.plugin>3.6.1</constgenerator.plugin>
+        <constgenerator.plugin.mhus>3.6.0</constgenerator.plugin.mhus>
     	
 		<scr.packages>*</scr.packages>
 		<bndlib.version>2.4.0</bndlib.version>
@@ -590,9 +591,9 @@
                 </executions>
                   <dependencies>
                     <dependency>
-                            <groupId>de.mhus.lib</groupId>
-                            <artifactId>mhu-lib-annotations</artifactId>
-                    <version>${constgenerator.plugin}</version>
+                        <groupId>de.mhus.lib</groupId>
+                        <artifactId>mhu-lib-annotations</artifactId>
+                        <version>${constgenerator.plugin.mhus}</version>
                     </dependency>
                   </dependencies>
                 </plugin>
