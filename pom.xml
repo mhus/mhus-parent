@@ -88,7 +88,7 @@
 
         <karaf.version>4.2.3</karaf.version>
         
-        <cxf.version>3.3.0</cxf.version>
+        <cxf.version>3.3.1</cxf.version>
         <javax.activation.version>1.1.1</javax.activation.version>
         <groovy.version>2.4.16</groovy.version>
         
