@@ -803,6 +803,7 @@
                         <version>${gpg.plugin}</version>
                         <configuration>
                             <passphrase>${gpg.passphrase}</passphrase>
+                            <ascDirectory>${project.build.directory}/../</ascDirectory>
                         </configuration>
                         <executions>
                             <execution>
