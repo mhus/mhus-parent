@@ -23,7 +23,7 @@
 
 	<groupId>de.mhus.lib</groupId>
 	<artifactId>mhus-parent</artifactId>
-	<version>3.6.1-SNAPSHOT</version>
+	<version>3.6.1</version>
 	<packaging>pom</packaging>
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
@@ -50,17 +50,17 @@
 		</developer>
 	</developers>
 	<properties>
-    	<mhus-lib.version>3.6.1-SNAPSHOT</mhus-lib.version>
+    	<mhus-lib.version>3.6.1</mhus-lib.version>
         <mhus-ports.version>1.6.1</mhus-ports.version>
         <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
-    	<mhus-osgi-tools.version>1.6.2-SNAPSHOT</mhus-osgi-tools.version>
-    	<mhus-sop.version>1.6.1-SNAPSHOT</mhus-sop.version>
-    	<mhus-transform.version>1.6.1-SNAPSHOT</mhus-transform.version>
-        <mhus-osgi-servlets.version>1.6.0</mhus-osgi-servlets.version>
-    	<mhus-crypt.version>1.6.1-SNAPSHOT</mhus-crypt.version>
-    	<cherry-web.version>1.6.1-SNAPSHOT</cherry-web.version>
-    	<cherry-reactive.version>1.6.1-SNAPSHOT</cherry-reactive.version>
-        <cherry-vault.version>1.6.1-SNAPSHOT</cherry-vault.version>
+    	<mhus-osgi-tools.version>1.6.2</mhus-osgi-tools.version>
+    	<mhus-sop.version>1.6.1</mhus-sop.version>
+    	<mhus-transform.version>1.6.1</mhus-transform.version>
+        <mhus-osgi-servlets.version>1.6.1</mhus-osgi-servlets.version>
+    	<mhus-crypt.version>1.6.1</mhus-crypt.version>
+    	<cherry-web.version>1.6.1</cherry-web.version>
+    	<cherry-reactive.version>1.6.1</cherry-reactive.version>
+        <cherry-vault.version>1.6.1</cherry-vault.version>
         <!-- plugins -->
         <constgenerator.plugin>3.6.1</constgenerator.plugin>
         <constgenerator.plugin.mhus>3.6.0</constgenerator.plugin.mhus>
@@ -151,9 +151,10 @@
 		<compiler.plugin>3.8.0</compiler.plugin>
 		<source.plugin>2.2.1</source.plugin>
 		<war.plugin>2.3</war.plugin>
-        <gpg.plugin>1.6</gpg.plugin>
+        <gpg.plugin>1.6</gpg.plugin><!-- Used mhus/maven-gpg-plugin/1.7-SNAPSHOT for release. I fixed the problem deploying the features. I will do a pull request soon -->
         <license.plugin>2.3</license.plugin>
         <nexus.plugin>1.6.8</nexus.plugin>
+        <install.plugin>2.5.2</install.plugin>
         
 	</properties>
 
@@ -645,6 +646,11 @@
 	        
         </pluginManagement>
 		<plugins>
+		    <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>${install.plugin}</version>
+		    </plugin>
 			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -803,7 +809,9 @@
                         <version>${gpg.plugin}</version>
                         <configuration>
                             <passphrase>${gpg.passphrase}</passphrase>
+                            <!-- 
                             <ascDirectory>${project.build.directory}/../</ascDirectory>
+                             -->
                         </configuration>
                         <executions>
                             <execution>
