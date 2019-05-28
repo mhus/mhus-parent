@@ -23,7 +23,7 @@
 
 	<groupId>de.mhus.lib</groupId>
 	<artifactId>mhus-parent</artifactId>
-	<version>3.6.2-SNAPSHOT</version>
+	<version>3.6.2</version>
 	<packaging>pom</packaging>
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
@@ -721,17 +721,6 @@
 					</execution>
 				</executions>
 			</plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>${nexus.plugin}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
 		</plugins>
 
 	</build>
@@ -803,6 +792,17 @@
             </distributionManagement>
             <build>
                 <plugins>
+		            <plugin>
+		                <groupId>org.sonatype.plugins</groupId>
+		                <artifactId>nexus-staging-maven-plugin</artifactId>
+		                <version>${nexus.plugin}</version>
+		                <extensions>true</extensions>
+		                <configuration>
+		                    <serverId>ossrh</serverId>
+		                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+		                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+		                </configuration>
+		            </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -822,10 +822,6 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
                     </plugin>
 		            <plugin>
 		                <groupId>org.apache.maven.plugins</groupId>
