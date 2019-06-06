@@ -50,11 +50,11 @@
 		</developer>
 	</developers>
 	<properties>
-    	<mhus-lib.version>3.6.1</mhus-lib.version>
+    	<mhus-lib.version>3.6.2-SNAPSHOT</mhus-lib.version>
         <mhus-ports.version>1.6.1</mhus-ports.version>
         <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
     	<mhus-osgi-tools.version>1.6.2</mhus-osgi-tools.version>
-    	<mhus-sop.version>1.6.1</mhus-sop.version>
+    	<mhus-sop.version>1.6.2-SNAPSHOT</mhus-sop.version>
     	<mhus-transform.version>1.6.1</mhus-transform.version>
         <mhus-osgi-servlets.version>1.6.1</mhus-osgi-servlets.version>
     	<mhus-crypt.version>1.6.1</mhus-crypt.version>
