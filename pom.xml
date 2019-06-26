@@ -52,15 +52,15 @@
 	<properties>
     	<mhus-lib.version>3.6.2-SNAPSHOT</mhus-lib.version>
         <mhus-ports.version>1.6.1</mhus-ports.version>
-        <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
+        <mhus-ports-vaadin.version>1.6.2-SNAPSHOT</mhus-ports-vaadin.version>
     	<mhus-osgi-tools.version>1.6.3-SNAPSHOT</mhus-osgi-tools.version>
     	<mhus-sop.version>1.6.2-SNAPSHOT</mhus-sop.version>
-    	<mhus-transform.version>1.6.1</mhus-transform.version>
-        <mhus-osgi-servlets.version>1.6.1</mhus-osgi-servlets.version>
-    	<mhus-crypt.version>1.6.1</mhus-crypt.version>
-    	<cherry-web.version>1.6.1</cherry-web.version>
-    	<cherry-reactive.version>1.6.1</cherry-reactive.version>
-        <cherry-vault.version>1.6.1</cherry-vault.version>
+    	<mhus-transform.version>1.6.2-SNAPSHOT</mhus-transform.version>
+        <mhus-osgi-servlets.version>1.6.2-SNAPSHOT</mhus-osgi-servlets.version>
+    	<mhus-crypt.version>1.6.2-SNAPSHOT</mhus-crypt.version>
+    	<cherry-web.version>1.6.2-SNAPSHOT</cherry-web.version>
+    	<cherry-reactive.version>1.6.2-SNAPSHOT</cherry-reactive.version>
+        <cherry-vault.version>1.6.2-SNAPSHOT</cherry-vault.version>
         <!-- plugins -->
         <constgenerator.plugin>3.6.1</constgenerator.plugin>
         <constgenerator.plugin.mhus>3.6.0</constgenerator.plugin.mhus>
@@ -72,7 +72,7 @@
 		<compileSource>11</compileSource>
 		<osgi.version>5.0.0</osgi.version>
 		<activemq.version>5.15.8</activemq.version>
-		<vaadin.version>8.6.1</vaadin.version>
+		<vaadin.version>8.8.3</vaadin.version>
 		<servlet.version>3.1.0</servlet.version>
 		<portlet.version>2.0</portlet.version>
 		<javax.mail.version>1.4.1</javax.mail.version>
@@ -142,7 +142,7 @@
         
         <!-- plugins -->
         <karaf.plugin>${karaf.version}</karaf.plugin>
-		<vaadin.plugin>8.6.1</vaadin.plugin>
+		<vaadin.plugin>8.8.3</vaadin.plugin>
 		<bundle.plugin>4.1.0</bundle.plugin>
 		<enforcer.version>1.4.1</enforcer.version>
 		<javadoc.plugin>3.1.0</javadoc.plugin>
@@ -284,6 +284,11 @@
             <dependency>
                 <groupId>de.mhus.osgi</groupId>
                 <artifactId>mhu-osgi-api</artifactId>
+                <version>${mhus-osgi-tools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.mhus.osgi</groupId>
+                <artifactId>mhu-osgi-jms</artifactId>
                 <version>${mhus-osgi-tools.version}</version>
             </dependency>
            
