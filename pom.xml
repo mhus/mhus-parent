@@ -61,6 +61,7 @@
     	<cherry-web.version>1.6.2-SNAPSHOT</cherry-web.version>
     	<cherry-reactive.version>1.6.2-SNAPSHOT</cherry-reactive.version>
         <cherry-vault.version>1.6.2-SNAPSHOT</cherry-vault.version>
+        <mhus-vaadin.version>1.6.2-SNAPSHOT</mhus-vaadin.version>
         <!-- plugins -->
         <constgenerator.plugin>3.6.1</constgenerator.plugin>
         <constgenerator.plugin.mhus>3.6.0</constgenerator.plugin.mhus>
@@ -195,11 +196,6 @@
                <artifactId>mhu-lib-mongo</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
-            <dependency>
-               <groupId>de.mhus.lib</groupId>
-               <artifactId>mhu-lib-vaadin</artifactId>
-               <version>${mhus-lib.version}</version>
-           </dependency>
            
           <dependency>
             <groupId>de.mhus.osgi</groupId>
@@ -258,6 +254,12 @@
             <artifactId>ports-flummi</artifactId>
             <version>${mhus-ports.version}</version>
         </dependency>
+
+        <dependency>
+           <groupId>de.mhus.vaadin</groupId>
+           <artifactId>vaadin-core</artifactId>
+           <version>${mhus-vaadin.version}</version>
+       </dependency>
            
 		    <dependency>
 		             <groupId>org.mongodb</groupId>
