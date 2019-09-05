@@ -52,7 +52,7 @@
 	<properties>
     	<mhus-lib.version>3.6.2-SNAPSHOT</mhus-lib.version>
         <mhus-ports.version>1.6.1</mhus-ports.version>
-        <mhus-ports-vaadin.version>1.6.2-SNAPSHOT</mhus-ports-vaadin.version>
+        <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
     	<mhus-osgi-tools.version>1.6.3-SNAPSHOT</mhus-osgi-tools.version>
     	<mhus-sop.version>1.6.2-SNAPSHOT</mhus-sop.version>
     	<mhus-transform.version>1.6.2-SNAPSHOT</mhus-transform.version>
