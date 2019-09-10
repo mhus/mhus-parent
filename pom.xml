@@ -62,6 +62,7 @@
     	<cherry-reactive.version>1.6.2-SNAPSHOT</cherry-reactive.version>
         <cherry-vault.version>1.6.2-SNAPSHOT</cherry-vault.version>
         <mhus-vaadin.version>1.6.2-SNAPSHOT</mhus-vaadin.version>
+        <mhus-mongo.version>1.6.2-SNAPSHOT</mhus-mongo.version>
         <!-- plugins -->
         <constgenerator.plugin>3.6.1</constgenerator.plugin>
         <constgenerator.plugin.mhus>3.6.0</constgenerator.plugin.mhus>
