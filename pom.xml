@@ -23,7 +23,7 @@
 
 	<groupId>de.mhus.lib</groupId>
 	<artifactId>mhus-parent</artifactId>
-	<version>3.6.3-SNAPSHOT</version>
+	<version>3.6.3</version>
 	<packaging>pom</packaging>
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
@@ -50,19 +50,19 @@
 		</developer>
 	</developers>
 	<properties>
-    	<mhus-lib.version>3.6.2-SNAPSHOT</mhus-lib.version>
+    	<mhus-lib.version>3.6.2</mhus-lib.version>
         <mhus-ports.version>1.6.1</mhus-ports.version>
         <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
-    	<mhus-osgi-tools.version>1.6.3-SNAPSHOT</mhus-osgi-tools.version>
-    	<mhus-sop.version>1.6.2-SNAPSHOT</mhus-sop.version>
-    	<mhus-transform.version>1.6.2-SNAPSHOT</mhus-transform.version>
-        <mhus-osgi-servlets.version>1.6.2-SNAPSHOT</mhus-osgi-servlets.version>
-    	<mhus-crypt.version>1.6.2-SNAPSHOT</mhus-crypt.version>
-    	<cherry-web.version>1.6.2-SNAPSHOT</cherry-web.version>
-    	<cherry-reactive.version>1.6.2-SNAPSHOT</cherry-reactive.version>
-        <cherry-vault.version>1.6.2-SNAPSHOT</cherry-vault.version>
-        <mhus-vaadin.version>1.6.2-SNAPSHOT</mhus-vaadin.version>
-        <mhus-mongo.version>1.6.2-SNAPSHOT</mhus-mongo.version>
+    	<mhus-osgi-tools.version>1.6.3</mhus-osgi-tools.version>
+    	<mhus-sop.version>1.6.2</mhus-sop.version>
+    	<mhus-transform.version>1.6.2</mhus-transform.version>
+        <mhus-osgi-servlets.version>1.6.2</mhus-osgi-servlets.version>
+    	<mhus-crypt.version>1.6.2</mhus-crypt.version>
+    	<cherry-web.version>1.6.2</cherry-web.version>
+    	<cherry-reactive.version>1.6.2</cherry-reactive.version>
+        <cherry-vault.version>1.6.2</cherry-vault.version>
+        <mhus-vaadin.version>1.6.2</mhus-vaadin.version>
+        <mhus-mongo.version>1.6.2</mhus-mongo.version>
         <!-- plugins -->
         <constgenerator.plugin>3.6.1</constgenerator.plugin>
         <constgenerator.plugin.mhus>3.6.0</constgenerator.plugin.mhus>
@@ -156,8 +156,15 @@
         <license.plugin>2.3</license.plugin>
         <nexus.plugin>1.6.8</nexus.plugin>
         <install.plugin>2.5.2</install.plugin>
+        <!-- PGP BOUNCY
         <bouncycastle.plugin>1.0.0</bouncycastle.plugin>
-        
+        PGP APACHE -->
+        <!-- Used git: mhus/maven-gpg-plugin/1.7-SNAPSHOT for release.
+        Fixed a bug creating karaf features.
+        A pull request is created.
+         -->
+        <gpg.plugin>1.7-SNAPSHOT</gpg.plugin>
+        <!-- END -->
 	</properties>
 
     <dependencyManagement>
@@ -787,6 +794,7 @@
 		                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
 		                </configuration>
 		            </plugin>
+		            <!-- PGP BOUNCY
 					<plugin>
 					    <groupId>com.deciphernow</groupId>
 					    <artifactId>bouncycastle-maven-plugin</artifactId>
@@ -806,6 +814,28 @@
 					        </execution>
 					    </executions>
 					</plugin>
+		             PGP APACHE -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${gpg.plugin}</version>
+                        <configuration>
+                            <passphrase>${gpg.passphrase}</passphrase>
+                            <!-- 
+                            <ascDirectory>${project.build.directory}/../</ascDirectory>
+                             -->
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- END -->
 		            <plugin>
 		                <groupId>org.apache.maven.plugins</groupId>
 		                <artifactId>maven-source-plugin</artifactId>
