@@ -23,7 +23,7 @@
 
 	<groupId>de.mhus.lib</groupId>
 	<artifactId>mhus-parent</artifactId>
-	<version>3.6.3</version>
+	<version>3.6.4-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
@@ -50,7 +50,7 @@
 		</developer>
 	</developers>
 	<properties>
-    	<mhus-lib.version>3.6.2</mhus-lib.version>
+    	<mhus-lib.version>3.6.3-SNAPSHOT</mhus-lib.version>
         <mhus-ports.version>1.6.1</mhus-ports.version>
         <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
     	<mhus-osgi-tools.version>1.6.3</mhus-osgi-tools.version>
