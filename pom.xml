@@ -165,6 +165,7 @@
          -->
         <gpg.plugin>1.7-SNAPSHOT</gpg.plugin>
         <!-- END -->
+        <maven-git-code-format.version>1.32</maven-git-code-format.version>
 	</properties>
 
     <dependencyManagement>
@@ -712,7 +713,23 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
+			    <!-- https://github.com/Cosium/maven-git-code-format -->
+	            <plugin>
+	              <groupId>com.cosium.code</groupId>
+	              <artifactId>maven-git-code-format</artifactId>
+	              <version>${maven-git-code-format.version}</version>
+	              <configuration>
+	                <googleJavaFormatOptions>
+	                  <aosp>false</aosp>
+	                  <fixImportsOnly>false</fixImportsOnly>
+	                  <skipSortingImports>true</skipSortingImports>
+	                  <skipRemovingUnusedImports>false</skipRemovingUnusedImports>
+	                </googleJavaFormatOptions>
+	                <!-- https://en.wikipedia.org/wiki/Glob_(programming) -->
+	                <globPattern>**/[!_]*</globPattern>
+	              </configuration>
+	            </plugin>		
+	        </plugins>
 
 	</build>
 
