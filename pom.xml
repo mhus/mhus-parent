@@ -714,6 +714,8 @@
 				</executions>
 			</plugin>
 			    <!-- https://github.com/Cosium/maven-git-code-format -->
+	            <!-- https://en.wikipedia.org/wiki/Glob_(programming) -->
+			    <!--
 	            <plugin>
 	              <groupId>com.cosium.code</groupId>
 	              <artifactId>maven-git-code-format</artifactId>
@@ -725,10 +727,10 @@
 	                  <skipSortingImports>true</skipSortingImports>
 	                  <skipRemovingUnusedImports>false</skipRemovingUnusedImports>
 	                </googleJavaFormatOptions>
-	                <!-- https://en.wikipedia.org/wiki/Glob_(programming) -->
 	                <globPattern>**/[!_]*</globPattern>
 	              </configuration>
 	            </plugin>		
+			     -->
 	        </plugins>
 
 	</build>
