@@ -126,7 +126,7 @@
         <bytebuddy.version>1.9.4</bytebuddy.version>
         <openjpa.version>2.2.1</openjpa.version>
         <log4j.version>1.2.14</log4j.version>
-        <pax-logging-log4j2.version>1.11.2</pax-logging-log4j2.version>
+        <pax-logging-log4j2.version>1.8.5</pax-logging-log4j2.version>
         <pax-url-aether.version>2.5.3</pax-url-aether.version>
         <jetty.version>9.4.20.v20190813</jetty.version>
         <org.json.version>20180813</org.json.version>
@@ -715,7 +715,6 @@
 			</plugin>
 			    <!-- https://github.com/Cosium/maven-git-code-format -->
 	            <!-- https://en.wikipedia.org/wiki/Glob_(programming) -->
-			    <!--
 	            <plugin>
 	              <groupId>com.cosium.code</groupId>
 	              <artifactId>maven-git-code-format</artifactId>
@@ -730,7 +729,6 @@
 	                <globPattern>**/[!_]*</globPattern>
 	              </configuration>
 	            </plugin>		
-			     -->
 	        </plugins>
 
 	</build>
