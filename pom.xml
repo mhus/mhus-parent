@@ -155,7 +155,7 @@
 		<war.plugin>2.3</war.plugin>
         <license.plugin>2.3</license.plugin>
         <nexus.plugin>1.6.8</nexus.plugin>
-        <install.plugin>2.5.2</install.plugin>
+        <install.plugin>3.0.0-M1</install.plugin>
         <!-- PGP BOUNCY
         <bouncycastle.plugin>1.0.0</bouncycastle.plugin>
         PGP APACHE -->
