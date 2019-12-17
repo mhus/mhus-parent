@@ -156,15 +156,7 @@
         <license.plugin>2.3</license.plugin>
         <nexus.plugin>1.6.8</nexus.plugin>
         <install.plugin>3.0.0-M1</install.plugin>
-        <!-- PGP BOUNCY
-        <bouncycastle.plugin>1.0.0</bouncycastle.plugin>
-        PGP APACHE -->
-        <!-- Used git: mhus/maven-gpg-plugin/1.7-SNAPSHOT for release.
-        Fixed a bug creating karaf features.
-        A pull request is created.
-         -->
-        <gpg.plugin>1.7-SNAPSHOT</gpg.plugin>
-        <!-- END -->
+        <gpg.plugin>1.7</gpg.plugin>
         <maven-git-code-format.version>1.32</maven-git-code-format.version>
 	</properties>
 
@@ -811,36 +803,12 @@
 		                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
 		                </configuration>
 		            </plugin>
-		            <!-- PGP BOUNCY
-					<plugin>
-					    <groupId>com.deciphernow</groupId>
-					    <artifactId>bouncycastle-maven-plugin</artifactId>
-					    <version>${bouncycastle.plugin}</version>
-					    <configuration>
-					        <passphrase>${env.PGP_PASSPHRASE}</passphrase>
-					        <rings>${env.PGP_RINGS}</rings>
-					        <userId>${env.PGP_USER_ID}</userId>
-					    </configuration>
-					    <executions>
-					        <execution>
-					            <id>sign-artifacts</id>
-					            <phase>verify</phase>
-					            <goals>
-					                <goal>sign</goal>
-					            </goals>
-					        </execution>
-					    </executions>
-					</plugin>
-		             PGP APACHE -->
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
+                        <groupId>de.mhus.mvn.plugin</groupId>
+                        <artifactId>gpg-maven-plugin</artifactId>
                         <version>${gpg.plugin}</version>
                         <configuration>
                             <passphrase>${gpg.passphrase}</passphrase>
-                            <!-- 
-                            <ascDirectory>${project.build.directory}/../</ascDirectory>
-                             -->
                         </configuration>
                         <executions>
                             <execution>
@@ -852,7 +820,6 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!-- END -->
 		            <plugin>
 		                <groupId>org.apache.maven.plugins</groupId>
 		                <artifactId>maven-source-plugin</artifactId>
