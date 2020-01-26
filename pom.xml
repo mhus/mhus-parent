@@ -713,7 +713,7 @@
 	              <version>${maven-git-code-format.version}</version>
 	              <configuration>
 	                <googleJavaFormatOptions>
-	                  <aosp>false</aosp>
+	                  <aosp>true</aosp>
 	                  <fixImportsOnly>false</fixImportsOnly>
 	                  <skipSortingImports>true</skipSortingImports>
 	                  <skipRemovingUnusedImports>false</skipRemovingUnusedImports>
