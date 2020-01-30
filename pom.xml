@@ -50,18 +50,18 @@
 		</developer>
 	</developers>
 	<properties>
-    	<mhus-lib.version>6.3.0</mhus-lib.version>
+    	<mhus-lib.version>6.4.0-SNAPSHOT</mhus-lib.version>
         <mhus-ports.version>1.6.1</mhus-ports.version>
         <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
-    	<mhus-osgi-tools.version>6.4.0</mhus-osgi-tools.version>
+    	<mhus-osgi-tools.version>6.5.0-SNAPSHOT</mhus-osgi-tools.version>
         <mhus-vaadin.version>6.3.0</mhus-vaadin.version>
         <mhus-mongo.version>6.3.0</mhus-mongo.version>
     	<mhus-transform.version>6.3.0</mhus-transform.version>
-        <mhus-osgi-servlets.version>6.3.0</mhus-osgi-servlets.version>
+        <mhus-osgi-servlets.version>6.4.0-SNAPSHOT</mhus-osgi-servlets.version>
     	<mhus-crypt.version>6.3.0</mhus-crypt.version>
     	<mhus-sop.version>6.3.0</mhus-sop.version>
     	<cherry-web.version>6.3.0</cherry-web.version>
-    	<cherry-reactive.version>6.3.0</cherry-reactive.version>
+    	<cherry-reactive.version>7.1.0-SNAPSHOT</cherry-reactive.version>
         <cherry-vault.version>6.3.0</cherry-vault.version>
         <!-- plugins -->
         <constgenerator.plugin>3.6.1</constgenerator.plugin>
@@ -69,7 +69,6 @@
     	
 		<scr.packages>*</scr.packages>
 		<bndlib.version>2.4.0</bndlib.version>
-		<felix.metatype.version>1.2.2</felix.metatype.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<compileSource>11</compileSource>
 		<osgi.version>5.0.0</osgi.version>
@@ -78,8 +77,12 @@
 		<servlet.version>3.1.0</servlet.version>
 		<portlet.version>2.0</portlet.version>
 		<javax.mail.version>1.4.1</javax.mail.version>
-
+		
+		<felix.metatype.version>1.2.2</felix.metatype.version>
 		<felix.plugin.version>3.0.1</felix.plugin.version>
+        <felix.webconsole.version>4.2.0</felix.webconsole.version>
+        <felix.healthcheck.version>2.0.2</felix.healthcheck.version>
+
 		<maven.version>3.5.0</maven.version>
 		<jackson.version>2.9.8</jackson.version>
 		<jackson.asl.version>1.9.5</jackson.asl.version>
@@ -131,7 +134,6 @@
         <jetty.version>9.4.12.v20180830</jetty.version>
         <org.json.version>20180813</org.json.version>
         <javax.servlet.version>1.0.0</javax.servlet.version>
-        <felix.webconsole.version>4.2.0</felix.webconsole.version>
         
         <!-- features -->
         <commons-jexl.version>2.1.1</commons-jexl.version>
@@ -562,6 +564,12 @@
             <artifactId>org.apache.felix.metatype</artifactId>
             <version>${felix.metatype.version}</version>
         </dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.healthcheck.api -->
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.healthcheck.api</artifactId>
+		    <version>${felix.healthcheck.version}</version>
+		</dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-io</artifactId>
