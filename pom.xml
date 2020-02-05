@@ -51,8 +51,8 @@
 	</developers>
 	<properties>
     	<mhus-lib.version>6.4.0-SNAPSHOT</mhus-lib.version>
-        <mhus-ports.version>1.6.1</mhus-ports.version>
-        <mhus-ports-vaadin.version>1.6.1</mhus-ports-vaadin.version>
+        <mhus-ports.version>6.2.0</mhus-ports.version>
+        <mhus-ports-vaadin.version>6.2.0</mhus-ports-vaadin.version>
     	<mhus-osgi-tools.version>6.5.0-SNAPSHOT</mhus-osgi-tools.version>
         <mhus-vaadin.version>6.3.0</mhus-vaadin.version>
         <mhus-mongo.version>6.3.0</mhus-mongo.version>
