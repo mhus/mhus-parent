@@ -59,7 +59,7 @@
     	<mhus-transform.version>6.3.0</mhus-transform.version>
         <mhus-osgi-servlets.version>6.4.0-SNAPSHOT</mhus-osgi-servlets.version>
     	<mhus-crypt.version>6.3.0</mhus-crypt.version>
-    	<mhus-sop.version>6.3.0</mhus-sop.version>
+    	<mhus-sop.version>6.4.0-SNAPSHOT</mhus-sop.version>
     	<cherry-web.version>6.3.0</cherry-web.version>
     	<cherry-reactive.version>7.1.0-SNAPSHOT</cherry-reactive.version>
         <cherry-vault.version>6.3.0</cherry-vault.version>
