@@ -81,7 +81,11 @@
 		<felix.metatype.version>1.2.2</felix.metatype.version>
 		<felix.plugin.version>3.0.1</felix.plugin.version>
         <felix.webconsole.version>4.2.0</felix.webconsole.version>
-        <felix.healthcheck.version>2.0.2</felix.healthcheck.version>
+        <felix.healthcheck.annotation.version>2.0.0</felix.healthcheck.annotation.version>
+        <felix.healthcheck.api.version>2.0.2</felix.healthcheck.api.version>
+        <felix.healthcheck.core.version>2.0.6</felix.healthcheck.core.version>
+        <felix.healthcheck.generalchecks.version>2.0.4</felix.healthcheck.generalchecks.version>
+        <felix.healthcheck.webconsoleplugin.version>2.0.0</felix.healthcheck.webconsoleplugin.version>
 
 		<maven.version>3.5.0</maven.version>
 		<jackson.version>2.10.2</jackson.version>
@@ -109,7 +113,7 @@
         <commons-net.version>3.6</commons-net.version>
         <commons-pool.version>1.6</commons-pool.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
-        <commons-lang3.version>3.7</commons-lang3.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
         <commons-io.version>1.3.2</commons-io.version>
         
         <mysql.version>5.1.18</mysql.version>
@@ -568,8 +572,13 @@
 		<dependency>
 		    <groupId>org.apache.felix</groupId>
 		    <artifactId>org.apache.felix.healthcheck.api</artifactId>
-		    <version>${felix.healthcheck.version}</version>
+		    <version>${felix.healthcheck.api.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.healthcheck.annotation</artifactId>
+            <version>${felix.healthcheck.annotation.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-io</artifactId>
