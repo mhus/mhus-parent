@@ -23,7 +23,7 @@
 
 	<groupId>de.mhus.lib</groupId>
 	<artifactId>mhus-parent</artifactId>
-	<version>6.5.0-SNAPSHOT</version>
+	<version>7.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
@@ -50,19 +50,22 @@
 		</developer>
 	</developers>
 	<properties>
-    	<mhus-lib.version>6.4.0-SNAPSHOT</mhus-lib.version>
-        <mhus-ports.version>6.2.0</mhus-ports.version>
-        <mhus-ports-vaadin.version>6.2.0</mhus-ports-vaadin.version>
-    	<mhus-osgi-tools.version>6.5.0-SNAPSHOT</mhus-osgi-tools.version>
-        <mhus-vaadin.version>6.3.0</mhus-vaadin.version>
-        <mhus-mongo.version>6.3.0</mhus-mongo.version>
-    	<mhus-transform.version>6.3.0</mhus-transform.version>
-        <mhus-osgi-servlets.version>6.4.0-SNAPSHOT</mhus-osgi-servlets.version>
-    	<mhus-crypt.version>6.3.0</mhus-crypt.version>
-    	<mhus-sop.version>6.4.0-SNAPSHOT</mhus-sop.version>
-    	<cherry-web.version>6.3.0</cherry-web.version>
+    	<mhus-lib.version>7.0.0-SNAPSHOT</mhus-lib.version>
+        <mhus-ports.version>7.0.0-SNAPSHOT</mhus-ports.version>
+        <mhus-ports-vaadin.version>7.0.0-SNAPSHOT</mhus-ports-vaadin.version>
+    	<mhus-osgi-tools.version>7.0.0-SNAPSHOT</mhus-osgi-tools.version>
+        <mhus-vaadin.version>7.0.0-SNAPSHOT</mhus-vaadin.version>
+        <mhus-mongo.version>7.0.0-SNAPSHOT</mhus-mongo.version>
+    	<mhus-transform.version>7.0.0-SNAPSHOT</mhus-transform.version>
+        <mhus-osgi-servlets.version>7.0.0-SNAPSHOT</mhus-osgi-servlets.version>
+    	<mhus-crypt.version>7.0.0-SNAPSHOT</mhus-crypt.version>
+    	<mhus-rest.version>7.0.0-SNAPSHOT</mhus-rest.version>
+        <mhus-micro.version>7.0.0-SNAPSHOT</mhus-micro.version>
+    	
+    	<cherry-web.version>7.0.0-SNAPSHOT</cherry-web.version>
     	<cherry-reactive.version>7.1.0-SNAPSHOT</cherry-reactive.version>
-        <cherry-vault.version>6.3.0</cherry-vault.version>
+        <cherry-vault.version>7.0.0-SNAPSHOT</cherry-vault.version>
+        
         <!-- plugins -->
         <constgenerator.plugin>3.6.1</constgenerator.plugin>
         <constgenerator.plugin.mhus>3.6.1</constgenerator.plugin.mhus>
@@ -170,54 +173,89 @@
         <dependencies>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>mhu-lib-annotations</artifactId>
+               <artifactId>lib-annotations</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>mhu-lib-core</artifactId>
+               <artifactId>lib-core</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>mhu-lib-j2ee</artifactId>
+               <artifactId>lib-j2ee</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>mhu-lib-jms</artifactId>
+               <artifactId>lib-jms</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>mhu-lib-persistence</artifactId>
+               <artifactId>lib-persistence</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
              <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>mhu-lib-jpa</artifactId>
+               <artifactId>lib-jpa</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>mhu-lib-mongo</artifactId>
+               <artifactId>lib-mongo</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
-           
-          <dependency>
-            <groupId>de.mhus.osgi</groupId>
-            <artifactId>mhu-sop-api</artifactId>
-            <version>${mhus-sop.version}</version>
-          </dependency>
+
+            <dependency>
+                <groupId>de.mhus.rest</groupId>
+                <artifactId>rest-core</artifactId>
+                <version>${mhus-rest.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.mhus.rest</groupId>
+                <artifactId>rest-osgi</artifactId>
+                <version>${mhus-rest.version}</version>
+            </dependency>
+            <!-- 
+            <dependency>
+                <groupId>de.mhus.rest</groupId>
+                <artifactId>rest-karaf</artifactId>
+                <version>${mhus-rest.version}</version>
+            </dependency>
+             -->
+
+            <dependency>
+                <groupId>de.mhus.micro</groupId>
+                <artifactId>micro-core</artifactId>
+                <version>${mhus-micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.mhus.micro</groupId>
+                <artifactId>micro-osgi</artifactId>
+                <version>${mhus-micro.version}</version>
+            </dependency>
+            <!-- 
+            <dependency>
+                <groupId>de.mhus.micro</groupId>
+                <artifactId>micro-jms</artifactId>
+                <version>${mhus-micro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.mhus.micro</groupId>
+                <artifactId>micro-karaf</artifactId>
+                <version>${mhus-micro.version}</version>
+            </dependency>
+             -->
            
         <dependency>
             <groupId>de.mhus.osgi</groupId>
-            <artifactId>mhu-transform-api</artifactId>
+            <artifactId>transform-api</artifactId>
             <version>${mhus-transform.version}</version>
         </dependency>
         <dependency>
             <groupId>de.mhus.osgi</groupId>
-            <artifactId>mhu-osgi-crypt-api</artifactId>
+            <artifactId>osgi-crypt-api</artifactId>
             <version>${mhus-crypt.version}</version>
         </dependency>
         <dependency>
@@ -287,17 +325,17 @@
            
             <dependency>
 	            <groupId>de.mhus.osgi</groupId>
-	            <artifactId>mhu-osgi-services</artifactId>
+	            <artifactId>osgi-services</artifactId>
 	            <version>${mhus-osgi-tools.version}</version>
             </dependency>
             <dependency>
                 <groupId>de.mhus.osgi</groupId>
-                <artifactId>mhu-osgi-api</artifactId>
+                <artifactId>osgi-api</artifactId>
                 <version>${mhus-osgi-tools.version}</version>
             </dependency>
             <dependency>
                 <groupId>de.mhus.osgi</groupId>
-                <artifactId>mhu-osgi-jms</artifactId>
+                <artifactId>osgi-jms</artifactId>
                 <version>${mhus-osgi-tools.version}</version>
             </dependency>
            

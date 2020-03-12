@@ -22,7 +22,7 @@
 	<modelVersion>4.0.0</modelVersion>
     <parent>
 		<groupId>de.mhus.lib</groupId>
-		<version>6.5.0-SNAPSHOT</version>
+		<version>7.0.0-SNAPSHOT</version>
 	    <artifactId>mhus-oss</artifactId>
 	    <relativePath>../mhus-oss</relativePath>
     </parent>
@@ -46,12 +46,12 @@
 	<build>
 		<plugins>
             <plugin>
-                <groupId>org.apache.karaf.tooling</groupId>
+                <groupId>de.mhus.apache.karaf.tooling</groupId>
                 <artifactId>karaf-services-maven-plugin</artifactId>
                 <configuration>
                     <artifactInclude>.*mhu.*</artifactInclude>
                 </configuration>
-                <version>${karaf.plugin}</version>
+                <version>4.2.8</version>
                 <executions>
                     <execution>
                         <id>service-metadata-generate</id>
@@ -60,7 +60,7 @@
                             <goal>service-metadata-generate</goal>
                         </goals>
                         <configuration>
-                            <artifactInclude>.*mhu.*</artifactInclude>
+                            <artifactInclude>de\.mhus.*</artifactInclude>
                         </configuration>
                     </execution>
                 </executions>
@@ -87,7 +87,7 @@
                                 <goal>service-metadata-generate</goal>
                             </goals>
                             <configuration>
-                                <artifactInclude>.*mhu.*</artifactInclude>
+                                <artifactInclude>de\.mhus.*</artifactInclude>
                             </configuration>
                         </execution>
                     </executions>
