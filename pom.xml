@@ -67,7 +67,7 @@
         <cherry-vault.version>7.0.0-SNAPSHOT</cherry-vault.version>
         
         <!-- plugins -->
-        <constgenerator.plugin>3.6.1</constgenerator.plugin>
+        <constgenerator.plugin>3.6.2</constgenerator.plugin>
         <constgenerator.plugin.mhus>3.6.1</constgenerator.plugin.mhus>
     	
 		<scr.packages>*</scr.packages>
@@ -235,19 +235,12 @@
                 <artifactId>micro-osgi</artifactId>
                 <version>${mhus-micro.version}</version>
             </dependency>
-            <!-- 
-            <dependency>
-                <groupId>de.mhus.micro</groupId>
-                <artifactId>micro-jms</artifactId>
-                <version>${mhus-micro.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.mhus.micro</groupId>
-                <artifactId>micro-karaf</artifactId>
-                <version>${mhus-micro.version}</version>
-            </dependency>
-             -->
-           
+	        <dependency>
+	            <groupId>de.mhus.micro</groupId>
+	            <artifactId>micro-ext-api</artifactId>
+	            <version>${mhus-micro.version}</version>
+	        </dependency>
+
         <dependency>
             <groupId>de.mhus.osgi</groupId>
             <artifactId>transform-api</artifactId>
@@ -658,6 +651,9 @@
                     </goals>
                   </execution>
                 </executions>
+	               <configuration>
+	                   <artifactInclude>de\.mhus.*</artifactInclude>
+	               </configuration>
                   <dependencies>
                     <dependency>
                         <groupId>de.mhus.lib</groupId>
