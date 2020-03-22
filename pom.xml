@@ -142,6 +142,8 @@
         <org.json.version>20180813</org.json.version>
         <javax.servlet.version>1.0.0</javax.servlet.version>
         
+        <shiro.version>1.5.1</shiro.version>
+        
         <!-- features -->
         <commons-jexl.version>2.1.1</commons-jexl.version>
         <org.jsoup.version>1.11.3</org.jsoup.version>
@@ -631,6 +633,19 @@
             <version>${org.json.version}</version>
         </dependency>
           
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <!-- I should not use web for developing
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+         -->
+        
 	    </dependencies>
     </dependencyManagement>
     
