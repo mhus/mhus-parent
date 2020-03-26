@@ -61,6 +61,8 @@
     	<mhus-crypt.version>7.0.0-SNAPSHOT</mhus-crypt.version>
     	<mhus-rest.version>7.0.0-SNAPSHOT</mhus-rest.version>
         <mhus-micro.version>7.0.0-SNAPSHOT</mhus-micro.version>
+    	<mhus-osgi-cache.version>7.0.0-SNAPSHOT</mhus-osgi-cache.version>
+    	<mhus-osgi-dev.version>7.0.0-SNAPSHOT</mhus-osgi-dev.version>
     	
     	<cherry-web.version>7.0.0-SNAPSHOT</cherry-web.version>
     	<cherry-reactive.version>7.1.0-SNAPSHOT</cherry-reactive.version>
@@ -97,7 +99,11 @@
 		<javax.mail.version>1.4.1</javax.mail.version>
 		<jline.version>3.9.0</jline.version>
 		
-
+        <javax.cache.version>1.1.1</javax.cache.version>
+        <ehcache.version>3.8.1</ehcache.version>
+		<hazelcast.version>4.0</hazelcast.version><!-- cellar uses 3.9.1 -->
+		
+        
         <karaf.version>4.2.6</karaf.version>
         
         <cxf.version>3.3.1</cxf.version>
@@ -301,6 +307,28 @@
            <artifactId>vaadin-core</artifactId>
            <version>${mhus-vaadin.version}</version>
        </dependency>
+
+        <dependency>
+            <groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
+            <version>${javax.cache.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-all</artifactId>
+            <version>${hazelcast.version}</version>
+        </dependency>
+		<dependency>
+		    <groupId>org.ehcache</groupId>
+		    <artifactId>ehcache</artifactId>
+		    <version>${ehcache.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.ehcache</groupId>
+		    <artifactId>ehcache-clustered</artifactId>
+		    <version>${ehcache.version}</version>
+		</dependency>
+        
            
 		    <dependency>
 		             <groupId>org.mongodb</groupId>
