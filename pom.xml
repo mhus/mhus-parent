@@ -63,6 +63,7 @@
         <mhus-micro.version>7.0.0-SNAPSHOT</mhus-micro.version>
     	<mhus-osgi-cache.version>7.0.0-SNAPSHOT</mhus-osgi-cache.version>
     	<mhus-osgi-dev.version>7.0.0-SNAPSHOT</mhus-osgi-dev.version>
+        <mhus-db.version>7.0.0-SNAPSHOT</mhus-db.version>
     	
     	<cherry-web.version>7.0.0-SNAPSHOT</cherry-web.version>
     	<cherry-reactive.version>7.1.0-SNAPSHOT</cherry-reactive.version>
@@ -202,16 +203,6 @@
            </dependency>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>lib-persistence</artifactId>
-               <version>${mhus-lib.version}</version>
-           </dependency>
-             <dependency>
-               <groupId>de.mhus.lib</groupId>
-               <artifactId>lib-jpa</artifactId>
-               <version>${mhus-lib.version}</version>
-           </dependency>
-            <dependency>
-               <groupId>de.mhus.lib</groupId>
                <artifactId>lib-mongo</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
@@ -249,6 +240,21 @@
 	            <artifactId>micro-ext-api</artifactId>
 	            <version>${mhus-micro.version}</version>
 	        </dependency>
+            <dependency>
+                <groupId>de.mhus.db</groupId>
+                <artifactId>db-core</artifactId>
+                <version>${mhus-db.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.mhus.db</groupId>
+                <artifactId>db-jpa</artifactId>
+                <version>${mhus-db.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.mhus.db</groupId>
+                <artifactId>db-osgi-api</artifactId>
+                <version>${mhus-db.version}</version>
+            </dependency>
 
         <dependency>
             <groupId>de.mhus.osgi</groupId>
@@ -873,6 +879,7 @@
     <modules>
         <module>mhus-oss</module>
         <module>mhus-karaf</module>
+        <module>mhus-features</module>
     </modules>
 
     <profiles>

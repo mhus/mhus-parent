@@ -49,7 +49,7 @@
                 <groupId>de.mhus.apache.karaf.tooling</groupId>
                 <artifactId>karaf-services-maven-plugin</artifactId>
                 <configuration>
-                    <artifactInclude>.*mhu.*</artifactInclude>
+                    <artifactInclude>de\.mhus.*</artifactInclude>
                 </configuration>
                 <version>4.2.8</version>
                 <executions>
@@ -78,6 +78,9 @@
                 <plugin>
                     <groupId>de.mhus.apache.karaf.tooling</groupId>
                     <artifactId>karaf-services-maven-plugin</artifactId>
+	                <configuration>
+	                    <artifactInclude>de\.mhus.*</artifactInclude>
+	                </configuration>
                     <version>4.2.8</version>
                     <executions>
                         <execution>
