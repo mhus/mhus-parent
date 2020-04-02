@@ -57,14 +57,17 @@
 
 		<bundle>mvn:de.mhus.lib/lib-annotations/${mhus-lib.version}</bundle>
 		<bundle>mvn:de.mhus.lib/lib-core/${mhus-lib.version}</bundle>
-		<bundle>mvn:de.mhus.lib/lib-persistence/${mhus-lib.version}</bundle>
 		<bundle>mvn:de.mhus.lib/lib-j2ee/${mhus-lib.version}</bundle>
 
+		<bundle>mvn:de.mhus.db/db-core/${mhus-db.version}</bundle>
+        <bundle>mvn:de.mhus.db/db-osgi-api/${mhus-db.version}</bundle>
+        <bundle>mvn:de.mhus.db/db-osgi-adb/${mhus-db.version}</bundle>
+        <bundle>mvn:de.mhus.db/db-karaf/${mhus-db.version}</bundle>
+		
         <!-- basic osgi-tools -->
         <bundle>mvn:de.mhus.osgi/osgi-api/${project.version}</bundle>
 		<bundle>mvn:de.mhus.osgi/osgi-services/${project.version}</bundle>
 		<bundle>mvn:de.mhus.osgi/karaf-commands/${project.version}</bundle>
-		<bundle>mvn:de.mhus.osgi/karaf-xdb/${project.version}</bundle>
 
 		<bundle>mvn:javax.xml.rpc/javax.xml.rpc-api/${javax.xml.rpc.version}</bundle>
 
