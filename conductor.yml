@@ -1,0 +1,81 @@
+
+import:
+  - default:configuration-default.yml
+
+projects:
+   - name: mhus-parent
+     path: .
+     labels:
+       group: parent
+       order: 0
+   - name: mhus-lib
+     path: ../mhus-lib
+     labels:
+       group: library
+       order: 10
+   - name: mhus-osgi-tools
+     path: ../mhus-osgi-tools
+     labels:
+       group: bundle
+       order: 20
+   - name: mhus-osgi-crypt
+     path: ../mhus-osgi-crypt
+     labels:
+       group: bundle
+       order: 30
+   - name: mhus-osgi-servlets
+     path: ../mhus-osgi-servlets
+     labels:
+       group: bundle
+       order: 40
+   - name: mhus-transform
+     path: ../mhus-transform
+     labels:
+       group: bundle
+       order: 50
+   - name: mhus-vaadin
+     path: ../mhus-vaadin
+     labels:
+       group: bundle
+       order: 60
+   - name: mhus-persistence
+     path: ../mhus-persistence
+     labels:
+       group: bundle
+       order: 70
+   - name: mhus-mongo
+     path: ../mhus-mongo
+     labels:
+       group: bundle
+       order: 80
+   - name: mhus-rest
+     path: ../mhus-rest
+     labels:
+       group: bundle
+       order: 90
+   - name: mhus-micro
+     path: ../mhus-micro
+     labels:
+       group: bundle
+       order: 100
+   - name: mhus-osgi-dev
+     path: ../mhus-osgi-dev
+     labels:
+       group: bundle
+       order: 110
+   - name: cherry-reactive
+     path: ../cherry-reactive
+     labels:
+       group: cherry
+       order: 120
+   - name: cherry-vault
+     path: ../cherry-vault
+     labels:
+       group: cherry
+       order: 130
+   - name: cherry-web
+     path: ../cherry-web
+     labels:
+       group: cherry
+       order: 140
+     
