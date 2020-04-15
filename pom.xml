@@ -113,6 +113,9 @@
         
         <junit.juniper.version>5.4.0</junit.juniper.version>
         <junit.platform.version>1.4.0</junit.platform.version>
+        <!-- hamcest is needed by junit -->
+        <hamcrest.version>1.3</hamcrest.version>
+        
         <geronimo-ws-metadata.version>1.1.3</geronimo-ws-metadata.version>
         <geronimo-jms.version>1.1.1</geronimo-jms.version>
         <vaadin.vaadin-sass-compiler.version>0.9.12</vaadin.vaadin-sass-compiler.version>
@@ -177,6 +180,10 @@
         <install.plugin>3.0.0-M1</install.plugin>
         <gpg.plugin>1.7</gpg.plugin>
         <maven-git-code-format.version>1.32</maven-git-code-format.version>
+        
+        <reflections.version>0.9.12</reflections.version>
+        <snakeyaml.version>1.26</snakeyaml.version>
+        
 	</properties>
 
     <dependencyManagement>
@@ -695,7 +702,18 @@
             <version>${shiro.version}</version>
         </dependency>
          -->
+		<!-- https://github.com/ronmamo/reflections -->
+		<dependency>
+		    <groupId>org.reflections</groupId>
+		    <artifactId>reflections</artifactId>
+		    <version>${reflections.version}</version>
+		</dependency>
         
+		<dependency>
+		    <groupId>org.yaml</groupId>
+		    <artifactId>snakeyaml</artifactId>
+		    <version>${snakeyaml.version}</version>
+		</dependency>
 	    </dependencies>
     </dependencyManagement>
     
@@ -867,7 +885,15 @@
            <version>${junit.platform.version}</version>
            <scope>test</scope>
         </dependency>
+		<!-- Needed by junit -->
+		<dependency>
+		    <groupId>org.hamcrest</groupId>
+		    <artifactId>hamcrest-all</artifactId>
+		    <version>${hamcrest.version}</version>
+		    <scope>test</scope>
+		</dependency>
      </dependencies>
+
 
     <repositories>
         <repository>
