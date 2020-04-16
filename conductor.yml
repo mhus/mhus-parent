@@ -1,6 +1,7 @@
 
 import:
   - default:configuration-default.yml
+  - file:lifecycles.yml
 
 projects:
    - name: mhus-parent

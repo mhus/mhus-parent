@@ -1,0 +1,101 @@
+
+lifecycle:
+- name: deploy
+  steps:
+    # reset and pull all projects
+  - target: git
+    arguments:
+    - reset --HARD
+    - pull
+  # new versions and update parent
+  - title: Calculate new versions
+    target: con.calculateNewVersion
+  - title: Set new version properties
+    target: con.updatePomProperties
+    selector:
+      group: parent
+  - title: Set new parent version
+    target: con.updatePomParentVersion
+    selector:
+      version.changed: true
+    properties:
+      version: ${projects.parent.version}
+  - title: Install parent pom
+    target: con.maven
+    arguments:
+    - clean
+    - install
+    selector:
+      group: parent
+  # update all other projects
+  - title: Set new project version
+    target: con.maven
+    arguments:
+    - versions:set
+    - "-DnewVersion=${project.version}"
+    selector:
+      version.changed: true
+  # compile all others and push
+  - title: Compile Projects
+    target: con.maven
+    arguments:
+    - clean
+    - install
+    - "-P mhus-release"
+    selector:
+      version.changed: true
+  - title: Deploy Projects
+    target: con.maven
+    arguments:
+    - deploy
+    - "-P mhus-release"
+    selector:
+      version.changed: true
+  # create tags
+  - title: Git Commit
+    target: con.git
+    arguments:
+    - add *
+    - commit -m "${project.version}"
+    selector:
+      version.changed: true
+  - title: Git Tag
+    target: con.git
+    arguments:
+    - git tag "${project.version}"
+    - git push origin --tags
+    - git push
+    selector:
+      version.changed: true
+    
+  # save versions
+  - title: Save version history
+    target: con.persistNewVersions
+  # create parent tag
+  # commit parent
+  # set next SNAPSHOT
+  - title: Calculate new Snapshot
+    target: con.nextSnapshotVersions
+  - title: Set new version properties
+    target: con.updatePomProperties
+    selector:
+      group: parent
+  - title: Set new parent version
+    target: con.updatePomParentVersion
+    selector:
+      version.changed: true
+    properties:
+      version: ${projects.parent.version}
+  # commit
+  - title: Git Commit
+    target: con.git
+    arguments:
+    - add *
+    - commit -m "${project.version}"
+    selector:
+      version.changed: true
+  
+- name: snapshot
+  steps:   
+  
+  
