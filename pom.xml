@@ -77,7 +77,7 @@
 		<bndlib.version>2.4.0</bndlib.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<compileSource>11</compileSource>
-		<osgi.version>5.0.0</osgi.version>
+		<osgi.version>6.0.0</osgi.version>
 		<activemq.version>5.15.8</activemq.version>
 		<vaadin.version>8.8.3</vaadin.version>
 		<servlet.version>3.1.0</servlet.version>
@@ -435,7 +435,7 @@
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.compendium</artifactId>
+            <artifactId>osgi.cmpn</artifactId>
             <version>${osgi.version}</version>
         </dependency>
         <dependency>
