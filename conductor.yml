@@ -74,13 +74,20 @@ projects:
        order: 90
      properties:
        gitUrl: https://github.com/mhus/mhus-rest.git
-   - name: mhus-micro
-     path: ../mhus-micro
-     labels:
-       group: bundle
-       order: 100
-     properties:
-       gitUrl: https://github.com/mhus/mhus-micro.git
+#   - name: mhus-micro
+#     path: ../mhus-micro
+#     labels:
+#       group: bundle
+#       order: 100
+#     properties:
+#       gitUrl: https://github.com/mhus/mhus-micro.git
+#   - name: mhus-osgi-cache
+#     path: ../mhus-osgi-cache
+#     labels:
+#       group: bundle
+#       order: 105
+#     properties:
+#       gitUrl: https://github.com/mhus/mhus-osgi-cache.git
    - name: mhus-osgi-dev
      path: ../mhus-osgi-dev
      labels:
@@ -102,6 +109,7 @@ projects:
        order: 130
      properties:
        gitUrl: https://github.com/mhus/cherry-vault.git
+       dockerPath: assembly/reactive-playground-docker
    - name: cherry-web
      path: ../cherry-web
      labels:

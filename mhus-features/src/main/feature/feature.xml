@@ -56,8 +56,8 @@
         <bundle>mvn:org.ehcache/ehcache/${ehcache.version}</bundle>
         <bundle>mvn:org.ehcache/ehcache-clustered/${ehcache.version}</bundle>
 
-		<bundle>mvn:org.codehaus.jackson/jackson-core-asl/${jackson.asl.version}</bundle>
-		<bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${jackson.asl.version}</bundle>
+		<bundle>mvn:com.fasterxml.jackson.core/jackson-core/${jackson.version}</bundle>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson.version}</bundle>
 		<bundle><![CDATA[wrap:mvn:org.apache.commons/commons-io/${commons-io.version}/$Bundle-SymbolicName=commons-io&Bundle-Version=${commons-io.version}&Export-Package=org.apache.commons.io;version="${commons-io.version}",!*]]></bundle>
 
 		<bundle>mvn:de.mhus.lib/lib-annotations/${mhus-lib.version}</bundle>

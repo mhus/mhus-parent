@@ -95,7 +95,6 @@
 
 		<maven.version>3.5.0</maven.version>
 		<jackson.version>2.10.2</jackson.version>
-		<jackson.asl.version>1.9.13</jackson.asl.version>
 
 		<javax.mail.version>1.4.1</javax.mail.version>
 		<jline.version>3.9.0</jline.version>
@@ -592,11 +591,11 @@
         <artifactId>portlet-api</artifactId>
         <version>${portlet.version}</version>
     </dependency>
-  <dependency>
-        <groupId>org.codehaus.jackson</groupId>
-        <artifactId>jackson-mapper-asl</artifactId>
-        <version>${jackson.asl.version}</version>
-    </dependency>
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>${jackson.version}</version>
+	</dependency>
     <dependency>
         <groupId>org.apache.openjpa</groupId>
         <artifactId>openjpa</artifactId>
