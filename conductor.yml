@@ -46,6 +46,13 @@ projects:
        order: 50
      properties:
        gitUrl: https://github.com/mhus/mhus-transform.git
+   - name: mhus-ports
+     path: ../mhus-ports
+     labels:
+       group: bundle
+       order: 55
+     properties:
+       gitUrl: https://github.com/mhus/mhus-ports.git
    - name: mhus-vaadin
      path: ../mhus-vaadin
      labels:
