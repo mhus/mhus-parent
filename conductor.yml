@@ -109,6 +109,7 @@ projects:
        order: 120
      properties:
        gitUrl: https://github.com/mhus/cherry-reactive.git
+       dockerPath: assembly/reactive-playground-docker
    - name: cherry-vault
      path: ../cherry-vault
      labels:
@@ -116,7 +117,6 @@ projects:
        order: 130
      properties:
        gitUrl: https://github.com/mhus/cherry-vault.git
-       dockerPath: assembly/reactive-playground-docker
    - name: cherry-web
      path: ../cherry-web
      labels:

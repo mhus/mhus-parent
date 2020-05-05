@@ -50,6 +50,7 @@
 		</developer>
 	</developers>
 	<properties>
+        <mhus-parent.version>7.0.0-SNAPSHOT</mhus-parent.version>
     	<mhus-lib.version>7.0.0-SNAPSHOT</mhus-lib.version>
         <mhus-ports.version>7.0.0-SNAPSHOT</mhus-ports.version>
         <mhus-ports-vaadin.version>7.0.0-SNAPSHOT</mhus-ports-vaadin.version>
