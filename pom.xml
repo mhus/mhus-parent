@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
     Copyright 2019 Mike Hummel
 
@@ -15,15 +14,13 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.mhus.lib</groupId>
 	<artifactId>mhus-parent</artifactId>
-	<version>7.0.0-SNAPSHOT</version>
+	<version>7.0.0</version>
 	<packaging>pom</packaging>
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
@@ -50,25 +47,25 @@
 		</developer>
 	</developers>
 	<properties>
-        <mhus-parent.version>7.0.0-SNAPSHOT</mhus-parent.version>
-    	<mhus-lib.version>7.0.0-SNAPSHOT</mhus-lib.version>
-        <mhus-ports.version>7.0.0-SNAPSHOT</mhus-ports.version>
+        <mhus-parent.version>7.0.0</mhus-parent.version>
+    	<mhus-lib.version>7.0.0</mhus-lib.version>
+        <mhus-ports.version>7.0.0</mhus-ports.version>
         <mhus-ports-vaadin.version>${mhus-ports.version}</mhus-ports-vaadin.version>
-    	<mhus-osgi-tools.version>7.0.0-SNAPSHOT</mhus-osgi-tools.version>
-        <mhus-vaadin.version>7.0.0-SNAPSHOT</mhus-vaadin.version>
-        <mhus-mongo.version>7.0.0-SNAPSHOT</mhus-mongo.version>
-    	<mhus-transform.version>7.0.0-SNAPSHOT</mhus-transform.version>
-        <mhus-osgi-servlets.version>7.0.0-SNAPSHOT</mhus-osgi-servlets.version>
-    	<mhus-crypt.version>7.0.0-SNAPSHOT</mhus-crypt.version>
-    	<mhus-rest.version>7.0.0-SNAPSHOT</mhus-rest.version>
+    	<mhus-osgi-tools.version>7.0.0</mhus-osgi-tools.version>
+        <mhus-vaadin.version>7.0.0</mhus-vaadin.version>
+        <mhus-mongo.version>7.0.0</mhus-mongo.version>
+    	<mhus-transform.version>7.0.0</mhus-transform.version>
+        <mhus-osgi-servlets.version>7.0.0</mhus-osgi-servlets.version>
+    	<mhus-crypt.version>7.0.0</mhus-crypt.version>
+    	<mhus-rest.version>7.0.0</mhus-rest.version>
         <mhus-micro.version>7.0.0-SNAPSHOT</mhus-micro.version>
     	<mhus-osgi-cache.version>7.0.0-SNAPSHOT</mhus-osgi-cache.version>
-    	<mhus-osgi-dev.version>7.0.0-SNAPSHOT</mhus-osgi-dev.version>
-        <mhus-db.version>7.0.0-SNAPSHOT</mhus-db.version>
+    	<mhus-osgi-dev.version>7.0.0</mhus-osgi-dev.version>
+        <mhus-db.version>7.0.0</mhus-db.version>
     	
-    	<cherry-web.version>7.0.0-SNAPSHOT</cherry-web.version>
-    	<cherry-reactive.version>7.1.0-SNAPSHOT</cherry-reactive.version>
-        <cherry-vault.version>7.0.0-SNAPSHOT</cherry-vault.version>
+    	<cherry-web.version>7.0.0</cherry-web.version>
+    	<cherry-reactive.version>7.1.0</cherry-reactive.version>
+        <cherry-vault.version>7.0.0</cherry-vault.version>
         
         <!-- plugins -->
         <constgenerator.plugin>3.6.2</constgenerator.plugin>

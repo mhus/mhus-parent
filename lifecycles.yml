@@ -3,23 +3,30 @@ lifecycle:
 - name: deploy
   steps:
     # reset and pull all projects
-  - target: git
+  - title: Git Reset
+    target: con.git
     arguments:
     - reset --HARD
     - pull
-  # new versions and update parent
+    
+  # new versions
+  
   - title: Calculate new versions
     target: con.calculateNewVersion
   - title: Set new version properties
     target: con.updatePomProperties
     selector:
-      group: parent
-  - title: Set new parent version
-    target: con.updatePomParentVersion
-    selector:
       version.changed: true
-    properties:
-      version: ${projects.parent.version}
+  
+  # Update and build parent
+  
+  - title: Set new project version
+    target: con.maven
+    arguments:
+    - versions:set
+    - "-DnewVersion=${project.version}"
+    selector:
+      group: parent
   - title: Install parent pom
     target: con.maven
     arguments:
@@ -27,7 +34,15 @@ lifecycle:
     - install
     selector:
       group: parent
+
   # update all other projects
+  
+  - title: Set new parent version
+    target: con.updatePomParentVersion
+    selector:
+      version.changed: true
+    properties:
+      version: ${projects.mhus-parent.version}
   - title: Set new project version
     target: con.maven
     arguments:
@@ -41,31 +56,39 @@ lifecycle:
     arguments:
     - clean
     - install
-    - "-P mhus-release"
+    - "-P release-mhus"
+    sort: order
     selector:
+      group: bundle
       version.changed: true
   - title: Deploy Projects
     target: con.maven
     arguments:
     - deploy
-    - "-P mhus-release"
+    - '-P release-mhus'
+    sort: order
     selector:
+      group: bundle
       version.changed: true
   # create tags
   - title: Git Commit
     target: con.git
     arguments:
-    - add *
-    - commit -m "${project.version}"
+    - 'add *'
+    - 'commit -m "${project.version}"'
     selector:
+      group: bundle
       version.changed: true
+    properties:
+      ignoreReturnCode: true
   - title: Git Tag
     target: con.git
     arguments:
-    - git tag "${project.version}"
-    - git push origin --tags
-    - git push
+    - 'tag "${project.version}"'
+    - 'push origin --tags'
+    - 'push'
     selector:
+      group: bundle
       version.changed: true
     
   # save versions
