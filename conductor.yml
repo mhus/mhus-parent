@@ -32,7 +32,7 @@ projects:
    - name: mhus-lib
      path: ../mhus-lib
      labels:
-       group: library
+       group: bundle
        order: 10
      properties:
        gitUrl: https://github.com/mhus/mhus-lib.git

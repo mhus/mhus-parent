@@ -108,7 +108,7 @@ lifecycle:
     selector:
       version.changed: true
     properties:
-      version: ${projects.parent.version}
+      version: ${projects.mhus-parent.version}
   # commit
   - title: Git Commit
     target: con.git
