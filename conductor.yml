@@ -11,6 +11,24 @@ projects:
        order: 0
      properties:
        gitUrl: https://github.com/mhus/mhus-parent.git
+       property.mhus-parent: mhus-parent.version
+       property.mhus-lib: mhus-lib.version
+       property.mhus-ports: mhus-ports.version
+       property.mhus-osgi-tools: mhus-osgi-tools.version
+       property.mhus-vaadin: mhus-vaadin.version
+       property.mhus-mongo: mhus-mongo.version
+       property.mhus-transform: mhus-transform.version
+       property.mhus-osgi-servlets: mhus-osgi-servlets.version
+       property.mhus-osgi-crypt: mhus-crypt.version
+       property.mhus-rest: mhus-rest.version
+       property.mhus-micro: mhus-micro.version
+       property.mhus-osgi-cache: mhus-osgi-cache.version
+       property.mhus-osgi-dev: mhus-osgi-dev.version
+       property.mhus-persistence: mhus-db.version
+       property.cherry-web: cherry-web.version
+       property.cherry-reactive: cherry-reactive.version
+       property.cherry-vault: cherry-vault.version
+
    - name: mhus-lib
      path: ../mhus-lib
      labels:

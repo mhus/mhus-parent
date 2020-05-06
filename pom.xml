@@ -53,7 +53,7 @@
         <mhus-parent.version>7.0.0-SNAPSHOT</mhus-parent.version>
     	<mhus-lib.version>7.0.0-SNAPSHOT</mhus-lib.version>
         <mhus-ports.version>7.0.0-SNAPSHOT</mhus-ports.version>
-        <mhus-ports-vaadin.version>7.0.0-SNAPSHOT</mhus-ports-vaadin.version>
+        <mhus-ports-vaadin.version>${mhus-ports.version}</mhus-ports-vaadin.version>
     	<mhus-osgi-tools.version>7.0.0-SNAPSHOT</mhus-osgi-tools.version>
         <mhus-vaadin.version>7.0.0-SNAPSHOT</mhus-vaadin.version>
         <mhus-mongo.version>7.0.0-SNAPSHOT</mhus-mongo.version>
