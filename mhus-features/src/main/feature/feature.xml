@@ -180,4 +180,18 @@
         <bundle>mvn:de.mhus.osgi/karaf-dev/${mhus-osgi-dev.version}</bundle>
     </feature>
 
+    <feature name='mhu-health-servlet' description='Install health servlet' version='${project.version}'>
+        <feature>http</feature>
+        <feature>http-whiteboard</feature>
+        <bundle>mvn:org.apache.commons/commons-lang3/${commons-lang3.version}</bundle>
+        <!-- 
+        <bundle>mvn:org.apache.felix/org.apache.felix.healthcheck.annotation/${felix.healthcheck.annotation.version}</bundle>
+         -->
+        <bundle>mvn:org.apache.felix/org.apache.felix.healthcheck.api/${felix.healthcheck.api.version}</bundle>
+        <bundle>mvn:org.apache.felix/org.apache.felix.healthcheck.core/${felix.healthcheck.core.version}</bundle>
+        <bundle>mvn:org.apache.felix/org.apache.felix.healthcheck.generalchecks/${felix.healthcheck.generalchecks.version}</bundle>
+
+        <bundle>mvn:de.mhus.osgi/health-servlet/${mhus-osgi-servlets.version}</bundle>
+    </feature>
+
 </features>
