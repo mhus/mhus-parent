@@ -2,24 +2,31 @@
 lifecycle:
 - name: deploy
   steps:
-    # reset and pull all projects
+  
+  - title: Git Status
+    target: con.git
+    arguments:
+    - 'status'
+    sort: order 
+    properties:
+      ignoreReturnCode: true
+
   - title: Git Reset
     target: con.git
     arguments:
-    - reset --HARD
-    - pull
-    
-  # new versions
-  
+    - "reset --hard"
+    - "pull"
+
   - title: Calculate new versions
     target: con.calculateNewVersion
+
   - title: Set new version properties
     target: con.updatePomProperties
     selector:
       version.changed: true
-  
+
   # Update and build parent
-  
+
   - title: Set new project version
     target: con.maven
     arguments:
@@ -27,22 +34,45 @@ lifecycle:
     - "-DnewVersion=${project.version}"
     selector:
       group: parent
+
+  - title: Validate No Snapshots
+    target: con.maven
+    arguments:
+    - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0-SNAPSHOT:validate-no-snapshots'
+    - "-P release-mhus"
+    sort: order
+    selector:
+      group: parent
+
   - title: Install parent pom
     target: con.maven
     arguments:
     - clean
     - install
+    - "-P release"
     selector:
       group: parent
 
   # update all other projects
-  
+
   - title: Set new parent version
     target: con.updatePomParentVersion
     selector:
       version.changed: true
+      group: bundle
     properties:
-      version: ${projects.mhus-parent.version}
+      version: ${projects.magic-parent.version}
+
+  - title: Validate No Snapshots
+    target: con.maven
+    arguments:
+    - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0-SNAPSHOT:validate-no-snapshots'
+    - "-P release-mhus"
+    sort: order
+    selector:
+      version.changed: true
+      group: bundle
+
   - title: Set new project version
     target: con.maven
     arguments:
@@ -50,7 +80,8 @@ lifecycle:
     - "-DnewVersion=${project.version}"
     selector:
       version.changed: true
-  # compile all others and push
+      group: bundle
+
   - title: Compile Projects
     target: con.maven
     arguments:
@@ -61,6 +92,7 @@ lifecycle:
     selector:
       group: bundle
       version.changed: true
+
   - title: Deploy Projects
     target: con.maven
     arguments:
@@ -70,55 +102,110 @@ lifecycle:
     selector:
       group: bundle
       version.changed: true
-  # create tags
+
+
+  - title: Deploy Projects
+    target: con.maven
+    arguments:
+    - deploy
+    - '-P release-mhus'
+    selector:
+      group: parent
+
+  - title: Save version history
+    target: con.persistNewVersions
+
   - title: Git Commit
     target: con.git
     arguments:
-    - 'add *'
+    - 'add -A'
     - 'commit -m "${project.version}"'
     selector:
-      group: bundle
       version.changed: true
     properties:
       ignoreReturnCode: true
-  - title: Git Tag
+
+
+  - title: Git New Tag
     target: con.git
     arguments:
     - 'tag "${project.version}"'
     - 'push origin --tags'
+    selector:
+      version.changed: true
+    properties:
+      ignoreReturnCode: true
+
+  - title: Git Push
+    target: con.git
+    arguments:
     - 'push'
     selector:
-      group: bundle
+      version.changed: true
+    properties:
+      ignoreReturnCode: true
+
+# Snapshot
+
+  - title: Calculate new SNAPSHOT versions
+    target: snapshotVersion
+    selector:
       version.changed: true
     
-  # save versions
-  - title: Save version history
-    target: con.persistNewVersions
-  # create parent tag
-  # commit parent
-  # set next SNAPSHOT
-  - title: Calculate new Snapshot
-    target: con.nextSnapshotVersions
-  - title: Set new version properties
-    target: con.updatePomProperties
+  - title: Set new project version
+    target: con.maven
+    arguments:
+    - versions:set
+    - "-DnewVersion=${project.version}"
     selector:
       group: parent
+
+  - title: Compile Parent
+    target: con.maven
+    arguments:
+    - clean
+    - install
+    sort: order
+    selector:
+      group: parent
+
   - title: Set new parent version
     target: con.updatePomParentVersion
     selector:
       version.changed: true
+      group: bundle
     properties:
       version: ${projects.mhus-parent.version}
-  # commit
-  - title: Git Commit
-    target: con.git
+      
+  - title: Set new project version
+    target: con.maven
     arguments:
-    - add *
-    - commit -m "${project.version}"
+    - versions:set
+    - "-DnewVersion=${project.version}"
+    selector:
+      group: bundle
+      version.changed: true
+
+### Step zum zurücksetzen der Properties in parent/pom.xml fehlt !!!
+
+  - title: Compile All
+    target: con.maven
+    arguments:
+    - clean
+    - install
+    sort: order
     selector:
       version.changed: true
-  
-- name: snapshot
-  steps:   
-  
+
+  - title: Git Commit And Push
+    target: con.git
+    arguments:
+    - 'add -A'
+    - 'commit -m "42-SNAPSHOT"'
+    - push
+    selector:
+      version.changed: true
+    properties:
+      ignoreReturnCode: true
+
   
