@@ -99,7 +99,7 @@
 		
         <javax.cache.version>1.1.1</javax.cache.version>
         <ehcache.version>3.8.1</ehcache.version>
-		<hazelcast.version>4.0</hazelcast.version><!-- cellar uses 3.9.1 -->
+		<hazelcast.version>3.9.1</hazelcast.version><!-- cellar uses 4.0 -->
 		
         
         <karaf.version>4.2.6</karaf.version>
@@ -173,7 +173,7 @@
 		<compiler.plugin>3.8.0</compiler.plugin>
 		<source.plugin>2.2.1</source.plugin>
 		<war.plugin>2.3</war.plugin>
-        <license.plugin>2.3</license.plugin>
+        <license.plugin>2.11</license.plugin>
         <nexus.plugin>1.6.8</nexus.plugin>
         <install.plugin>3.0.0-M1</install.plugin>
         <gpg.plugin>1.7</gpg.plugin>
