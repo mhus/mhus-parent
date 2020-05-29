@@ -182,6 +182,9 @@
         <reflections.version>0.9.12</reflections.version>
         <snakeyaml.version>1.26</snakeyaml.version>
         
+        <jaeger.version>0.32.0</jaeger.version>
+        <opentracingapi.version>0.31.0</opentracingapi.version>
+        
 	</properties>
 
     <dependencyManagement>
@@ -712,6 +715,19 @@
 		    <artifactId>snakeyaml</artifactId>
 		    <version>${snakeyaml.version}</version>
 		</dependency>
+		
+		<dependency>
+	        <groupId>io.opentracing</groupId>
+		    <artifactId>opentracing-api</artifactId>
+	        <version>${opentracingapi.version}</version>
+		</dependency>
+
+		<dependency>
+		  <groupId>io.jaegertracing</groupId>
+		  <artifactId>jaeger-client</artifactId>
+		  <version>${jaeger.version}</version>
+		</dependency>
+		
 	    </dependencies>
     </dependencyManagement>
     

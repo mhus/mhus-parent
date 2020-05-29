@@ -55,7 +55,14 @@
         <bundle>mvn:javax.cache/cache-api/${javax.cache.version}</bundle>
         <bundle>mvn:org.ehcache/ehcache/${ehcache.version}</bundle>
         <bundle>mvn:org.ehcache/ehcache-clustered/${ehcache.version}</bundle>
-
+        <!-- Tracing -->
+		<bundle>wrap:mvn:io.opentracing/opentracing-api/${opentracingapi.version}</bundle>
+		<bundle>wrap:mvn:io.opentracing/opentracing-util/${opentracingapi.version}</bundle>
+		<bundle>wrap:mvn:io.opentracing/opentracing-noop/${opentracingapi.version}</bundle>
+		<bundle>wrap:mvn:io.jaegertracing/jaeger-client/${jaeger.version}</bundle>		
+		<bundle>wrap:mvn:io.jaegertracing/jaeger-core/${jaeger.version}</bundle>		
+		<bundle>wrap:mvn:io.jaegertracing/jaeger-thrift/${jaeger.version}</bundle>		
+		
 		<bundle>mvn:com.fasterxml.jackson.core/jackson-core/${jackson.version}</bundle>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.version}</bundle>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/${jackson.version}</bundle>
