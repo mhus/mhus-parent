@@ -1,8 +1,14 @@
 
-lifecycle:
+
+
+
+lifecycles:
 - name: deploy
   steps:
   
+  # #####################
+  # GIT Stuff
+  # #####################
   - title: Git Status
     target: con.git
     arguments:
@@ -11,12 +17,23 @@ lifecycle:
     properties:
       ignoreReturnCode: true
 
+  - title: Confirm Git Status
+    target: confirm
+    properties:
+       prompt: Confirm
+       message: |
+         Check if GIT must be commited before, if not
+         press y to process deployment.
+
   - title: Git Reset
     target: con.git
     arguments:
     - "reset --hard"
     - "pull"
 
+  # #####################
+  # New Version
+  # #####################
   - title: Calculate new versions
     target: con.calculateNewVersion
 
@@ -25,23 +42,58 @@ lifecycle:
     selector:
       version.changed: true
 
-  # Update and build parent
+  - title: Confirm New Versions
+    target: confirm
+    properties:
+       prompt: Confirm
+       message: Check if new Versions are set correctly
 
+  # #####################
+  # Prepare code
+  # #####################
+  
+  - title: Beautify source code
+    target: maven
+    arguments:
+    - "git-code-format:format-code '-DglobPattern=**/*'"
+    selector:
+      version.changed: true
+  
+  - title: set license information
+    target: maven
+    arguments:
+    - license:format
+    selector:
+      version.changed: true
+    
+#  - title: compile templated files
+#    target: maven
+#    arguments:
+#    - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
+#    selector:
+#      version.changed: true
+
+  # #####################
+  # Create documentation
+  # #####################
+  
+#  - title: compile templated files
+#    target: maven
+#    arguments:
+#    - de.mhus.mvn.plugin:manual-collector-maven-plugin:1.1.0:collect
+#    selector:
+#      version.changed: true
+
+  # #####################
+  # Update and build parent
+  # #####################
   - title: Set new project version
     target: con.maven
     arguments:
     - versions:set
     - "-DnewVersion=${project.version}"
     selector:
-      group: parent
-
-  - title: Validate No Snapshots
-    target: con.maven
-    arguments:
-    - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0-SNAPSHOT:validate-no-snapshots'
-    - "-P release-mhus"
-    sort: order
-    selector:
+      version.changed: true
       group: parent
 
   - title: Install parent pom
@@ -51,9 +103,22 @@ lifecycle:
     - install
     - "-P release"
     selector:
+      version.changed: true
       group: parent
 
-  # update all other projects
+  - title: Validate No Snapshots
+    target: con.maven
+    arguments:
+    - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0:validate-no-snapshots'
+    - "-P release"
+    sort: order
+    selector:
+      version.changed: true
+      group: parent
+
+  # #####################
+  # deploy all other projects
+  # #####################
 
   - title: Set new parent version
     target: con.updatePomParentVersion
@@ -62,16 +127,6 @@ lifecycle:
       group: bundle
     properties:
       version: ${projects.magic-parent.version}
-
-  - title: Validate No Snapshots
-    target: con.maven
-    arguments:
-    - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0-SNAPSHOT:validate-no-snapshots'
-    - "-P release-mhus"
-    sort: order
-    selector:
-      version.changed: true
-      group: bundle
 
   - title: Set new project version
     target: con.maven
@@ -87,28 +142,42 @@ lifecycle:
     arguments:
     - clean
     - install
-    - "-P release-mhus"
+    - "-P release"
     sort: order
     selector:
       group: bundle
       version.changed: true
 
+  - title: Validate No Snapshots
+    target: con.maven
+    arguments:
+    - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0:validate-no-snapshots'
+    - "-P release"
+    sort: order
+    selector:
+      version.changed: true
+      group: bundle
+
   - title: Deploy Projects
     target: con.maven
     arguments:
     - deploy
-    - '-P release-mhus'
+    - '-P release'
     sort: order
     selector:
       group: bundle
       version.changed: true
 
 
-  - title: Deploy Projects
+  # #####################
+  # finally Deploy Parent
+  # #####################
+  
+  - title: Deploy Parent
     target: con.maven
     arguments:
     - deploy
-    - '-P release-mhus'
+    - '-P release'
     selector:
       group: parent
 
@@ -124,7 +193,6 @@ lifecycle:
       version.changed: true
     properties:
       ignoreReturnCode: true
-
 
   - title: Git New Tag
     target: con.git
@@ -145,49 +213,50 @@ lifecycle:
     properties:
       ignoreReturnCode: true
 
-# Snapshot
+  # #####################
+  # Snapshot Version
+  # #####################
 
-  - title: Calculate new SNAPSHOT versions
-    target: snapshotVersion
+  - title: Set project snapshot version
+    target: nextSnapshotVersions
+
+  - title: Set snapshot version properties
+    target: con.updatePomProperties
     selector:
       version.changed: true
-    
-  - title: Set new project version
+
+  - title: Set snapshot project version
     target: con.maven
     arguments:
     - versions:set
     - "-DnewVersion=${project.version}"
-    selector:
-      group: parent
-
-  - title: Compile Parent
-    target: con.maven
-    arguments:
-    - clean
-    - install
     sort: order
     selector:
       group: parent
+      version.changed: true
 
-  - title: Set new parent version
+  - title: Set snapshot parent version
     target: con.updatePomParentVersion
     selector:
-      version.changed: true
       group: bundle
+    sort: order
     properties:
       version: ${projects.mhus-parent.version}
-      
-  - title: Set new project version
+      version.changed: true
+
+  - title: Set snapshot project version
     target: con.maven
     arguments:
     - versions:set
     - "-DnewVersion=${project.version}"
+    sort: order
     selector:
       group: bundle
       version.changed: true
 
-### Step zum zurücksetzen der Properties in parent/pom.xml fehlt !!!
-
+  # #####################
+  # Compile all projects
+  # #####################
   - title: Compile All
     target: con.maven
     arguments:
@@ -197,6 +266,16 @@ lifecycle:
     selector:
       version.changed: true
 
+#  - title: compile templated files - snapshot
+#    target: maven
+#    arguments:
+#    - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
+#    selector:
+#      version.changed: true
+
+  # #####################
+  # Commit Snapshot
+  # #####################
   - title: Git Commit And Push
     target: con.git
     arguments:
@@ -208,4 +287,3 @@ lifecycle:
     properties:
       ignoreReturnCode: true
 
-  
