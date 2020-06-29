@@ -76,7 +76,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<compileSource>11</compileSource>
 		<osgi.version>6.0.0</osgi.version>
-		<activemq.version>5.15.8</activemq.version>
+		<activemq.version>5.15.13</activemq.version>
 		<vaadin.version>8.11.0</vaadin.version>
 		<servlet.version>3.1.0</servlet.version>
 		<portlet.version>2.0</portlet.version>
@@ -136,7 +136,7 @@
         <mongo.morphia.version>1.5.3</mongo.morphia.version>
         <mongo.bwaldvogel.version>1.18.2</mongo.bwaldvogel.version>
         
-        <guava.version>18.0</guava.version>
+        <guava.version>28.2-jre</guava.version>
         <httpcomponents.httpcore.version>4.4.6</httpcomponents.httpcore.version>
         <httpcomponents.httpclient.version>4.5.7</httpcomponents.httpclient.version>
         <httpcomponents.httpmime.version>4.5.7</httpcomponents.httpmime.version>
