@@ -62,6 +62,7 @@
     	<mhus-osgi-cache.version>7.0.0-SNAPSHOT</mhus-osgi-cache.version>
     	<mhus-osgi-dev.version>7.1.0-SNAPSHOT</mhus-osgi-dev.version>
         <mhus-db.version>7.1.0-SNAPSHOT</mhus-db.version>
+        <mhus-jms.version>7.1.0-SNAPSHOT</mhus-jms.version>
     	
     	<cherry-web.version>7.1.0-SNAPSHOT</cherry-web.version>
     	<cherry-reactive.version>7.2.0-SNAPSHOT</cherry-reactive.version>
@@ -321,6 +322,17 @@
            <artifactId>vaadin-core</artifactId>
            <version>${mhus-vaadin.version}</version>
        </dependency>
+
+        <dependency>
+            <groupId>de.mhus.jms</groupId>
+            <artifactId>jms-core</artifactId>
+            <version>${mhus-jms.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mhus.jms</groupId>
+            <artifactId>jms-osgi-api</artifactId>
+            <version>${mhus-jms.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>javax.cache</groupId>

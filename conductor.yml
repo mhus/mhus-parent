@@ -21,6 +21,7 @@ projects:
        property.mhus-osgi-servlets: mhus-osgi-servlets.version
        property.mhus-osgi-crypt: mhus-crypt.version
        property.mhus-rest: mhus-rest.version
+       property.mhus-jms: mhus-jms.version
        property.mhus-micro: mhus-micro.version
        property.mhus-osgi-cache: mhus-osgi-cache.version
        property.mhus-osgi-dev: mhus-osgi-dev.version
@@ -99,32 +100,39 @@ projects:
        order: 90
      properties:
        gitUrl: https://github.com/mhus/mhus-rest.git
+   - name: mhus-jms
+     path: ../mhus-jms
+     labels:
+       group: bundle
+       order: 100
+     properties:
+       gitUrl: https://github.com/mhus/mhus-jms.git
 #   - name: mhus-micro
 #     path: ../mhus-micro
 #     labels:
 #       group: bundle
-#       order: 100
+#       order: 110
 #     properties:
 #       gitUrl: https://github.com/mhus/mhus-micro.git
 #   - name: mhus-osgi-cache
 #     path: ../mhus-osgi-cache
 #     labels:
 #       group: bundle
-#       order: 105
+#       order: 120
 #     properties:
 #       gitUrl: https://github.com/mhus/mhus-osgi-cache.git
    - name: mhus-osgi-dev
      path: ../mhus-osgi-dev
      labels:
        group: bundle
-       order: 110
+       order: 199
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-dev.git
    - name: cherry-reactive
      path: ../cherry-reactive
      labels:
        group: cherry
-       order: 120
+       order: 200
      properties:
        gitUrl: https://github.com/mhus/cherry-reactive.git
        dockerPath: assembly/reactive-playground-docker
@@ -132,14 +140,14 @@ projects:
      path: ../cherry-vault
      labels:
        group: cherry
-       order: 130
+       order: 210
      properties:
        gitUrl: https://github.com/mhus/cherry-vault.git
    - name: cherry-web
      path: ../cherry-web
      labels:
        group: cherry
-       order: 140
+       order: 220
      properties:
        gitUrl: https://github.com/mhus/cherry-web.git
      

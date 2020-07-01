@@ -76,9 +76,9 @@
         <bundle>mvn:de.mhus.db/db-karaf/${mhus-db.version}</bundle>
 		
         <!-- basic osgi-tools -->
-        <bundle>mvn:de.mhus.osgi/osgi-api/${project.version}</bundle>
-		<bundle>mvn:de.mhus.osgi/osgi-services/${project.version}</bundle>
-		<bundle>mvn:de.mhus.osgi/karaf-commands/${project.version}</bundle>
+        <bundle>mvn:de.mhus.osgi/osgi-api/${mhus-osgi-tools.version}</bundle>
+		<bundle>mvn:de.mhus.osgi/osgi-services/${mhus-osgi-tools.version}</bundle>
+		<bundle>mvn:de.mhus.osgi/karaf-commands/${mhus-osgi-tools.version}</bundle>
 
 		<bundle>mvn:javax.xml.rpc/javax.xml.rpc-api/${javax.xml.rpc.version}</bundle>
 
@@ -95,8 +95,10 @@
 		<feature>activemq-client</feature>
 		<feature>mhu-base</feature>
 		<bundle>mvn:org.apache.geronimo.specs/geronimo-ws-metadata_2.0_spec/1.1.3</bundle>
-		<bundle>mvn:de.mhus.lib/lib-jms/${mhus-lib.version}</bundle>
-		<bundle>mvn:de.mhus.osgi/osgi-jms/${project.version}</bundle>
+		<bundle>mvn:de.mhus.jms/jms-core/${mhus-jms.version}</bundle>
+        <bundle>mvn:de.mhus.jms/jms-osgi-api/${mhus-jms.version}</bundle>
+        <bundle>mvn:de.mhus.jms/jms-osgi-impl/${mhus-jms.version}</bundle>
+        <bundle>mvn:de.mhus.jms/jms-karaf/${mhus-jms.version}</bundle>
 	</feature>
 	
 	<feature name='mhu-vaadin' description='Additional tools to use vaadin' version='${project.version}'>
