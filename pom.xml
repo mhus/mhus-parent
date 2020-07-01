@@ -236,19 +236,10 @@
 
             <dependency>
                 <groupId>de.mhus.micro</groupId>
-                <artifactId>micro-core</artifactId>
+                <artifactId>micro-client-api</artifactId>
                 <version>${mhus-micro.version}</version>
             </dependency>
-            <dependency>
-                <groupId>de.mhus.micro</groupId>
-                <artifactId>micro-osgi</artifactId>
-                <version>${mhus-micro.version}</version>
-            </dependency>
-	        <dependency>
-	            <groupId>de.mhus.micro</groupId>
-	            <artifactId>micro-ext-api</artifactId>
-	            <version>${mhus-micro.version}</version>
-	        </dependency>
+
             <dependency>
                 <groupId>de.mhus.db</groupId>
                 <artifactId>db-core</artifactId>
