@@ -73,6 +73,8 @@
 		<bundle>mvn:de.mhus.lib/lib-core/${mhus-lib.version}</bundle>
 		<bundle>mvn:de.mhus.lib/lib-j2ee/${mhus-lib.version}</bundle>
 
+        <!-- persistence -->
+        <bundle>mvn:com.github.jsqlparser/jsqlparser/3.1</bundle>
 		<bundle>mvn:de.mhus.db/db-core/${mhus-db.version}</bundle>
         <bundle>mvn:de.mhus.db/db-osgi-api/${mhus-db.version}</bundle>
         <bundle>mvn:de.mhus.db/db-osgi-adb/${mhus-db.version}</bundle>
