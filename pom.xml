@@ -215,6 +215,12 @@
                <artifactId>lib-mongo</artifactId>
                <version>${mhus-lib.version}</version>
            </dependency>
+            <dependency>
+               <groupId>de.mhus.lib</groupId>
+               <artifactId>lib-tests</artifactId>
+               <version>${mhus-lib.version}</version>
+               <scope>test</scope>
+           </dependency>
 
             <dependency>
                 <groupId>de.mhus.rest</groupId>
