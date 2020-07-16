@@ -153,6 +153,7 @@
         <javax.servlet.version>1.0.0</javax.servlet.version>
         
         <shiro.version>1.5.1</shiro.version>
+        <docker-java.version>3.2.5</docker-java.version>
         
         <!-- features -->
         <commons-jexl.version>2.1.1</commons-jexl.version>
@@ -217,7 +218,7 @@
            </dependency>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>lib-tests</artifactId>
+               <artifactId>lib-junit</artifactId>
                <version>${mhus-lib.version}</version>
                <scope>test</scope>
            </dependency>
