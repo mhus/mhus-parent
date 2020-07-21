@@ -63,6 +63,8 @@
 		<bundle>mvn:com.google.code.gson/gson/2.8.2</bundle>
         <bundle><![CDATA[wrap:mvn:io.jaegertracing/jaeger-client/${jaeger.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>        
         <bundle><![CDATA[wrap:mvn:io.jaegertracing/jaeger-core/${jaeger.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>      
+        <bundle><![CDATA[wrap:mvn:io.jaegertracing/jaeger-thrift/${jaeger.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>    
+        <bundle>mvn:org.apache.thrift/libthrift/0.11.0</bundle>
 		
 		<bundle>mvn:com.fasterxml.jackson.core/jackson-core/${jackson.version}</bundle>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.version}</bundle>
@@ -89,11 +91,6 @@
 
 	</feature>
 
-	<feature name='mhu-base-jaeger' description='Enable jaeger tracing' version='${project.version}'>
-		<bundle><![CDATA[wrap:mvn:io.jaegertracing/jaeger-thrift/${jaeger.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>	
-		<bundle>mvn:org.apache.thrift/libthrift/0.11.0</bundle>
-	</feature>
-	
 	<feature name='mhu-jms' description='Additional toos to use JMS' version='${project.version}'>
 		<feature>activemq-client</feature>
 		<feature>mhu-base</feature>
@@ -192,9 +189,8 @@
         <bundle>mvn:de.mhus.lib/mongo-karaf-impl/${mhus-mongo.version}</bundle>
     </feature>
 
-    <feature name='mhu-dev' description='Mongo enhancement' version='${project.version}'>
+    <feature name='mhu-dev' description='Development test extension' version='${project.version}'>
         <feature>mhu-base</feature>
-        <feature>mhu-base-jaeger</feature>
         <bundle>mvn:de.mhus.osgi/karaf-dev/${mhus-osgi-dev.version}</bundle>
     </feature>
 
