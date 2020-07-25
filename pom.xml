@@ -68,6 +68,9 @@
     	<cherry-reactive.version>7.2.0-SNAPSHOT</cherry-reactive.version>
         <cherry-vault.version>7.1.0-SNAPSHOT</cherry-vault.version>
         
+        <!-- Docker -->
+    	<docker.mhus-apache-karaf.version>"4.2.6_04"</docker.mhus-apache-karaf.version>
+    	
         <!-- plugins -->
         <constgenerator.plugin>3.6.2</constgenerator.plugin>
         <constgenerator.plugin.mhus>3.6.1</constgenerator.plugin.mhus>
