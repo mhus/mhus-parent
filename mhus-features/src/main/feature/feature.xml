@@ -24,7 +24,6 @@
 		<details>${project.description}</details>
 		<!-- <config>foo=bar</config> -->
 		<feature>scr</feature>
-		<feature>jdbc</feature>
 		<feature>jndi</feature>
 		<feature>http</feature>
 		<feature>http-whiteboard</feature>
@@ -74,13 +73,6 @@
 		<bundle>mvn:de.mhus.lib/lib-annotations/${mhus-lib.version}</bundle>
 		<bundle>mvn:de.mhus.lib/lib-core/${mhus-lib.version}</bundle>
 		<bundle>mvn:de.mhus.lib/lib-j2ee/${mhus-lib.version}</bundle>
-
-        <!-- persistence -->
-        <bundle>mvn:com.github.jsqlparser/jsqlparser/3.1</bundle>
-		<bundle>mvn:de.mhus.db/db-core/${mhus-db.version}</bundle>
-        <bundle>mvn:de.mhus.db/db-osgi-api/${mhus-db.version}</bundle>
-        <bundle>mvn:de.mhus.db/db-osgi-adb/${mhus-db.version}</bundle>
-        <bundle>mvn:de.mhus.db/db-karaf/${mhus-db.version}</bundle>
 		
         <!-- basic osgi-tools -->
         <bundle>mvn:de.mhus.osgi/osgi-api/${mhus-osgi-tools.version}</bundle>
@@ -91,6 +83,23 @@
 
 	</feature>
 
+    <feature name='mhu-jdbc' description='Additional toos to use jdbc' version='${project.version}'>
+        <feature>jdbc</feature>
+        <feature>mhu-base</feature>
+<!-- 
+        <bundle>mvn:mysql/mysql-connector-java/${mysql.version}</bundle>
+ -->
+        <bundle>mvn:mysql/mysql-connector-java/5.1.18</bundle>
+        <bundle>mvn:org.postgresql/postgresql/${postgresql.version}</bundle>
+        
+        <!-- persistence -->
+        <bundle>mvn:com.github.jsqlparser/jsqlparser/3.1</bundle>
+        <bundle>mvn:de.mhus.db/db-core/${mhus-db.version}</bundle>
+        <bundle>mvn:de.mhus.db/db-osgi-api/${mhus-db.version}</bundle>
+        <bundle>mvn:de.mhus.db/db-osgi-adb/${mhus-db.version}</bundle>
+        <bundle>mvn:de.mhus.db/db-karaf/${mhus-db.version}</bundle>
+    </feature>
+    
 	<feature name='mhu-jms' description='Additional toos to use JMS' version='${project.version}'>
 		<feature>activemq-client</feature>
 		<feature>mhu-base</feature>
@@ -166,7 +175,7 @@
         <bundle>mvn:de.mhus.osgi/transform-birt/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-freemarker/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-jtwig/${mhus-transform.version}</bundle>
-            <bundle>mvn:de.mhus.ports/ports-groovy/${mhus-ports.version}</bundle>
+        <bundle>mvn:de.mhus.ports/ports-groovy/${mhus-ports.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-pdf/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-soffice/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-velocity/${mhus-transform.version}</bundle>
