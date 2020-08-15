@@ -111,7 +111,7 @@ lifecycles:
   - title: Validate No Snapshots
     target: con.maven
     arguments:
-    - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0:validate-no-snapshots'
+    - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.1:validate-no-snapshots'
     - "-P release-mhus"
     sort: order
     selector:
