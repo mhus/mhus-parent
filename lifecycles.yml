@@ -94,7 +94,7 @@ lifecycles:
     - "-DnewVersion=${project.version}"
     selector:
       version.changed: true
-      group: parent
+      group: prepare
 
   - title: Install parent pom
     target: con.maven
@@ -104,7 +104,7 @@ lifecycles:
     - "-P release"
     selector:
       version.changed: true
-      group: parent
+      group: prepare
 
   - title: Validate No Snapshots
     target: con.maven

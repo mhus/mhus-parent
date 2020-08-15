@@ -7,7 +7,9 @@ projects:
    - name: mhus-parent
      path: .
      labels:
-       group: parent
+       group: 
+       - parent
+       - prepare
        order: 0
      properties:
        gitUrl: https://github.com/mhus/mhus-parent.git
@@ -33,77 +35,98 @@ projects:
    - name: mhus-lib
      path: ../mhus-lib
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 10
      properties:
        gitUrl: https://github.com/mhus/mhus-lib.git
    - name: mhus-osgi-tools
      path: ../mhus-osgi-tools
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 20
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-tools.git
    - name: mhus-osgi-crypt
      path: ../mhus-osgi-crypt
      labels:
-       group: bundle
+       group:
+       - bundle
+       - prepare
        order: 30
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-crypt.git
    - name: mhus-osgi-servlets
      path: ../mhus-osgi-servlets
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 40
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-servlets.git
    - name: mhus-transform
      path: ../mhus-transform
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 50
      properties:
        gitUrl: https://github.com/mhus/mhus-transform.git
    - name: mhus-ports
      path: ../mhus-ports
      labels:
-       group: bundle
+       group: 
+       - bundle
        order: 55
      properties:
        gitUrl: https://github.com/mhus/mhus-ports.git
    - name: mhus-vaadin
      path: ../mhus-vaadin
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 60
      properties:
        gitUrl: https://github.com/mhus/mhus-vaadin.git
    - name: mhus-persistence
      path: ../mhus-persistence
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 70
      properties:
        gitUrl: https://github.com/mhus/mhus-persistence.git
    - name: mhus-mongo
      path: ../mhus-mongo
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 80
      properties:
        gitUrl: https://github.com/mhus/mhus-mongo.git
    - name: mhus-rest
      path: ../mhus-rest
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 90
      properties:
        gitUrl: https://github.com/mhus/mhus-rest.git
    - name: mhus-jms
      path: ../mhus-jms
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 100
      properties:
        gitUrl: https://github.com/mhus/mhus-jms.git
@@ -124,14 +147,19 @@ projects:
    - name: mhus-osgi-dev
      path: ../mhus-osgi-dev
      labels:
-       group: bundle
+       group: 
+       - bundle
+       - prepare
        order: 199
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-dev.git
    - name: cherry-reactive
      path: ../cherry-reactive
      labels:
-       group: cherry
+       group:
+       - bundle
+       - cherry
+       - prepare
        order: 200
      properties:
        gitUrl: https://github.com/mhus/cherry-reactive.git
@@ -139,14 +167,20 @@ projects:
    - name: cherry-vault
      path: ../cherry-vault
      labels:
-       group: cherry
+       group: 
+       - cherry
+       - bundle
+       - prepare
        order: 210
      properties:
        gitUrl: https://github.com/mhus/cherry-vault.git
    - name: cherry-web
      path: ../cherry-web
      labels:
-       group: cherry
+       group: 
+       - cherry
+       - bundle
+       - prepare
        order: 220
      properties:
        gitUrl: https://github.com/mhus/cherry-web.git
