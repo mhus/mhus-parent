@@ -237,6 +237,16 @@ lifecycles:
       group: parent
       version.changed: true
 
+  - title: Compile Parent Snapshot
+    target: con.maven
+    arguments:
+    - clean
+    - install
+    sort: order
+    selector:
+      group: parent
+      version.changed: true
+
   - title: Set snapshot parent version
     target: con.updatePomParentVersion
     selector:
@@ -263,9 +273,10 @@ lifecycles:
     target: con.maven
     arguments:
     - clean
-    - install
+    - 'install -fn'
     sort: order
     selector:
+      group: bundle
       version.changed: true
 
 #  - title: compile templated files - snapshot
