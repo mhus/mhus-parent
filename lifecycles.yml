@@ -293,7 +293,7 @@ lifecycles:
     target: con.git
     arguments:
     - 'add -A'
-    - 'commit -m "42-SNAPSHOT"'
+    - 'commit -m "SNAPSHOT"'
     - push
     selector:
       version.changed: true
