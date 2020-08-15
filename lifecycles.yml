@@ -60,13 +60,13 @@ lifecycles:
       version.changed: true
       group: prepare
   
-  - title: set license information
-    target: con.maven
-    arguments:
-    - license:format
-    selector:
-      version.changed: true
-      group: prepare
+#  - title: set license information
+#    target: con.maven
+#    arguments:
+#    - license:format
+#    selector:
+#      version.changed: true
+#      group: prepare
     
 #  - title: compile templated files
 #    target: con.maven
