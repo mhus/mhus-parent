@@ -128,7 +128,7 @@ lifecycles:
       version.changed: true
       group: bundle
     properties:
-      version: ${projects.magic-parent.version}
+      version: ${projects.mhus-parent.version}
 
   - title: Set new project version
     target: con.maven
