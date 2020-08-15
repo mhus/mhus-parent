@@ -9,7 +9,7 @@ projects:
      labels:
        group: 
        - parent
-       - prepare
+#       - prepare
        order: 0
      properties:
        gitUrl: https://github.com/mhus/mhus-parent.git
