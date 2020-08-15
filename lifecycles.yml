@@ -58,6 +58,7 @@ lifecycles:
     - "git-code-format:format-code '-DglobPattern=**/*'"
     selector:
       version.changed: true
+      group: prepare
   
   - title: set license information
     target: con.maven
@@ -65,6 +66,7 @@ lifecycles:
     - license:format
     selector:
       version.changed: true
+      group: prepare
     
 #  - title: compile templated files
 #    target: con.maven
@@ -94,7 +96,7 @@ lifecycles:
     - "-DnewVersion=${project.version}"
     selector:
       version.changed: true
-      group: prepare
+      group: parent
 
   - title: Install parent pom
     target: con.maven
@@ -104,7 +106,7 @@ lifecycles:
     - "-P release"
     selector:
       version.changed: true
-      group: prepare
+      group: parent
 
   - title: Validate No Snapshots
     target: con.maven
