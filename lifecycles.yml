@@ -53,21 +53,21 @@ lifecycles:
   # #####################
   
   - title: Beautify source code
-    target: maven
+    target: con.maven
     arguments:
     - "git-code-format:format-code '-DglobPattern=**/*'"
     selector:
       version.changed: true
   
   - title: set license information
-    target: maven
+    target: con.maven
     arguments:
     - license:format
     selector:
       version.changed: true
     
 #  - title: compile templated files
-#    target: maven
+#    target: con.maven
 #    arguments:
 #    - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
 #    selector:
@@ -78,7 +78,7 @@ lifecycles:
   # #####################
   
 #  - title: compile templated files
-#    target: maven
+#    target: con.maven
 #    arguments:
 #    - de.mhus.mvn.plugin:manual-collector-maven-plugin:1.1.0:collect
 #    selector:
@@ -267,7 +267,7 @@ lifecycles:
       version.changed: true
 
 #  - title: compile templated files - snapshot
-#    target: maven
+#    target: con.maven
 #    arguments:
 #    - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
 #    selector:
