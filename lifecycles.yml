@@ -103,7 +103,7 @@ lifecycles:
     arguments:
     - clean
     - install
-    - "-P release"
+    - "-P release-mhus"
     selector:
       version.changed: true
       group: parent
@@ -112,7 +112,7 @@ lifecycles:
     target: con.maven
     arguments:
     - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0:validate-no-snapshots'
-    - "-P release"
+    - "-P release-mhus"
     sort: order
     selector:
       version.changed: true
@@ -144,7 +144,7 @@ lifecycles:
     arguments:
     - clean
     - install
-    - "-P release"
+    - "-P release-mhus"
     sort: order
     selector:
       group: bundle
@@ -154,7 +154,7 @@ lifecycles:
     target: con.maven
     arguments:
     - 'de.mhus.mvn.plugin:versioning-maven-plugin:1.0.0:validate-no-snapshots'
-    - "-P release"
+    - "-P release-mhus"
     sort: order
     selector:
       version.changed: true
@@ -164,7 +164,7 @@ lifecycles:
     target: con.maven
     arguments:
     - deploy
-    - '-P release'
+    - '-P release-mhus'
     sort: order
     selector:
       group: bundle
@@ -179,7 +179,7 @@ lifecycles:
     target: con.maven
     arguments:
     - deploy
-    - '-P release'
+    - '-P release-mhus'
     selector:
       group: parent
 
