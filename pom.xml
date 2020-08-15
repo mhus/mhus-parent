@@ -243,12 +243,13 @@
                 <version>${mhus-rest.version}</version>
             </dependency>
              -->
-
+<!-- 
             <dependency>
                 <groupId>de.mhus.micro</groupId>
                 <artifactId>micro-client-api</artifactId>
                 <version>${mhus-micro.version}</version>
             </dependency>
+ -->
 
             <dependency>
                 <groupId>de.mhus.db</groupId>
