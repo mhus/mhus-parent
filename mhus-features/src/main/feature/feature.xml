@@ -150,11 +150,6 @@
         <bundle>mvn:de.mhus.rest/rest-karaf/${mhus-rest.version}</bundle>
     </feature>
     
-    <feature name='mhu-rest-servlet' description='Rest enhancement and start default servlet /rest' version='${project.version}'>
-        <feature>mhu-rest</feature>
-        <bundle>mvn:de.mhus.rest/rest-osgi-servlet/${mhus-rest.version}</bundle>
-    </feature>
-
     <feature name='mhu-micro' description='Microservice enhancement' version='${project.version}'>
         <feature>mhu-base</feature>
         <bundle>mvn:de.mhus.micro/micro-core/${mhus-micro.version}</bundle>
