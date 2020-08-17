@@ -167,6 +167,7 @@
         <nexus.plugin>1.6.8</nexus.plugin>
         <install.plugin>3.0.0-M1</install.plugin>
         <gpg.plugin>1.7</gpg.plugin>
+        <apache.rat.plugin>0.13</apache.rat.plugin>
         <maven-git-code-format.version>1.32</maven-git-code-format.version>
         
         <reflections.version>0.9.12</reflections.version>
@@ -995,6 +996,65 @@
 		                    </execution>
 		                </executions>
 		            </plugin>
+                    <plugin>
+                        <groupId>org.apache.rat</groupId>
+                        <artifactId>apache-rat-plugin</artifactId>
+                        <version>${apache.rat.plugin}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <reportFile>${project.build.directory}/${project.build.finalName}.rat</reportFile>
+                            <excludeSubProjects>false</excludeSubProjects>
+                            <excludes>
+                                <exclude>**/*.pub</exclude>
+                                <exclude>**/target/**/*</exclude>
+                                <!-- GIT files -->
+                                <exclude>**/.git/**/*</exclude>
+                                <!-- IDEA files -->
+                                <exclude>**/.idea/**/*</exclude>
+                                <exclude>**/*.iml</exclude>
+                                <exclude>**/*.ipr</exclude>
+                                <exclude>**/*.iws</exclude>
+                                <!-- Eclipse files -->
+                                <exclude>**/.*</exclude>
+                                <exclude>**/eclipse-classes/**/*</exclude>
+                                <exclude>**/dependency-reduced-pom.xml</exclude>
+                                <exclude>**/.settings/**</exclude>
+                                <exclude>**/bin/**</exclude>
+                                <!-- resources file -->
+                                <exclude>**/goal.txt</exclude>
+                                <exclude>**/grep.txt</exclude>
+                                <exclude>**/edit.txt</exclude>
+                                <exclude>**/wc.txt</exclude>
+                                <exclude>**/foo</exclude>
+                                <exclude>**/org.ops4j.pax.exam.TestContainerFactory</exclude>
+                                <exclude>**/maven-metadata-local.xml</exclude>
+                                <!-- test manifests -->
+                                <exclude>**/*.mf</exclude>
+                                <!-- test json files -->
+                                <exclude>**/*.json</exclude>
+                                <!-- test adoc files -->
+                                <exclude>**/*.adoc</exclude>
+                                <!-- test md files -->
+                                <exclude>**/*.md</exclude>
+                                <!-- test wiring resource files -->
+                                <exclude>**/src/test/resources/wirings/*</exclude>
+                                <!-- SSH keys -->
+                                <exclude>**/*.key</exclude>
+                                <exclude>**/*.id_rsa</exclude>
+                                <!-- For Jenkins, ignore the .repository -->
+                                <exclude>.repository/**</exclude>
+                                <!-- jar files -->
+                                <exclude>**/*.jar</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
             
