@@ -23,8 +23,7 @@
     <parent>
 		<groupId>de.mhus.lib</groupId>
 		<version>7.2.0-SNAPSHOT</version>
-	    <artifactId>mhus-oss</artifactId>
-	    <relativePath>../mhus-oss</relativePath>
+	    <artifactId>mhus-parent</artifactId>
     </parent>
 	<artifactId>mhus-karaf</artifactId>
 	<packaging>pom</packaging>
@@ -51,7 +50,6 @@
                 <configuration>
                     <artifactInclude>de\.mhus.*</artifactInclude>
                 </configuration>
-                <version>4.2.8</version>
                 <executions>
                     <execution>
                         <id>service-metadata-generate</id>
