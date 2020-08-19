@@ -23,8 +23,8 @@
     <parent>
         <groupId>de.mhus.lib</groupId>
         <version>7.2.0-SNAPSHOT</version>
-        <artifactId>mhus-karaf</artifactId>
-        <relativePath>../mhus-karaf</relativePath>
+        <artifactId>mhus-oss</artifactId>
+        <relativePath>../mhus-oss</relativePath>
     </parent>
     <artifactId>mhus-karaf-oss</artifactId>
     <packaging>pom</packaging>
@@ -46,14 +46,59 @@
     </scm>
 
     <build>
-        <pluginManagement>
-        </pluginManagement>
         <plugins>
             <plugin>
-                <groupId>de.mhus.mvn.plugin</groupId>
-                <artifactId>license-maven-plugin</artifactId>
+                <groupId>de.mhus.apache.karaf.tooling</groupId>
+                <artifactId>karaf-services-maven-plugin</artifactId>
+                <configuration>
+                    <artifactInclude>de\.mhus.*</artifactInclude>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>service-metadata-generate</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>service-metadata-generate</goal>
+                        </goals>
+                        <configuration>
+                            <artifactInclude>de\.mhus.*</artifactInclude>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.karaf.tooling</groupId>
+                    <artifactId>karaf-maven-plugin</artifactId>
+                    <version>${karaf.plugin}</version>
+                    <extensions>true</extensions>
+                </plugin>
+                <plugin>
+                    <groupId>de.mhus.apache.karaf.tooling</groupId>
+                    <artifactId>karaf-services-maven-plugin</artifactId>
+                    <configuration>
+                        <artifactInclude>de\.mhus.*</artifactInclude>
+                    </configuration>
+                    <version>4.2.8</version>
+                    <executions>
+                        <execution>
+                            <id>service-metadata-generate</id>
+                            <phase>process-classes</phase>
+                            <goals>
+                                <goal>service-metadata-generate</goal>
+                            </goals>
+                            <configuration>
+                                <artifactInclude>de\.mhus.*</artifactInclude>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        
     </build>
 
 </project>

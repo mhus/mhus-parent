@@ -45,6 +45,59 @@
 	</scm>
 	<build>
         <pluginManagement>
+	        <plugins>
+	            <plugin>
+	                <groupId>de.mhus.mvn.plugin</groupId>
+	                <version>${manual.collector.plugin}</version>
+	                <artifactId>manual-collector-maven-plugin</artifactId>
+	                <configuration>
+	                    <outputDirectory>manual/src/main/asciidoc/categories</outputDirectory>
+	                    <cleanupOutputDirectory>true</cleanupOutputDirectory>
+	                    <generateIndexFiles>true</generateIndexFiles>
+	                    <!-- 
+	                    <textHeader>"==== {{title}}&#xA;&#xA;.Source&#xA;[%collapsible]&#xA;====&#xA;{{file.path}}&#xA;====&#xA;&#xA;"</textHeader>
+	                     -->
+                        <textHeader>"==== {{title}}&#xA;&#xA;// {{file.path}}&#xA;&#xA;"</textHeader>
+	                </configuration>
+                    <executions>
+                        <execution>
+                            <phase>process-sources</phase>
+                            <goals>
+                                <goal>collect</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+	            </plugin>
+	            <plugin>
+	                <groupId>org.asciidoctor</groupId>
+	                <artifactId>asciidoctor-maven-plugin</artifactId>
+	                <version>2.0.0</version>
+	                <executions>
+	                    <execution>
+	                        <id>output-html</id>
+	                        <phase>generate-resources</phase>
+	                        <goals>
+	                            <goal>process-asciidoc</goal>
+	                        </goals>
+	                        <configuration>
+	                            <sourceHighlighter>coderay</sourceHighlighter>
+	                            <backend>html5</backend>
+	                            <doctype>article</doctype>
+	                            <preserveDirectories>true</preserveDirectories>
+	                            <attributes>
+	                                <toc />
+	                                <linkcss>false</linkcss>
+	                            </attributes>
+	                        </configuration>
+	                    </execution>
+	                </executions>
+	                <configuration>
+	                    <sourceDirectory>src/main/asciidoc</sourceDirectory>
+	                    <headerFooter>true</headerFooter>
+	                    <imagesDir>src/main/asciidoc/images</imagesDir>
+	                </configuration>
+	            </plugin>
+	        </plugins>
         </pluginManagement>
 		<plugins>
 			<plugin>
@@ -55,4 +108,134 @@
 
 	</build>
 
+    <profiles>
+        <profile>
+            <id>site-mhus</id>
+            <build>
+                <plugins>
+		            <plugin>
+		              <groupId>org.apache.maven.plugins</groupId>
+		              <artifactId>maven-site-plugin</artifactId>
+		              <version>3.9.1</version>
+		              <configuration>
+		                    <skip>${maven-site-plugin.skip}</skip>
+		                    <siteDirectory>${session.executionRootDirectory}/src/site</siteDirectory>
+		              </configuration>
+		            </plugin>
+		            <plugin>
+		                <groupId>org.apache.maven.plugins</groupId>
+		                <artifactId>maven-antrun-plugin</artifactId>
+		                <version>3.0.0</version>
+		                <executions>
+		                    <execution>
+		                        <id>id.pre-site</id>
+		                        <phase>pre-site</phase>
+		                        <goals>
+		                            <goal>run</goal>
+		                        </goals>
+		                        <configuration>
+		                            <failOnError>false</failOnError>
+		                            <target>
+		                                <ant antfile="${basedir}/src/site/prepare-site.xml">
+		                                  <target name="prepare"/>
+		                                </ant>
+		                            </target>
+		                        </configuration>
+		                    </execution>
+		                  </executions>
+		            </plugin>
+                </plugins>
+            </build>
+            
+		  <reporting>
+		    <plugins>
+		      <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-project-info-reports-plugin</artifactId>
+		        <version>3.1.0</version>
+		      </plugin>
+		      <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-javadoc-plugin</artifactId>
+		        <version>${javadoc.plugin}</version>
+		        <configuration>
+		            <failOnError>false</failOnError>
+		        </configuration>
+		        <reportSets>
+		          <reportSet><!-- by default, id = "default" -->
+		            <reports><!-- select non-aggregate reports -->
+		              <report>javadoc</report>
+		              <report>test-javadoc</report>
+		            </reports>
+		          </reportSet>
+		          <reportSet><!-- aggregate reportSet, to define in poms having modules -->
+		            <id>aggregate</id>
+		            <inherited>false</inherited><!-- don't run aggregate in child modules -->
+		            <reports>
+		              <report>aggregate</report>
+		            </reports>
+		          </reportSet>
+		        </reportSets>
+		      </plugin>
+		      <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-report-plugin</artifactId>
+		        <version>3.0.0-M5</version>
+		      </plugin>
+		      <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-jxr-plugin</artifactId>
+		        <version>3.0.0</version>
+		        <reportSets>
+		          <reportSet>
+		            <id>aggregate</id>
+		            <inherited>false</inherited>
+		            <reports>
+		              <report>aggregate</report>
+		            </reports>
+		          </reportSet>
+		        </reportSets>
+		      </plugin>
+		
+		            
+		     <plugin>
+		        <artifactId>maven-clover-plugin</artifactId>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <version>2.4</version>
+		      </plugin>
+		      
+		      <plugin>
+		         <groupId>org.apache.maven.plugins</groupId>
+		         <artifactId>maven-pmd-plugin</artifactId>
+		         <version>3.13.0</version>
+		         <configuration>
+		            <targetjdk>11</targetjdk>
+		            <rulesets>
+		               <ruleset>/rulesets/java/maven-pmd-plugin-default.xml</ruleset>
+		            </rulesets>
+		            <format>xml</format>
+		            <linkXref>true</linkXref>
+		            <sourceEncoding>utf-8</sourceEncoding>
+		            <minimumTokens>100</minimumTokens>
+		         </configuration>
+		      </plugin>
+		      
+		      <plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>taglist-maven-plugin</artifactId>
+		        <version>2.4</version>
+		      </plugin>
+		      
+		    </plugins>
+		    </reporting>
+		
+		  <distributionManagement>
+		    <site>
+		      <id>www.mhus.info</id>
+		      <url>scp://www.mhus.info/www/docs/project/</url>
+		    </site>
+		  </distributionManagement>
+            
+        </profile>
+    </profiles>
 </project>

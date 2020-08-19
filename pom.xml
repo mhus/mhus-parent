@@ -174,7 +174,7 @@
 		<vaadin.plugin>8.8.3</vaadin.plugin>
 		<bundle.plugin>4.1.0</bundle.plugin>
 		<enforcer.version>1.4.1</enforcer.version>
-		<javadoc.plugin>3.1.0</javadoc.plugin>
+		<javadoc.plugin>3.2.0</javadoc.plugin>
 		<assembly.plugin>2.1</assembly.plugin>
 		<surefire.plugin>2.22.1</surefire.plugin>
 		<compiler.plugin>3.8.0</compiler.plugin>
@@ -186,6 +186,7 @@
         <gpg.plugin>1.7</gpg.plugin>
         <apache.rat.plugin>0.13</apache.rat.plugin>
         <tmpl.plugin>1.1.0</tmpl.plugin>
+        <manual.collector.plugin>1.1.0</manual.collector.plugin>
         <maven-git-code-format.version>1.32</maven-git-code-format.version>
         
         <reflections.version>0.9.12</reflections.version>
