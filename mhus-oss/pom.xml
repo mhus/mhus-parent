@@ -97,6 +97,37 @@
 	                    <imagesDir>src/main/asciidoc/images</imagesDir>
 	                </configuration>
 	            </plugin>
+	            <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+	            <plugin>
+	            	<groupId>org.eclipse.m2e</groupId>
+	            	<artifactId>lifecycle-mapping</artifactId>
+	            	<version>1.0.0</version>
+	            	<configuration>
+	            		<lifecycleMappingMetadata>
+	            			<pluginExecutions>
+	            				<pluginExecution>
+	            					<pluginExecutionFilter>
+	            						<groupId>
+	            							de.mhus.mvn.plugin
+	            						</groupId>
+	            						<artifactId>
+	            							manual-collector-maven-plugin
+	            						</artifactId>
+	            						<versionRange>
+	            							[1.1.0,)
+	            						</versionRange>
+	            						<goals>
+	            							<goal>collect</goal>
+	            						</goals>
+	            					</pluginExecutionFilter>
+	            					<action>
+	            						<ignore></ignore>
+	            					</action>
+	            				</pluginExecution>
+	            			</pluginExecutions>
+	            		</lifecycleMappingMetadata>
+	            	</configuration>
+	            </plugin>
 	        </plugins>
         </pluginManagement>
 		<plugins>
