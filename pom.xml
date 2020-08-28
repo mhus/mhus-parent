@@ -255,6 +255,11 @@
                 <version>${mhus-micro.version}</version>
             </dependency>
  -->
+	        <dependency>
+	          <groupId>de.mhus.osgi</groupId>
+	          <artifactId>osgi-cluster-api</artifactId>
+	          <version>${mhus-osgi-cluster.version}</version>
+	        </dependency>
 
             <dependency>
                 <groupId>de.mhus.db</groupId>
