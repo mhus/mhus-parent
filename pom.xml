@@ -241,20 +241,12 @@
                 <artifactId>rest-osgi</artifactId>
                 <version>${mhus-rest.version}</version>
             </dependency>
-            <!-- 
-            <dependency>
-                <groupId>de.mhus.rest</groupId>
-                <artifactId>rest-karaf</artifactId>
-                <version>${mhus-rest.version}</version>
-            </dependency>
-             -->
-<!-- 
             <dependency>
                 <groupId>de.mhus.micro</groupId>
-                <artifactId>micro-client-api</artifactId>
+                <artifactId>micro-api</artifactId>
                 <version>${mhus-micro.version}</version>
             </dependency>
- -->
+
 	        <dependency>
 	          <groupId>de.mhus.osgi</groupId>
 	          <artifactId>osgi-cluster-api</artifactId>
