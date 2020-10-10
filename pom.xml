@@ -158,6 +158,7 @@
         <javax.servlet.version>1.0.0</javax.servlet.version>
         
         <shiro.version>1.5.1</shiro.version>
+        <jjwt.version>0.11.2</jjwt.version>
         <docker-java.version>3.2.5</docker-java.version>
         
         <!-- features -->
@@ -747,6 +748,24 @@
 		  <groupId>io.jaegertracing</groupId>
 		  <artifactId>jaeger-client</artifactId>
 		  <version>${jaeger.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-api</artifactId>
+		    <version>${jjwt.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-impl</artifactId>
+		    <version>${jjwt.version}</version>
+		    <scope>runtime</scope>
+		</dependency>
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-jackson</artifactId>
+		    <version>${jjwt.version}</version>
+		    <scope>runtime</scope>
 		</dependency>
 		
 	    </dependencies>
