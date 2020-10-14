@@ -66,9 +66,9 @@
         <mhus-db.version>7.2.0-SNAPSHOT</mhus-db.version>
         <mhus-jms.version>7.2.0-SNAPSHOT</mhus-jms.version>
     	
-    	<cherry-web.version>7.2.0-SNAPSHOT</cherry-web.version>
-    	<cherry-reactive.version>7.3.0-SNAPSHOT</cherry-reactive.version>
-        <cherry-vault.version>7.2.0-SNAPSHOT</cherry-vault.version>
+    	<mhus-web.version>7.2.0-SNAPSHOT</mhus-web.version>
+    	<mhus-reactive.version>7.3.0-SNAPSHOT</mhus-reactive.version>
+        <mhus-vault.version>7.2.0-SNAPSHOT</mhus-vault.version>
         
         <!-- Docker -->
     	<docker.mhus-apache-karaf.version>4.2.6_04</docker.mhus-apache-karaf.version>
@@ -283,33 +283,33 @@
         <dependency>
             <groupId>de.mhus.cherry</groupId>
             <artifactId>web-api</artifactId>
-            <version>${cherry-web.version}</version>
+            <version>${mhus-web.version}</version>
         </dependency>
         <dependency>
             <groupId>de.mhus.cherry</groupId>
             <artifactId>web-util</artifactId>
-            <version>${cherry-web.version}</version>
+            <version>${mhus-web.version}</version>
         </dependency>
 
         <dependency>
             <groupId>de.mhus.cherry.reactive</groupId>
             <artifactId>reactive-model</artifactId>
-            <version>${cherry-reactive.version}</version>
+            <version>${mhus-reactive.version}</version>
         </dependency>
         <dependency>
             <groupId>de.mhus.cherry.reactive</groupId>
             <artifactId>reactive-util</artifactId>
-            <version>${cherry-reactive.version}</version>
+            <version>${mhus-reactive.version}</version>
         </dependency>
         <dependency>
             <groupId>de.mhus.cherry.reactive</groupId>
             <artifactId>reactive-osgi</artifactId>
-            <version>${cherry-reactive.version}</version>
+            <version>${mhus-reactive.version}</version>
         </dependency>
         <dependency>
             <groupId>de.mhus.cherry.reactive</groupId>
             <artifactId>reactive-vaadin-widgets</artifactId>
-            <version>${cherry-reactive.version}</version>
+            <version>${mhus-reactive.version}</version>
         </dependency>
         <dependency>
             <groupId>de.mhus.ports</groupId>

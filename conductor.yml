@@ -44,9 +44,9 @@ projects:
        property.mhus-osgi-cluster: mhus-osgi-cluster.version
        property.mhus-osgi-dev: mhus-osgi-dev.version
        property.mhus-persistence: mhus-db.version
-       property.cherry-web: cherry-web.version
-       property.cherry-reactive: cherry-reactive.version
-       property.cherry-vault: cherry-vault.version
+       property.mhus-web: mhus-web.version
+       property.mhus-reactive: mhus-reactive.version
+       property.mhus-vault: mhus-vault.version
 
    - name: mhus-lib
      path: ../mhus-lib
@@ -169,8 +169,8 @@ projects:
        order: 199
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-dev.git
-   - name: cherry-reactive
-     path: ../cherry-reactive
+   - name: mhus-reactive
+     path: ../mhus-reactive
      labels:
        group:
        - bundle
@@ -178,10 +178,10 @@ projects:
        - prepare
        order: 200
      properties:
-       gitUrl: https://github.com/mhus/cherry-reactive.git
+       gitUrl: https://github.com/mhus/mhus-reactive.git
        dockerPath: assembly/reactive-playground-docker
-   - name: cherry-vault
-     path: ../cherry-vault
+   - name: mhus-vault
+     path: ../mhus-vault
      labels:
        group: 
        - cherry
@@ -189,9 +189,9 @@ projects:
        - prepare
        order: 210
      properties:
-       gitUrl: https://github.com/mhus/cherry-vault.git
-   - name: cherry-web
-     path: ../cherry-web
+       gitUrl: https://github.com/mhus/mhus-vault.git
+   - name: mhus-web
+     path: ../mhus-web
      labels:
        group: 
        - cherry
@@ -199,5 +199,5 @@ projects:
        - prepare
        order: 220
      properties:
-       gitUrl: https://github.com/mhus/cherry-web.git
+       gitUrl: https://github.com/mhus/mhus-web.git
      
