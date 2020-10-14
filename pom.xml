@@ -281,33 +281,33 @@
             <version>${mhus-crypt.version}</version>
         </dependency>
         <dependency>
-            <groupId>de.mhus.cherry</groupId>
+            <groupId>de.mhus.app</groupId>
             <artifactId>web-api</artifactId>
             <version>${mhus-web.version}</version>
         </dependency>
         <dependency>
-            <groupId>de.mhus.cherry</groupId>
+            <groupId>de.mhus.app</groupId>
             <artifactId>web-util</artifactId>
             <version>${mhus-web.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>de.mhus.cherry.reactive</groupId>
+            <groupId>de.mhus.app.reactive</groupId>
             <artifactId>reactive-model</artifactId>
             <version>${mhus-reactive.version}</version>
         </dependency>
         <dependency>
-            <groupId>de.mhus.cherry.reactive</groupId>
+            <groupId>de.mhus.app.reactive</groupId>
             <artifactId>reactive-util</artifactId>
             <version>${mhus-reactive.version}</version>
         </dependency>
         <dependency>
-            <groupId>de.mhus.cherry.reactive</groupId>
+            <groupId>de.mhus.app.reactive</groupId>
             <artifactId>reactive-osgi</artifactId>
             <version>${mhus-reactive.version}</version>
         </dependency>
         <dependency>
-            <groupId>de.mhus.cherry.reactive</groupId>
+            <groupId>de.mhus.app.reactive</groupId>
             <artifactId>reactive-vaadin-widgets</artifactId>
             <version>${mhus-reactive.version}</version>
         </dependency>
