@@ -126,7 +126,8 @@
         <vaadin.addon-test-helpers.version>1.2</vaadin.addon-test-helpers.version>
         <slf4j.version>1.7.6</slf4j.version>
         <javax.xml.rpc.version>1.1.1</javax.xml.rpc.version>
-        <bouncycastle.version>1.46</bouncycastle.version>
+        <bouncycastle.version>1.66</bouncycastle.version>
+        <bouncycastle.mail.version>1.46</bouncycastle.mail.version>
         <commons-net.version>3.6</commons-net.version>
         <commons-pool.version>1.6</commons-pool.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
@@ -535,14 +536,14 @@
             <version>${javax.xml.rpc.version}</version>
         </dependency>
         <dependency>
-            <artifactId>bcprov-jdk16</artifactId>
+            <artifactId>bcprov-jdk15on</artifactId>
             <groupId>org.bouncycastle</groupId>
             <version>${bouncycastle.version}</version>
         </dependency>
 	    <dependency>
 	        <groupId>org.bouncycastle</groupId>
-	        <artifactId>bcmail-jdk16</artifactId>
-	        <version>${bouncycastle.version}</version>
+	        <artifactId>bcmail-jdk15</artifactId>
+	        <version>${bouncycastle.mail.version}</version>
 	    </dependency>
         <dependency>
             <groupId>commons-dbcp</groupId>
@@ -960,6 +961,12 @@
 	                <globPattern>**/[!_]*</globPattern>
 	              </configuration>
 	            </plugin>		
+
+			    <plugin>
+			        <groupId>org.sonatype.ossindex.maven</groupId>
+			        <artifactId>ossindex-maven-plugin</artifactId>
+			        <version>3.1.0</version>
+			    </plugin>	            
 	        </plugins>
 
 	</build>
