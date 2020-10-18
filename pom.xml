@@ -158,7 +158,7 @@
         <org.json.version>20180813</org.json.version>
         <javax.servlet.version>1.0.0</javax.servlet.version>
         
-        <shiro.version>1.5.1</shiro.version>
+        <shiro.version>1.6.0</shiro.version>
         <jjwt.version>0.11.2</jjwt.version>
         <docker-java.version>3.2.5</docker-java.version>
         

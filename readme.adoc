@@ -1,0 +1,10 @@
+
+== MHUS Parent
+
+=== Vulnerability Check
+
+----
+
+mvn org.sonatype.ossindex.maven:ossindex-maven-plugin:audit-aggregate -f pom.xml
+
+----
