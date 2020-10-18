@@ -8,3 +8,36 @@
 mvn org.sonatype.ossindex.maven:ossindex-maven-plugin:audit-aggregate -f pom.xml
 
 ----
+
+=== Code Formatter
+
+----
+
+mvn git-code-format:format-code '-DglobPattern=**/*'
+
+----
+
+=== Licence Formatting
+
+----
+
+mvn license:format
+
+----
+
+=== Collect Manual Pages
+
+----
+
+mvn de.mhus.mvn.plugin:manual-collector-maven-plugin:1.1.0:collect
+
+----
+
+=== Update Templetyed Files
+
+----
+
+mvn de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
+
+----
+
