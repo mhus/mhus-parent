@@ -967,6 +967,32 @@
 			        <artifactId>ossindex-maven-plugin</artifactId>
 			        <version>3.1.0</version>
 			    </plugin>	            
+			    
+			     <plugin>
+			        <groupId>org.jacoco</groupId>
+			        <artifactId>jacoco-maven-plugin</artifactId>
+			        <version>0.8.6</version>
+			        <executions>
+			          <execution>
+			            <id>prepare-agent</id>
+			            <goals>
+			              <goal>prepare-agent</goal>
+			            </goals>
+			          </execution>
+			          <execution>
+			            <id>post-unit-test</id>
+			            <phase>test</phase>
+			            <goals>
+			              <goal>report-aggregate</goal>
+			            </goals>
+			            <configuration>
+			              <dataFile>${project.build.directory}/jacoco.exec</dataFile>
+			              <outputDirectory>${project.build.directory}/jacoco-ut</outputDirectory>
+			            </configuration>
+			          </execution>
+			        </executions>
+			      </plugin>			    
+			    
 	        </plugins>
 
 	</build>
@@ -1027,6 +1053,54 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+        </profile>
+        <profile>
+            <id>snapshot-mhus</id>
+            <activation>
+                <property>
+                    <name>performMhusSnapshotRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+            </distributionManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>${nexus.plugin}</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${source.plugin}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>de.mhus.mvn.plugin</groupId>
+                        <artifactId>tmpl-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        
         </profile>
         <profile>
             <id>release-mhus</id>

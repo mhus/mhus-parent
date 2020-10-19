@@ -41,3 +41,24 @@ mvn de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
 
 ----
 
+=== Create Report
+
+Execute in extending project. You need to create a src/site.
+
+----
+
+mvn site -P site-mhus 
+
+----
+
+=== Create a release
+
+Create or prepare a release with signatures.
+
+----
+
+mvn install -P release-mhus
+
+----
+
+To deploy use 'deploy' instead of 'install'.
