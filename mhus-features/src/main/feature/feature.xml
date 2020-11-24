@@ -168,7 +168,9 @@
         <feature>mhu-base</feature>
         <bundle>mvn:de.mhus.osgi/transform-api/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-core/${mhus-transform.version}</bundle>
+        <!-- 
         <bundle>mvn:de.mhus.osgi/transform-birt/${mhus-transform.version}</bundle>
+         -->
         <bundle>mvn:de.mhus.osgi/transform-freemarker/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-jtwig/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.ports/ports-groovy/${mhus-ports.version}</bundle>

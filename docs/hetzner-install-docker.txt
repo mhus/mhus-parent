@@ -7,7 +7,9 @@ chown -R user .ssh
 
 # Firewall - disable all expect SSH
 
-ufw allow 21/tcp
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22/tcp
 ufw enable
 ufw status
 
