@@ -30,7 +30,6 @@
     <packaging>pom</packaging>
     <description>Parent POM for all mhus karaf open source projects</description>
     <url>https://www.mhus.info</url>
-    <inceptionYear>2020</inceptionYear>
     
     <licenses>
         <license>

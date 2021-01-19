@@ -27,6 +27,7 @@
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
     <name>mhus-parent</name>
+    <inceptionYear>2020</inceptionYear>
 
 	<licenses>
 		<license>
