@@ -1182,20 +1182,16 @@
                             <excludes>
                                 <exclude>**/*.pub</exclude>
                                 <exclude>**/target/**/*</exclude>
-                                <!-- GIT files -->
                                 <exclude>**/.git/**/*</exclude>
-                                <!-- IDEA files -->
                                 <exclude>**/.idea/**/*</exclude>
                                 <exclude>**/*.iml</exclude>
                                 <exclude>**/*.ipr</exclude>
                                 <exclude>**/*.iws</exclude>
-                                <!-- Eclipse files -->
                                 <exclude>**/.*</exclude>
                                 <exclude>**/eclipse-classes/**/*</exclude>
                                 <exclude>**/dependency-reduced-pom.xml</exclude>
                                 <exclude>**/.settings/**</exclude>
                                 <exclude>**/bin/**</exclude>
-                                <!-- resources file -->
                                 <exclude>**/goal.txt</exclude>
                                 <exclude>**/grep.txt</exclude>
                                 <exclude>**/edit.txt</exclude>
@@ -1203,23 +1199,17 @@
                                 <exclude>**/foo</exclude>
                                 <exclude>**/org.ops4j.pax.exam.TestContainerFactory</exclude>
                                 <exclude>**/maven-metadata-local.xml</exclude>
-                                <!-- test manifests -->
                                 <exclude>**/*.mf</exclude>
-                                <!-- test json files -->
                                 <exclude>**/*.json</exclude>
-                                <!-- test adoc files -->
                                 <exclude>**/*.adoc</exclude>
-                                <!-- test md files -->
                                 <exclude>**/*.md</exclude>
-                                <!-- test wiring resource files -->
                                 <exclude>**/src/test/resources/wirings/*</exclude>
-                                <!-- SSH keys -->
                                 <exclude>**/*.key</exclude>
                                 <exclude>**/*.id_rsa</exclude>
-                                <!-- For Jenkins, ignore the .repository -->
                                 <exclude>.repository/**</exclude>
-                                <!-- jar files -->
                                 <exclude>**/*.jar</exclude>
+                                <exclude>**/*.ini</exclude>
+                                <exclude>**/*.htm</exclude>
                             </excludes>
                         </configuration>
                     </plugin>
