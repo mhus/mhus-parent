@@ -1164,6 +1164,7 @@
 		                    </execution>
 		                </executions>
 		            </plugin>
+		            <!-- 
                     <plugin>
                         <groupId>org.apache.rat</groupId>
                         <artifactId>apache-rat-plugin</artifactId>
@@ -1222,6 +1223,7 @@
                             </excludes>
                         </configuration>
                     </plugin>
+                     -->
 	                <plugin>
 	                    <groupId>de.mhus.mvn.plugin</groupId>
 	                    <artifactId>tmpl-maven-plugin</artifactId>
