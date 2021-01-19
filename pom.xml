@@ -1216,6 +1216,7 @@
                                 <exclude>**/*.cnf</exclude>
                                 <exclude>**/*.log</exclude>
                                 <exclude>**/*.sec.plain</exclude>
+                                <exclude>**/*.versionsBackup</exclude>
                             </excludes>
                         </configuration>
                     </plugin>
