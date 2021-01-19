@@ -1217,6 +1217,8 @@
                                 <exclude>**/*.log</exclude>
                                 <exclude>**/*.sec.plain</exclude>
                                 <exclude>**/*.versionsBackup</exclude>
+                                <exclude>**/*.rptdesign</exclude>
+                                <exclude>**/*.twig</exclude>
                             </excludes>
                         </configuration>
                     </plugin>
