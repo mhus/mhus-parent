@@ -1211,6 +1211,11 @@
                                 <exclude>**/*.ini</exclude>
                                 <exclude>**/*.htm</exclude>
                                 <exclude>**/*.log</exclude>
+                                <exclude>**/*.js.map</exclude>
+                                <exclude>**/*.sec</exclude>
+                                <exclude>**/*.cnf</exclude>
+                                <exclude>**/*.log</exclude>
+                                <exclude>**/*.sec.plain</exclude>
                             </excludes>
                         </configuration>
                     </plugin>
