@@ -1210,6 +1210,7 @@
                                 <exclude>**/*.jar</exclude>
                                 <exclude>**/*.ini</exclude>
                                 <exclude>**/*.htm</exclude>
+                                <exclude>**/*.log</exclude>
                             </excludes>
                         </configuration>
                     </plugin>
