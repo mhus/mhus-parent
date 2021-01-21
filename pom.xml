@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
 
-    Copyright (C) 2020 Mike Hummel (mh@mhus.de)
+    Copyright (C) 2019 Mike Hummel (mh@mhus.de)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -27,8 +27,7 @@
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.org</url>
     <name>mhus-parent</name>
-    <inceptionYear>2020</inceptionYear>
-
+    <inceptionYear>2019</inceptionYear>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -1104,6 +1103,71 @@
         
         </profile>
         <profile>
+            <id>apache-rat</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.rat</groupId>
+                        <artifactId>apache-rat-plugin</artifactId>
+                        <version>${apache.rat.plugin}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <reportFile>${project.build.directory}/${project.build.finalName}.rat</reportFile>
+                            <excludeSubProjects>false</excludeSubProjects>
+                            <excludes>
+                                <exclude>**/*.pub</exclude>
+                                <exclude>**/target/**/*</exclude>
+                                <exclude>**/.git/**/*</exclude>
+                                <exclude>**/.idea/**/*</exclude>
+                                <exclude>**/*.iml</exclude>
+                                <exclude>**/*.ipr</exclude>
+                                <exclude>**/*.iws</exclude>
+                                <exclude>**/.*</exclude>
+                                <exclude>**/eclipse-classes/**/*</exclude>
+                                <exclude>**/dependency-reduced-pom.xml</exclude>
+                                <exclude>**/.settings/**</exclude>
+                                <exclude>**/bin/**</exclude>
+                                <exclude>**/goal.txt</exclude>
+                                <exclude>**/grep.txt</exclude>
+                                <exclude>**/edit.txt</exclude>
+                                <exclude>**/wc.txt</exclude>
+                                <exclude>**/foo</exclude>
+                                <exclude>**/org.ops4j.pax.exam.TestContainerFactory</exclude>
+                                <exclude>**/maven-metadata-local.xml</exclude>
+                                <exclude>**/*.mf</exclude>
+                                <exclude>**/*.json</exclude>
+                                <exclude>**/*.adoc</exclude>
+                                <exclude>**/*.md</exclude>
+                                <exclude>**/src/test/resources/wirings/*</exclude>
+                                <exclude>**/*.key</exclude>
+                                <exclude>**/*.id_rsa</exclude>
+                                <exclude>.repository/**</exclude>
+                                <exclude>**/*.jar</exclude>
+                                <exclude>**/*.ini</exclude>
+                                <exclude>**/*.htm</exclude>
+                                <exclude>**/*.log</exclude>
+                                <exclude>**/*.js.map</exclude>
+                                <exclude>**/*.sec</exclude>
+                                <exclude>**/*.cnf</exclude>
+                                <exclude>**/*.log</exclude>
+                                <exclude>**/*.sec.plain</exclude>
+                                <exclude>**/*.versionsBackup</exclude>
+                                <exclude>**/*.rptdesign</exclude>
+                                <exclude>**/*.twig</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
             <id>release-mhus</id>
             <activation>
                 <property>
@@ -1164,66 +1228,6 @@
 		                    </execution>
 		                </executions>
 		            </plugin>
-		            <!-- 
-                    <plugin>
-                        <groupId>org.apache.rat</groupId>
-                        <artifactId>apache-rat-plugin</artifactId>
-                        <version>${apache.rat.plugin}</version>
-                        <executions>
-                            <execution>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>check</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <reportFile>${project.build.directory}/${project.build.finalName}.rat</reportFile>
-                            <excludeSubProjects>false</excludeSubProjects>
-                            <excludes>
-                                <exclude>**/*.pub</exclude>
-                                <exclude>**/target/**/*</exclude>
-                                <exclude>**/.git/**/*</exclude>
-                                <exclude>**/.idea/**/*</exclude>
-                                <exclude>**/*.iml</exclude>
-                                <exclude>**/*.ipr</exclude>
-                                <exclude>**/*.iws</exclude>
-                                <exclude>**/.*</exclude>
-                                <exclude>**/eclipse-classes/**/*</exclude>
-                                <exclude>**/dependency-reduced-pom.xml</exclude>
-                                <exclude>**/.settings/**</exclude>
-                                <exclude>**/bin/**</exclude>
-                                <exclude>**/goal.txt</exclude>
-                                <exclude>**/grep.txt</exclude>
-                                <exclude>**/edit.txt</exclude>
-                                <exclude>**/wc.txt</exclude>
-                                <exclude>**/foo</exclude>
-                                <exclude>**/org.ops4j.pax.exam.TestContainerFactory</exclude>
-                                <exclude>**/maven-metadata-local.xml</exclude>
-                                <exclude>**/*.mf</exclude>
-                                <exclude>**/*.json</exclude>
-                                <exclude>**/*.adoc</exclude>
-                                <exclude>**/*.md</exclude>
-                                <exclude>**/src/test/resources/wirings/*</exclude>
-                                <exclude>**/*.key</exclude>
-                                <exclude>**/*.id_rsa</exclude>
-                                <exclude>.repository/**</exclude>
-                                <exclude>**/*.jar</exclude>
-                                <exclude>**/*.ini</exclude>
-                                <exclude>**/*.htm</exclude>
-                                <exclude>**/*.log</exclude>
-                                <exclude>**/*.js.map</exclude>
-                                <exclude>**/*.sec</exclude>
-                                <exclude>**/*.cnf</exclude>
-                                <exclude>**/*.log</exclude>
-                                <exclude>**/*.sec.plain</exclude>
-                                <exclude>**/*.versionsBackup</exclude>
-                                <exclude>**/*.rptdesign</exclude>
-                                <exclude>**/*.twig</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                     -->
 	                <plugin>
 	                    <groupId>de.mhus.mvn.plugin</groupId>
 	                    <artifactId>tmpl-maven-plugin</artifactId>

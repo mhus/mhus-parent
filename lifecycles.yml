@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 Mike Hummel (mh@mhus.de)
+# Copyright (C) 2019 Mike Hummel (mh@mhus.de)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -80,7 +80,7 @@ lifecycles:
       version.changed: true
       group: prepare
 
-  - title: compile templated files
+  - title: Templated files
     target: con.maven
     arguments:
     - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
@@ -333,5 +333,26 @@ lifecycles:
     target: con.maven
     arguments:
     - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
+    selector:
+      group: prepare
+
+- name: release-test
+  steps:
+  - title: Compile Projects
+    target: con.maven
+    arguments:
+    - clean
+    - install
+    - "-P release-mhus"
+    sort: order
+
+- name: apache-rat
+  steps:
+  - title: Compile Projects
+    target: con.maven
+    arguments:
+    - verify
+    - "-P apache-rat"
+    sort: order
     selector:
       group: prepare
