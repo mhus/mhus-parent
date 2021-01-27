@@ -71,7 +71,7 @@
         <mhus-vault.version>7.3.0-SNAPSHOT</mhus-vault.version>
         
         <!-- Docker -->
-    	<docker.mhus-apache-karaf.version>4.2.6_04</docker.mhus-apache-karaf.version>
+    	<docker.mhus-apache-karaf.version>4.2.6_05</docker.mhus-apache-karaf.version>
     	
         <!-- plugins -->
         <constgenerator.plugin>3.6.2</constgenerator.plugin>
