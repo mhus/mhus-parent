@@ -60,8 +60,10 @@
         <mhus-osgi-servlets.version>7.3.0-SNAPSHOT</mhus-osgi-servlets.version>
     	<mhus-crypt.version>7.3.0-SNAPSHOT</mhus-crypt.version>
     	<mhus-rest.version>7.3.0-SNAPSHOT</mhus-rest.version>
+    	<!-- 
         <mhus-micro.version>7.0.0-SNAPSHOT</mhus-micro.version>
     	<mhus-cluster.version>7.0.0-SNAPSHOT</mhus-cluster.version>
+    	 -->
     	<mhus-osgi-dev.version>7.3.0-SNAPSHOT</mhus-osgi-dev.version>
         <mhus-db.version>7.3.0-SNAPSHOT</mhus-db.version>
         <mhus-jms.version>7.3.0-SNAPSHOT</mhus-jms.version>
@@ -243,6 +245,7 @@
                 <artifactId>rest-osgi</artifactId>
                 <version>${mhus-rest.version}</version>
             </dependency>
+            <!-- 
             <dependency>
                 <groupId>de.mhus.micro</groupId>
                 <artifactId>micro-api</artifactId>
@@ -254,6 +257,7 @@
 	          <artifactId>osgi-cluster-api</artifactId>
 	          <version>${mhus-cluster.version}</version>
 	        </dependency>
+             -->
 
             <dependency>
                 <groupId>de.mhus.db</groupId>
