@@ -281,8 +281,8 @@
             <version>${mhus-transform.version}</version>
         </dependency>
         <dependency>
-            <groupId>de.mhus.osgi</groupId>
-            <artifactId>osgi-crypt-api</artifactId>
+            <groupId>de.mhus.crypt</groupId>
+            <artifactId>crypt-api</artifactId>
             <version>${mhus-crypt.version}</version>
         </dependency>
         <dependency>

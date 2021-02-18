@@ -181,9 +181,9 @@
 
     <feature name='mhu-crypt' description='Crypt enhancement' version='${project.version}'>
         <feature>mhu-base</feature>
-        <bundle>mvn:de.mhus.osgi/osgi-crypt-api/${mhus-crypt.version}</bundle>
-        <bundle>mvn:de.mhus.osgi/osgi-crypt-bc/${mhus-crypt.version}</bundle>
-        <bundle>mvn:de.mhus.osgi/karaf-crypt/${mhus-crypt.version}</bundle>
+        <bundle>mvn:de.mhus.crypt/crypt-api/${mhus-crypt.version}</bundle>
+        <bundle>mvn:de.mhus.crypt/crypt-bc/${mhus-crypt.version}</bundle>
+        <bundle>mvn:de.mhus.crypt/crypt-karaf/${mhus-crypt.version}</bundle>
     </feature>
 
     <feature name='mhu-mongo' description='Mongo enhancement' version='${project.version}'>

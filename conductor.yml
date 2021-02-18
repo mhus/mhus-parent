@@ -37,7 +37,7 @@ projects:
        property.mhus-mongo: mhus-mongo.version
        property.mhus-transform: mhus-transform.version
        property.mhus-osgi-servlets: mhus-osgi-servlets.version
-       property.mhus-osgi-crypt: mhus-crypt.version
+       property.mhus-crypt: mhus-crypt.version
        property.mhus-rest: mhus-rest.version
        property.mhus-jms: mhus-jms.version
        property.mhus-micro: mhus-micro.version
@@ -66,15 +66,15 @@ projects:
        order: 20
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-tools.git
-   - name: mhus-osgi-crypt
-     path: ../mhus-osgi-crypt
+   - name: mhus-crypt
+     path: ../mhus-crypt
      labels:
        group:
        - bundle
        - prepare
        order: 30
      properties:
-       gitUrl: https://github.com/mhus/mhus-osgi-crypt.git
+       gitUrl: https://github.com/mhus/mhus-crypt.git
    - name: mhus-osgi-servlets
      path: ../mhus-osgi-servlets
      labels:
