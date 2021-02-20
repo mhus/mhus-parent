@@ -1,0 +1,49 @@
+= Build with docker
+
+Use this commands to build or release mhu suite using a unified docker image.
+
+== Rebuild
+
+----
+docker run -it --rm \
+-v ~/.m2:/home/user/.m2 \
+-v ~/MHU/workspaces/mhus:/home/user/build \
+mhus/mhus-build:11.0.7-0 "./build/mhus-parent/build-bin/con.sh rebuild"
+----
+
+== Release
+
+----
+docker run -it --rm \
+-v ~/.m2:/home/user/.m2 \
+-v ~/MHU/workspaces/mhus:/home/user/build \
+-v ~/.gnupg:/home/user/.gnupg \
+mhus/mhus-build:11.0.7-0 "./build/mhus-parent/build-bin/con.sh release"
+----
+
+== Use Karaf in Docker
+
+----
+docker run -it --rm \
+-v ~/.m2:/home/user/.m2 \
+-p 18181:8181 \
+mhus/apache-karaf:4.2.6_05
+
+mhus_version=7.4.0-SNAPSHOT
+
+feature:repo-add activemq 5.15.8
+feature:repo-add mvn:org.apache.shiro/shiro-features/1.6.0/xml/features
+feature:repo-add mvn:de.mhus.osgi/mhus-features/${mhus_version}/xml/features
+
+feature:install mhu-base
+
+feature:install mhu-jdbc
+
+feature:install mhu-jms
+
+feature:install mhu-rest
+
+feature:install mhu-vaadin
+
+
+----
