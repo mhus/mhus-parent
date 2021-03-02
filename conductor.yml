@@ -146,13 +146,13 @@ projects:
        order: 100
      properties:
        gitUrl: https://github.com/mhus/mhus-jms.git
-#   - name: mhus-micro
-#     path: ../mhus-micro
-#     labels:
-#       group: bundle
-#       order: 110
-#     properties:
-#       gitUrl: https://github.com/mhus/mhus-micro.git
+   - name: mhus-micro
+     path: ../mhus-micro
+     labels:
+       group: bundle
+       order: 110
+     properties:
+       gitUrl: https://github.com/mhus/mhus-micro.git
 #   - name: mhus-cluster
 #     path: ../mhus-cluster
 #     labels:
