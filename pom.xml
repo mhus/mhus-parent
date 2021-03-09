@@ -795,6 +795,7 @@
                 </executions>
 	               <configuration>
 	                   <artifactInclude>de\.mhus.*</artifactInclude>
+	                   <ignore>REGISTER_NATIVES</ignore>
 	               </configuration>
                   <dependencies>
                     <dependency>
