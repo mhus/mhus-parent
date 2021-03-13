@@ -17,6 +17,8 @@ Install mhus:
 
 version_mhus=7.4.0-SNAPSHOT
 
+dev_version=7.0.0-SNAPSHOT
+
 feature:repo-add mvn:org.apache.shiro/shiro-features/1.6.0/xml/features
 feature:repo-add mvn:de.mhus.osgi/mhus-features/${version_mhus}/xml/features
 
@@ -27,12 +29,14 @@ feature:install -s mhu-rest
 feature:install -s mhu-jdbc
 
 feature:repo-add activemq 5.15.8
+bundle:install -s mvn:de.mhus.lib.itest/examples-jms/${dev_version}
 feature:install -s mhu-jms
 
 feature:install -s mhu-vaadin
 
 feature:install -s mhu-vaadin-ui
 
+bundle:install -s mvn:de.mhus.lib.itest/examples-micro/${dev_version}
 feature:install -s mhu-micro
 
 feature:install -s mhu-transform
