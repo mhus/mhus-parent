@@ -153,17 +153,12 @@
     
     <feature name='mhu-micro' description='Microservice enhancement' version='${project.version}'>
         <feature>mhu-base</feature>
-        <bundle>mvn:de.mhus.micro/micro-api/${mhus-micro.version}</bundle>
-        <bundle>mvn:de.mhus.micro/micro-impl/${mhus-micro.version}</bundle>
+        <bundle>mvn:de.mhus.micro/micro-core/${mhus-micro.version}</bundle>
+        <bundle>mvn:de.mhus.micro/micro-osgi/${mhus-micro.version}</bundle>
+        <!-- 
         <bundle>mvn:de.mhus.micro/micro-karaf/${mhus-micro.version}</bundle>
+         -->
     </feature>
-<!-- 
-    <feature name='mhu-micro-jms' description='Microservice enhancement' version='${project.version}'>
-        <feature>mhu-jms</feature>
-        <feature>mhu-micro</feature>
-        <bundle>mvn:de.mhus.micro/micro-prov-jms/${mhus-micro.version}</bundle>
-    </feature>
- -->
     <feature name='mhu-transform' description='Transform enhancement' version='${project.version}'>
         <feature>mhu-base</feature>
         <bundle>mvn:de.mhus.osgi/transform-api/${mhus-transform.version}</bundle>

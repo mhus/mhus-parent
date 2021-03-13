@@ -1,0 +1,56 @@
+
+
+Test karaf with docker:
+
+----
+
+docker run --name karaf-test -it -v ~/.m2:/home/user/.m2 -p 15005:5005 -p 18181:8181 mhus/apache-karaf:4.2.6_05
+
+docker stop karaf-test
+docker rm karaf-test
+
+----
+
+Install mhus:
+
+----
+
+version_mhus=7.4.0-SNAPSHOT
+
+feature:repo-add mvn:org.apache.shiro/shiro-features/1.6.0/xml/features
+feature:repo-add mvn:de.mhus.osgi/mhus-features/${version_mhus}/xml/features
+
+feature:install -s mhu-base
+
+feature:install -s mhu-rest
+
+feature:install -s mhu-jdbc
+
+feature:repo-add activemq 5.15.8
+feature:install -s mhu-jms
+
+feature:install -s mhu-vaadin
+
+feature:install -s mhu-vaadin-ui
+
+feature:install -s mhu-micro
+
+feature:install -s mhu-transform
+
+feature:install -s mhu-crypt
+
+feature:install -s mhu-mongo
+
+feature:install -s mhu-dev
+
+feature:install -s mhu-health-servlet
+
+
+
+
+
+
+
+
+
+----
