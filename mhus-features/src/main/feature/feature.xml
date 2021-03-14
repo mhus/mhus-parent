@@ -155,9 +155,7 @@
         <feature>mhu-base</feature>
         <bundle>mvn:de.mhus.micro/micro-core/${mhus-micro.version}</bundle>
         <bundle>mvn:de.mhus.micro/micro-osgi/${mhus-micro.version}</bundle>
-        <!-- 
         <bundle>mvn:de.mhus.micro/micro-karaf/${mhus-micro.version}</bundle>
-         -->
     </feature>
     <feature name='mhu-transform' description='Transform enhancement' version='${project.version}'>
         <feature>mhu-base</feature>
