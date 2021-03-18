@@ -26,6 +26,12 @@ feature:install -s mhu-base
 
 feature:install -s mhu-rest
 
+blue-create de.mhus.rest.core.impl.RestServlet
+blue-create de.mhus.rest.core.impl.RestWebSocketServlet
+blue-create de.mhus.rest.core.nodes.PublicRestNode
+blue-create de.mhus.rest.core.nodes.UserInformationRestNode
+blue-create de.mhus.rest.core.nodes.JwtTokenNode
+
 feature:install -s mhu-jdbc
 
 feature:repo-add activemq 5.15.8
