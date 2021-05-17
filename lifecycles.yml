@@ -180,7 +180,9 @@ lifecycles:
     - '-P release-mhus'
     sort: order
     selector:
-      group: bundle
+      group:
+      - bundle
+      - deploy
       version.changed: true
 
 

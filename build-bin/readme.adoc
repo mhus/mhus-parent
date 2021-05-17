@@ -2,6 +2,33 @@
 
 Use this commands to build or release mhu suite using a unified docker image.
 
+== Checkout from GIT
+
+Create local Directory:
+
+----
+mkdir -p ~/MHU/workspaces/mhus
+----
+
+Checkout parent:
+
+----
+docker run -it --rm \
+-v ~/.m2:/home/user/.m2 \
+-v ~/MHU/workspaces/mhus:/home/user/build \
+mhus/mhus-build:11.0.7-0 "git clone https://github.com/mhus/mhus-parent.git ./build/mhus-parent"
+----
+
+Checkout all other projects:
+
+----
+docker run -it --rm \
+-v ~/.m2:/home/user/.m2 \
+-v ~/MHU/workspaces/mhus:/home/user/build \
+mhus/mhus-build:11.0.7-0 "./build/mhus-parent/build-bin/con.sh git.pull"
+----
+
+
 == Rebuild
 
 ----
