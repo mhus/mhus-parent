@@ -38,6 +38,23 @@ docker run -it --rm \
 mhus/mhus-build:11.0.7-0 "./build/mhus-parent/build-bin/con.sh rebuild"
 ----
 
+== Build manually
+
+----
+docker run -it --rm \
+-v ~/.m2:/home/user/.m2 \
+-v ~/MHU/workspaces/mhus:/home/user/build \
+mhus/mhus-build:11.0.7-0
+
+cd build
+
+cd <project name>
+mvn install
+
+exit
+
+----
+
 == Release
 
 ----
