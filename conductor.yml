@@ -26,6 +26,7 @@ projects:
        group: 
        - parent
        - prepare
+       - deploy
        order: 0
      properties:
        gitUrl: https://github.com/mhus/mhus-parent.git
@@ -54,6 +55,7 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 10
      properties:
        gitUrl: https://github.com/mhus/mhus-lib.git
@@ -63,6 +65,7 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 20
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-tools.git
@@ -72,6 +75,7 @@ projects:
        group:
        - bundle
        - prepare
+       - deploy
        order: 30
      properties:
        gitUrl: https://github.com/mhus/mhus-crypt.git
@@ -81,6 +85,7 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 40
      properties:
        gitUrl: https://github.com/mhus/mhus-osgi-servlets.git
@@ -90,6 +95,7 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 50
      properties:
        gitUrl: https://github.com/mhus/mhus-transform.git
@@ -98,6 +104,7 @@ projects:
      labels:
        group: 
        - bundle
+       - deploy
        order: 55
      properties:
        gitUrl: https://github.com/mhus/mhus-ports.git
@@ -107,6 +114,7 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 60
      properties:
        gitUrl: https://github.com/mhus/mhus-vaadin.git
@@ -116,6 +124,7 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 70
      properties:
        gitUrl: https://github.com/mhus/mhus-persistence.git
@@ -125,6 +134,7 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 80
      properties:
        gitUrl: https://github.com/mhus/mhus-mongo.git
@@ -134,6 +144,7 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 90
      properties:
        gitUrl: https://github.com/mhus/mhus-rest.git
@@ -143,13 +154,16 @@ projects:
        group: 
        - bundle
        - prepare
+       - deploy
        order: 100
      properties:
        gitUrl: https://github.com/mhus/mhus-jms.git
    - name: mhus-micro
      path: ../mhus-micro
      labels:
-       group: bundle
+       group: 
+       - bundle
+#       - deploy
        order: 110
      properties:
        gitUrl: https://github.com/mhus/mhus-micro.git
@@ -176,6 +190,7 @@ projects:
        - bundle
        - cherry
        - prepare
+       - deploy
        order: 200
      properties:
        gitUrl: https://github.com/mhus/mhus-reactive.git
@@ -187,6 +202,7 @@ projects:
        - cherry
        - bundle
        - prepare
+       - deploy
        order: 210
      properties:
        gitUrl: https://github.com/mhus/mhus-vault.git
@@ -197,6 +213,7 @@ projects:
        - cherry
        - bundle
        - prepare
+       - deploy
        order: 220
      properties:
        gitUrl: https://github.com/mhus/mhus-web.git
