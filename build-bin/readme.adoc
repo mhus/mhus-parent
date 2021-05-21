@@ -2,6 +2,14 @@
 
 Use this commands to build or release mhu suite using a unified docker image.
 
+== Linux
+
+The UID of the container is created for Max OSX and is 501. If you use linux the default UID is 1000. First option is to create a user with UID 501 and execute the commands with this user. Or use root and change the access to the
+folders with `chown 501 ...` of the shared folders. 
+
+Option two is to add the line `-e APP_UID=1000` to each command. This will instruct the start script to change the UID
+of the container user (recommended).
+
 == Checkout from GIT
 
 Create local Directory:
@@ -13,10 +21,15 @@ mkdir -p ~/MHU/workspaces/mhus
 Checkout parent:
 
 ----
+
+echo "git clone https://github.com/mhus/mhus-parent.git ./build/mhus-parent" > ~/MHU/workspaces/mhus/checkout.sh
+
 docker run -it --rm \
 -v ~/.m2:/home/user/.m2 \
 -v ~/MHU/workspaces/mhus:/home/user/build \
-mhus/mhus-build:11.0.7-0 "git clone https://github.com/mhus/mhus-parent.git ./build/mhus-parent"
+mhus/mhus-build:11.0.7-0 "./build/checkout.sh"
+
+rm ~/MHU/workspaces/mhus/checkout.sh
 ----
 
 Checkout all other projects:
@@ -27,7 +40,6 @@ docker run -it --rm \
 -v ~/MHU/workspaces/mhus:/home/user/build \
 mhus/mhus-build:11.0.7-0 "./build/mhus-parent/build-bin/con.sh git.pull"
 ----
-
 
 == Rebuild
 
