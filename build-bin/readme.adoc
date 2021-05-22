@@ -32,7 +32,7 @@ mhus/mhus-build:11.0.7-0 "./build/checkout.sh"
 rm ~/MHU/workspaces/mhus/checkout.sh
 ----
 
-Checkout all other projects:
+Checkout all other projects (or pull all projects again):
 
 ----
 docker run -it --rm \
