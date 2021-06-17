@@ -30,6 +30,9 @@
         <feature>shiro-core</feature>
         <feature>aries-blueprint</feature>
 
+		<!-- since karaf 4.2.11 -->
+		<bundle>mvn:org.apache.logging.log4j/log4j-core/${log4j.version}</bundle>
+		
         <!-- felix -->
         <bundle>mvn:org.apache.commons/commons-lang3/${commons-lang3.version}</bundle>
         <!-- 
