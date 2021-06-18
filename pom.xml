@@ -113,9 +113,10 @@
         <karaf.version>4.2.11</karaf.version>
         
         <servicemix-spec.version>2.9.0</servicemix-spec.version>
-        <cxf.version>3.3.1</cxf.version>
+        <cxf.version>3.4.4</cxf.version>
         <javax.activation.version>1.1.1</javax.activation.version>
         <groovy.version>2.4.16</groovy.version>
+        <openjpa3.version>3.1.1</openjpa3.version>
         
         <junit.jupiter.version>5.6.2</junit.jupiter.version>
         <junit.juniper.version>5.6.2</junit.juniper.version>
