@@ -195,7 +195,7 @@
 
     <feature name='mhu-dev' description='Development test extension' version='${project.version}'>
         <feature>mhu-base</feature>
-        <bundle>mvn:de.mhus.osgi/karaf-dev/${mhus-osgi-dev.version}</bundle>
+        <bundle>mvn:de.mhus.osgi/karaf-dev/${mhus-osgi-tools.version}</bundle>
     </feature>
 
     <feature name='mhu-health-servlet' description='Install health servlet' version='${project.version}'>
