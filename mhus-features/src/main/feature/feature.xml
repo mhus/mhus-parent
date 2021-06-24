@@ -18,9 +18,8 @@
 -->
 <features name="${project.artifactId}-${project.version}"
 	xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
-<!-- try this
-	<repository>mvn:org.apache.shiro/shiro-features/1.6.0/xml/features</repository>
- -->
+
+	<repository>mvn:org.apache.shiro/shiro-features/${shiro.version}/xml/features</repository>
 
 	<feature name='mhu-base' description='mhu liba and basic osgi tooling and services' version='${project.version}'>
 		<details>${project.description}</details>
