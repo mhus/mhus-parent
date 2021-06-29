@@ -174,15 +174,15 @@ projects:
 #       order: 120
 #     properties:
 #       gitUrl: https://github.com/mhus/mhus-cluster.git
-   - name: mhus-osgi-dev
-     path: ../mhus-osgi-dev
-     labels:
-       group: 
-       - bundle
-       - prepare
-       order: 199
-     properties:
-       gitUrl: https://github.com/mhus/mhus-osgi-dev.git
+#   - name: mhus-osgi-dev
+#     path: ../mhus-osgi-dev
+#     labels:
+#       group: 
+#       - bundle
+#       - prepare
+#       order: 199
+#     properties:
+#       gitUrl: https://github.com/mhus/mhus-osgi-dev.git
    - name: mhus-reactive
      path: ../mhus-reactive
      labels:
