@@ -84,7 +84,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<compileSource>11</compileSource>
 		<osgi.version>6.0.0</osgi.version>
-		<activemq.version>5.15.14</activemq.version>
+		<activemq.version>5.16.2</activemq.version>
 		<vaadin.version>8.13.0</vaadin.version>
 		<servlet.version>3.1.0</servlet.version>
 		<portlet.version>2.0</portlet.version>
