@@ -106,7 +106,9 @@
     </feature>
     
 	<feature name='mhu-jms' description='Additional toos to use JMS' version='${project.version}'>
+	<!-- 
 		<feature>activemq-client</feature>
+	 -->
 		<feature version="${mhus-parent.version}">mhu-base</feature>
 		<bundle>mvn:org.apache.geronimo.specs/geronimo-ws-metadata_2.0_spec/1.1.3</bundle>
 		<bundle>mvn:de.mhus.jms/jms-core/${mhus-jms.version}</bundle>
