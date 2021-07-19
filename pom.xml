@@ -102,7 +102,7 @@
 		<maven.version>3.5.0</maven.version>
 		<jackson.version>2.12.3</jackson.version>
 
-		<javax.mail.version>1.4.1</javax.mail.version>
+		<javax.mail.version>1.6.2</javax.mail.version>
 		<jline.version>3.19.0</jline.version>
 		
         <javax.cache.version>1.1.1</javax.cache.version>
@@ -450,7 +450,7 @@
         </dependency>
         <dependency>
             <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
+            <artifactId>javax.mail-api</artifactId>
             <version>${javax.mail.version}</version>
         </dependency>
         <dependency>
