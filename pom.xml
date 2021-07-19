@@ -721,6 +721,13 @@
             <artifactId>shiro-config-ogdl</artifactId>
             <version>${shiro.version}</version>
         </dependency>
+        <!-- Common annotations for shiro -->
+        <dependency>
+		  <groupId>javax.annotation</groupId>
+		  <artifactId>jsr250-api</artifactId>
+		  <version>1.0</version>
+        </dependency>
+        
         <!-- I should not use web for developing
         <dependency>
             <groupId>org.apache.shiro</groupId>
