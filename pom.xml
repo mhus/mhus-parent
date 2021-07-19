@@ -88,7 +88,6 @@
 		<vaadin.version>8.13.0</vaadin.version>
 		<servlet.version>3.1.0</servlet.version>
 		<portlet.version>2.0</portlet.version>
-		<javax.mail.version>1.4.1</javax.mail.version>
 		
 		<felix.metatype.version>1.2.2</felix.metatype.version>
 		<felix.plugin.version>3.0.1</felix.plugin.version>
@@ -318,11 +317,13 @@
             <artifactId>reactive-vaadin-widgets</artifactId>
             <version>${mhus-reactive.version}</version>
         </dependency>
+        <!-- 
         <dependency>
             <groupId>de.mhus.ports</groupId>
             <artifactId>ports-javaxmail</artifactId>
             <version>${mhus-ports.version}</version>
         </dependency>
+         -->
         <dependency>
             <groupId>de.mhus.ports</groupId>
             <artifactId>ports-flummi</artifactId>
@@ -449,8 +450,8 @@
             <version>${javax.activation.version}</version>
         </dependency>
         <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>javax.mail-api</artifactId>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
             <version>${javax.mail.version}</version>
         </dependency>
         <dependency>
