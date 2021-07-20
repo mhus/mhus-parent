@@ -172,7 +172,7 @@
          -->
         <bundle>mvn:de.mhus.osgi/transform-freemarker/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-jtwig/${mhus-transform.version}</bundle>
-        <bundle>mvn:de.mhus.ports/ports-groovy/${mhus-ports.version}</bundle>
+        <bundle>mvn:org.codehaus.groovy/groovy/${groovy.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-pdf/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-soffice/${mhus-transform.version}</bundle>
         <bundle>mvn:de.mhus.osgi/transform-velocity/${mhus-transform.version}</bundle>
