@@ -188,7 +188,7 @@
         <license.plugin>2.11.1</license.plugin>
         <nexus.plugin>1.6.8</nexus.plugin>
         <install.plugin>3.0.0-M1</install.plugin>
-        <gpg.plugin>1.7</gpg.plugin>
+        <gpg.plugin>3.0.1</gpg.plugin>
         <apache.rat.plugin>0.13</apache.rat.plugin>
         <tmpl.plugin>1.1.0</tmpl.plugin>
         <manual.collector.plugin>1.1.0</manual.collector.plugin>
@@ -1224,8 +1224,8 @@
 		                </configuration>
 		            </plugin>
                     <plugin>
-                        <groupId>de.mhus.mvn.plugin</groupId>
-                        <artifactId>gpg-maven-plugin</artifactId>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
                         <version>${gpg.plugin}</version>
                         <configuration>
                             <passphrase>${gpg.passphrase}</passphrase>
