@@ -1224,8 +1224,8 @@
 		                </configuration>
 		            </plugin>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
+                        <groupId>de.mhus.mvn.plugin</groupId>
+                        <artifactId>gpg-maven-plugin</artifactId>
                         <version>${gpg.plugin}</version>
                         <configuration>
                             <passphrase>${gpg.passphrase}</passphrase>
