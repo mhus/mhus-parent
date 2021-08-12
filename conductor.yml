@@ -29,7 +29,7 @@ projects:
        - deploy
        order: 0
      properties:
-       gitUrl: https://github.com/mhus/mhus-parent.git
+       gitUrl: https://github.com/mhus-info/mhus-parent.git
        property.mhus-parent: mhus-parent.version
        property.mhus-lib: mhus-lib.version
        property.mhus-ports: mhus-ports.version
@@ -58,7 +58,7 @@ projects:
        - deploy
        order: 10
      properties:
-       gitUrl: https://github.com/mhus/mhus-lib.git
+       gitUrl: https://github.com/mhus-info/mhus-lib.git
    - name: mhus-osgi-tools
      path: ../mhus-osgi-tools
      labels:
@@ -68,7 +68,7 @@ projects:
        - deploy
        order: 20
      properties:
-       gitUrl: https://github.com/mhus/mhus-osgi-tools.git
+       gitUrl: https://github.com/mhus-info/mhus-osgi-tools.git
    - name: mhus-crypt
      path: ../mhus-crypt
      labels:
@@ -78,7 +78,7 @@ projects:
        - deploy
        order: 30
      properties:
-       gitUrl: https://github.com/mhus/mhus-crypt.git
+       gitUrl: https://github.com/mhus-info/mhus-crypt.git
    - name: mhus-osgi-servlets
      path: ../mhus-osgi-servlets
      labels:
@@ -88,7 +88,7 @@ projects:
        - deploy
        order: 40
      properties:
-       gitUrl: https://github.com/mhus/mhus-osgi-servlets.git
+       gitUrl: https://github.com/mhus-info/mhus-osgi-servlets.git
    - name: mhus-transform
      path: ../mhus-transform
      labels:
@@ -98,7 +98,7 @@ projects:
        - deploy
        order: 50
      properties:
-       gitUrl: https://github.com/mhus/mhus-transform.git
+       gitUrl: https://github.com/mhus-info/mhus-transform.git
    - name: mhus-ports
      path: ../mhus-ports
      labels:
@@ -107,7 +107,7 @@ projects:
        - deploy
        order: 55
      properties:
-       gitUrl: https://github.com/mhus/mhus-ports.git
+       gitUrl: https://github.com/mhus-info/mhus-ports.git
    - name: mhus-vaadin
      path: ../mhus-vaadin
      labels:
@@ -117,7 +117,7 @@ projects:
        - deploy
        order: 60
      properties:
-       gitUrl: https://github.com/mhus/mhus-vaadin.git
+       gitUrl: https://github.com/mhus-info/mhus-vaadin.git
    - name: mhus-persistence
      path: ../mhus-persistence
      labels:
@@ -127,7 +127,7 @@ projects:
        - deploy
        order: 70
      properties:
-       gitUrl: https://github.com/mhus/mhus-persistence.git
+       gitUrl: https://github.com/mhus-info/mhus-persistence.git
    - name: mhus-mongo
      path: ../mhus-mongo
      labels:
@@ -137,7 +137,7 @@ projects:
        - deploy
        order: 80
      properties:
-       gitUrl: https://github.com/mhus/mhus-mongo.git
+       gitUrl: https://github.com/mhus-info/mhus-mongo.git
    - name: mhus-rest
      path: ../mhus-rest
      labels:
@@ -147,7 +147,7 @@ projects:
        - deploy
        order: 90
      properties:
-       gitUrl: https://github.com/mhus/mhus-rest.git
+       gitUrl: https://github.com/mhus-info/mhus-rest.git
    - name: mhus-jms
      path: ../mhus-jms
      labels:
@@ -157,7 +157,7 @@ projects:
        - deploy
        order: 100
      properties:
-       gitUrl: https://github.com/mhus/mhus-jms.git
+       gitUrl: https://github.com/mhus-info/mhus-jms.git
    - name: mhus-micro
      path: ../mhus-micro
      labels:
@@ -166,7 +166,7 @@ projects:
 #       - deploy
        order: 110
      properties:
-       gitUrl: https://github.com/mhus/mhus-micro.git
+       gitUrl: https://github.com/mhus-info/mhus-micro.git
 #   - name: mhus-cluster
 #     path: ../mhus-cluster
 #     labels:
@@ -193,7 +193,7 @@ projects:
        - deploy
        order: 200
      properties:
-       gitUrl: https://github.com/mhus/mhus-reactive.git
+       gitUrl: https://github.com/mhus-info/mhus-reactive.git
        dockerPath: assembly/reactive-playground-docker
    - name: mhus-vault
      path: ../mhus-vault
@@ -205,7 +205,7 @@ projects:
        - deploy
        order: 210
      properties:
-       gitUrl: https://github.com/mhus/mhus-vault.git
+       gitUrl: https://github.com/mhus-info/mhus-vault.git
    - name: mhus-web
      path: ../mhus-web
      labels:
@@ -216,5 +216,5 @@ projects:
        - deploy
        order: 220
      properties:
-       gitUrl: https://github.com/mhus/mhus-web.git
+       gitUrl: https://github.com/mhus-info/mhus-web.git
      
