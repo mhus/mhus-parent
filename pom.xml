@@ -60,7 +60,7 @@
         <mhus-osgi-servlets.version>7.4.0-SNAPSHOT</mhus-osgi-servlets.version>
     	<mhus-crypt.version>7.5.0-SNAPSHOT</mhus-crypt.version>
     	<mhus-rest.version>7.5.0-SNAPSHOT</mhus-rest.version>
-        <mhus-micro.version>0.0.0</mhus-micro.version>
+        <mhus-micro.version>7.0.0-SNAPSHOT</mhus-micro.version>
     	<!-- 
     	<mhus-cluster.version>7.0.0-SNAPSHOT</mhus-cluster.version>
     	 -->
@@ -1193,13 +1193,24 @@
             </build>
         </profile>
         <profile>
+            <id>release-ngnetwork</id>
+		    <distributionManagement>
+		        <repository>
+		            <id>bsonexus</id>
+		            <url>http://nexus.ngnetwork.de:8080/nexus/content/repositories/releases/</url>
+		        </repository>
+		    </distributionManagement>
+		    <build>
+		      <plugins>
+                  <plugin>
+                      <groupId>de.mhus.mvn.plugin</groupId>
+                      <artifactId>tmpl-maven-plugin</artifactId>
+                  </plugin>
+		      </plugins>
+		    </build>
+        </profile>
+        <profile>
             <id>release-mhus</id>
-            <activation>
-                <property>
-                    <name>performMhusRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
             <distributionManagement>
                 <snapshotRepository>
                     <id>ossrh</id>

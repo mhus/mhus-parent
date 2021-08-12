@@ -107,6 +107,7 @@ lifecycles:
     arguments:
     - versions:set
     - "-DnewVersion=${project.version}"
+    sort: order
     selector:
       version.changed: true
       group: parent
