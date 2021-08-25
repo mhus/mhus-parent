@@ -23,6 +23,99 @@ lifecycles:
     condition: $ngnetwork yes
     target: con.test
     
+- name: release-ngnetwork
+  steps:
+  - title: Calculate new versions
+    target: con.calculateNewVersion
+  - title: Deploy ngnetwork
+    target: con.maven
+    arguments:
+    - deploy
+    - '-P release-ngnetwork'
+    sort: order
+    selector:
+      version.changed: true
+
+- name: step
+  steps:
+  - title: Calculate new versions
+    target: con.calculateNewVersion
+    
+  - title: Set project snapshot version
+    target: nextSnapshotVersions
+
+  - title: Set snapshot version properties
+    target: con.updatePomProperties
+    selector:
+      version.changed: true
+
+  - title: Set snapshot project version
+    target: con.maven
+    arguments:
+    - versions:set
+    - "-DnewVersion=${project.version}"
+    sort: order
+    selector:
+      group: parent
+      version.changed: true
+
+  - title: Compile Parent Snapshot
+    target: con.maven
+    arguments:
+    - clean
+    - install
+    sort: order
+    selector:
+      group: parent
+      version.changed: true
+
+  - title: Set snapshot parent version
+    target: con.updatePomParentVersion
+    selector:
+      group: bundle
+    sort: order
+    properties:
+      version: ${projects.mhus-parent.version}
+      version.changed: true
+
+  - title: Set snapshot project version
+    target: con.maven
+    arguments:
+    - versions:set
+    - "-DnewVersion=${project.version}"
+    sort: order
+    selector:
+      group: bundle
+      version.changed: true
+
+  # #####################
+  # Compile all projects
+  # #####################
+  - title: Compile All
+    target: con.maven
+    arguments:
+    - clean
+    - 'install -fn'
+    sort: order
+    selector:
+      group: bundle
+      version.changed: true
+
+  # #####################
+  # Commit Snapshot
+  # #####################
+  - title: Git Commit And Push
+    target: con.git
+    arguments:
+    - 'add -A'
+    - 'commit -m "SNAPSHOT"'
+    - push
+    selector:
+      version.changed: true
+    properties:
+      ignoreReturnCode: true
+
+
 # con release [ngnetwork=yes]
 - name: release
   steps:
