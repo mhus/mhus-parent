@@ -15,6 +15,15 @@
 #
 
 lifecycles:
+
+# con test ngnetwork=yes
+- name: test
+  steps:
+  - title: With Condition
+    condition: $ngnetwork yes
+    target: con.test
+    
+# con release [ngnetwork=yes]
 - name: release
   steps:
   
@@ -231,6 +240,23 @@ lifecycles:
     properties:
       ignoreReturnCode: true
 
+  # #####################
+  # Deploy ngnetwork
+  # #####################
+  
+  - title: Deploy ngnetwork
+    target: con.maven
+    condition: $ngnetwork yes
+    arguments:
+    - deploy
+    - '-P release-ngnetwork'
+    sort: order
+    selector:
+      group:
+      - deploy
+      version.changed: true
+  
+  
   # #####################
   # Snapshot Version
   # #####################
