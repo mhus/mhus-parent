@@ -197,8 +197,8 @@
         <reflections.version>0.9.12</reflections.version>
         <snakeyaml.version>1.26</snakeyaml.version>
         
-        <jaeger.version>0.32.0</jaeger.version>
-        <opentracingapi.version>0.31.0</opentracingapi.version>
+        <jaeger.version>1.6.0</jaeger.version>
+        <opentracingapi.version>0.33.0</opentracingapi.version>
         
 	</properties>
 
