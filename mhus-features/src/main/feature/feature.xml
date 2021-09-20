@@ -64,11 +64,11 @@
 		<bundle><![CDATA[wrap:mvn:io.opentracing/opentracing-api/${opentracingapi.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>
 		<bundle><![CDATA[wrap:mvn:io.opentracing/opentracing-util/${opentracingapi.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>
 		<bundle><![CDATA[wrap:mvn:io.opentracing/opentracing-noop/${opentracingapi.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>
-		<bundle>mvn:com.google.code.gson/gson/2.8.2</bundle>
+		<bundle>mvn:com.google.code.gson/gson/2.8.8</bundle>
         <bundle><![CDATA[wrap:mvn:io.jaegertracing/jaeger-client/${jaeger.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>        
         <bundle><![CDATA[wrap:mvn:io.jaegertracing/jaeger-core/${jaeger.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>      
         <bundle><![CDATA[wrap:mvn:io.jaegertracing/jaeger-thrift/${jaeger.version}$Import-Package=*;resolution:=optional&DynamicImport-Package=*&overwrite=MERGE]]></bundle>    
-        <bundle>mvn:org.apache.thrift/libthrift/0.11.0</bundle>
+        <bundle>mvn:org.apache.thrift/libthrift/0.15.0</bundle>
 		
 		<bundle>mvn:com.fasterxml.jackson.core/jackson-core/${jackson.version}</bundle>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.version}</bundle>
