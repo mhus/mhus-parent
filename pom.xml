@@ -70,6 +70,7 @@
     	
     	<mhus-web.version>7.4.0-SNAPSHOT</mhus-web.version>
     	<mhus-reactive.version>7.6.0-SNAPSHOT</mhus-reactive.version>
+        <mhus-reactive.plugin>${mhus-reactive.version}</mhus-reactive.plugin>
         <mhus-vault.version>7.5.0-SNAPSHOT</mhus-vault.version>
         
         <!-- Docker -->
@@ -122,6 +123,7 @@
         <junit.platform.version>1.6.2</junit.platform.version>
         <!-- hamcest is needed by junit -->
         <hamcrest.version>1.3</hamcrest.version>
+        <logback.version>1.2.6</logback.version>
         
         <geronimo-ws-metadata.version>1.1.3</geronimo-ws-metadata.version>
         <geronimo-jms.version>1.1.1</geronimo-jms.version>
@@ -791,6 +793,19 @@
 		
         <pluginManagement>
 	        <plugins>
+	            <plugin>
+	                <groupId>de.mhus.app.reactive</groupId>
+	                <artifactId>reactive-maven-plugin</artifactId>
+	                <version>${mhus-reactive.plugin}</version>
+	                <executions>
+	                    <execution>
+	                        <goals>
+	                            <goal>validate</goal>
+	                            <goal>designer</goal>
+	                        </goals>
+	                    </execution>
+	                </executions>
+	            </plugin>
                 <plugin>
                     <groupId>de.mhus.mvn.plugin</groupId>
                     <artifactId>constgenerator-maven-plugin</artifactId>
