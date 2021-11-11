@@ -25,16 +25,14 @@ lifecycles:
     
 - name: release-ngnetwork
   steps:
-  - title: Calculate new versions
-    target: con.calculateNewVersion
   - title: Deploy ngnetwork
     target: con.maven
     arguments:
     - deploy
     - '-P release-ngnetwork'
     sort: order
-    selector:
-      version.changed: true
+    properties:
+      ignoreReturnCode: true
 
 - name: step
   steps:
