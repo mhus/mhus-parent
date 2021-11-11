@@ -22,7 +22,7 @@
 
 	<groupId>de.mhus.lib</groupId>
 	<artifactId>mhus-parent</artifactId>
-	<version>7.6.0</version>
+	<version>7.7.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Parent POM for all mhus java projects</description>
 	<url>http://www.mhus.info</url>
@@ -49,29 +49,29 @@
 		</developer>
 	</developers>
 	<properties>
-        <mhus-parent.version>7.6.0</mhus-parent.version>
-    	<mhus-lib.version>7.6.0</mhus-lib.version>
-        <mhus-ports.version>7.3.1</mhus-ports.version>
+        <mhus-parent.version>7.7.0-SNAPSHOT</mhus-parent.version>
+    	<mhus-lib.version>7.7.0-SNAPSHOT</mhus-lib.version>
+        <mhus-ports.version>7.4.0-SNAPSHOT</mhus-ports.version>
         <mhus-ports-vaadin.version>${mhus-ports.version}</mhus-ports-vaadin.version>
-    	<mhus-osgi-tools.version>7.6.0</mhus-osgi-tools.version>
-        <mhus-vaadin.version>7.5.0</mhus-vaadin.version>
-        <mhus-mongo.version>7.6.0</mhus-mongo.version>
-    	<mhus-transform.version>7.4.0</mhus-transform.version>
-        <mhus-osgi-servlets.version>7.4.0</mhus-osgi-servlets.version>
-    	<mhus-crypt.version>7.5.0</mhus-crypt.version>
-    	<mhus-rest.version>7.6.0</mhus-rest.version>
+    	<mhus-osgi-tools.version>7.7.0-SNAPSHOT</mhus-osgi-tools.version>
+        <mhus-vaadin.version>7.6.0-SNAPSHOT</mhus-vaadin.version>
+        <mhus-mongo.version>7.7.0-SNAPSHOT</mhus-mongo.version>
+    	<mhus-transform.version>7.5.0-SNAPSHOT</mhus-transform.version>
+        <mhus-osgi-servlets.version>7.5.0-SNAPSHOT</mhus-osgi-servlets.version>
+    	<mhus-crypt.version>7.6.0-SNAPSHOT</mhus-crypt.version>
+    	<mhus-rest.version>7.7.0-SNAPSHOT</mhus-rest.version>
     	<!-- 
         <mhus-micro.version>7.0.0-SNAPSHOT</mhus-micro.version>
     	<mhus-cluster.version>7.0.0-SNAPSHOT</mhus-cluster.version>
     	 -->
     	<mhus-osgi-dev.version>7.3.0-SNAPSHOT</mhus-osgi-dev.version>
-        <mhus-db.version>7.6.0</mhus-db.version>
-        <mhus-jms.version>7.5.0</mhus-jms.version>
+        <mhus-db.version>7.7.0-SNAPSHOT</mhus-db.version>
+        <mhus-jms.version>7.6.0-SNAPSHOT</mhus-jms.version>
     	
-    	<mhus-web.version>7.4.0</mhus-web.version>
-    	<mhus-reactive.version>7.7.0</mhus-reactive.version>
+    	<mhus-web.version>7.5.0-SNAPSHOT</mhus-web.version>
+    	<mhus-reactive.version>7.8.0-SNAPSHOT</mhus-reactive.version>
         <mhus-reactive.plugin>${mhus-reactive.version}</mhus-reactive.plugin>
-        <mhus-vault.version>7.5.0</mhus-vault.version>
+        <mhus-vault.version>7.6.0-SNAPSHOT</mhus-vault.version>
         
         <!-- Docker -->
     	<docker.mhus-apache-karaf.version>4.2.11.1</docker.mhus-apache-karaf.version>
