@@ -334,8 +334,8 @@ lifecycles:
   # #####################
   # Deploy ngnetwork
   # #####################
-  
-  - title: Deploy ngnetwork
+
+  - title: Deploy to ngnetwork
     target: con.maven
 #    condition: $ngnetwork yes
     arguments:
@@ -346,7 +346,7 @@ lifecycles:
       group:
       - deploy
       version.changed: true
-  
+
   - title: Check deployment
     target: confirm
     properties:
