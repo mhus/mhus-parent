@@ -253,6 +253,11 @@
                 <artifactId>micro-core</artifactId>
                 <version>${mhus-micro.version}</version>
             </dependency>
+            <dependency>
+                <groupId>de.mhus.micro</groupId>
+                <artifactId>micro-jms</artifactId>
+                <version>${mhus-micro.version}</version>
+            </dependency>
 
             <!-- 
 	        <dependency>
