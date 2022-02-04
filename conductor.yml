@@ -41,7 +41,7 @@ projects:
        property.mhus-crypt: mhus-crypt.version
        property.mhus-rest: mhus-rest.version
        property.mhus-jms: mhus-jms.version
-       property.mhus-micro: mhus-micro.version
+#       property.mhus-micro: mhus-micro.version
        property.mhus-cluster: mhus-cluster.version
        property.mhus-osgi-dev: mhus-osgi-dev.version
        property.mhus-persistence: mhus-db.version
@@ -158,15 +158,15 @@ projects:
        order: 100
      properties:
        gitUrl: https://github.com/mhus-info/mhus-jms.git
-   - name: mhus-micro
-     path: ../mhus-micro
-     labels:
-       group: 
-       - bundle
-       - deploy
-       order: 110
-     properties:
-       gitUrl: https://github.com/mhus-info/mhus-micro.git
+#   - name: mhus-micro
+#     path: ../mhus-micro
+#     labels:
+#       group: 
+#       - bundle
+#       - deploy
+#       order: 110
+#     properties:
+#       gitUrl: https://github.com/mhus-info/mhus-micro.git
 #   - name: mhus-cluster
 #     path: ../mhus-cluster
 #     labels:
