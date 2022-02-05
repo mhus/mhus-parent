@@ -1083,7 +1083,7 @@
     <repositories>
         <repository>
            <id>vaadin-addons</id>
-           <url>http://maven.vaadin.com/vaadin-addons</url>
+           <url>https://maven.vaadin.com/vaadin-addons</url>
         </repository>
     </repositories>
     
@@ -1216,12 +1216,16 @@
         </profile>
         <profile>
             <id>release-ngnetwork</id>
-		    <distributionManagement>
-		        <repository>
-		            <id>bsonexus</id>
-		            <url>http://nexus.ngnetwork.de:8080/nexus/content/repositories/releases/</url>
-		        </repository>
-		    </distributionManagement>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>nexus_gammanetwork</id>
+                    <url>https://nexus.sta.gammanetwork.de/repository/maven-snapshots</url>
+                </snapshotRepository>
+                <repository>
+                    <id>nexus_gammanetwork</id>
+                    <url>https://nexus.sta.gammanetwork.de/repository/maven-releases</url>
+                </repository>
+            </distributionManagement>
 		    <build>
 		      <plugins>
                   <plugin>
