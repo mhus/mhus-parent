@@ -335,24 +335,24 @@ lifecycles:
   # Deploy ngnetwork
   # #####################
 
-  - title: Deploy to ngnetwork
-    target: con.maven
+#  - title: Deploy to ngnetwork
+#    target: con.maven
 #    condition: $ngnetwork yes
-    arguments:
-    - deploy
-    - '-P release-ngnetwork'
-    sort: order
-    selector:
-      group:
-      - deploy
-      version.changed: true
+#    arguments:
+#    - deploy
+#    - '-P release-ngnetwork'
+#    sort: order
+#    selector:
+#      group:
+#      - deploy
+#      version.changed: true
 
-  - title: Check deployment
-    target: confirm
-    properties:
-       prompt: Confirm
-       message: |
-         Check if deployment was successful
+#  - title: Check deployment
+#    target: confirm
+#    properties:
+#       prompt: Confirm
+#       message: |
+#         Check if deployment was successful
   
   # #####################
   # Snapshot Version
