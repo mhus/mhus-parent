@@ -180,13 +180,13 @@ lifecycles:
       version.changed: true
       group: prepare
 
-  - title: Templated files
-    target: con.maven
-    arguments:
-    - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
-    selector:
-      version.changed: true
-      group: prepare
+#  - title: Templated files
+#    target: con.maven
+#    arguments:
+#    - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
+#    selector:
+#      version.changed: true
+#      group: prepare
 
   # #####################
   # Create documentation
