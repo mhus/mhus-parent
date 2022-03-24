@@ -35,17 +35,12 @@ projects:
        property.mhus-ports: mhus-ports.version
        property.mhus-osgi-tools: mhus-osgi-tools.version
        property.mhus-vaadin: mhus-vaadin.version
-       property.mhus-mongo: mhus-mongo.version
-       property.mhus-transform: mhus-transform.version
        property.mhus-osgi-servlets: mhus-osgi-servlets.version
        property.mhus-crypt: mhus-crypt.version
        property.mhus-rest: mhus-rest.version
        property.mhus-jms: mhus-jms.version
-#       property.mhus-micro: mhus-micro.version
-       property.mhus-cluster: mhus-cluster.version
        property.mhus-osgi-dev: mhus-osgi-dev.version
        property.mhus-persistence: mhus-db.version
-       property.mhus-web: mhus-web.version
        property.mhus-reactive: mhus-reactive.version
        property.mhus-vault: mhus-vault.version
 
@@ -89,16 +84,6 @@ projects:
        order: 40
      properties:
        gitUrl: https://github.com/mhus-info/mhus-osgi-servlets.git
-   - name: mhus-transform
-     path: ../mhus-transform
-     labels:
-       group: 
-       - bundle
-       - prepare
-       - deploy
-       order: 50
-     properties:
-       gitUrl: https://github.com/mhus-info/mhus-transform.git
    - name: mhus-ports
      path: ../mhus-ports
      labels:
@@ -128,16 +113,6 @@ projects:
        order: 70
      properties:
        gitUrl: https://github.com/mhus-info/mhus-persistence.git
-   - name: mhus-mongo
-     path: ../mhus-mongo
-     labels:
-       group: 
-       - bundle
-       - prepare
-       - deploy
-       order: 80
-     properties:
-       gitUrl: https://github.com/mhus-info/mhus-mongo.git
    - name: mhus-rest
      path: ../mhus-rest
      labels:
@@ -158,22 +133,6 @@ projects:
        order: 100
      properties:
        gitUrl: https://github.com/mhus-info/mhus-jms.git
-#   - name: mhus-micro
-#     path: ../mhus-micro
-#     labels:
-#       group: 
-#       - bundle
-#       - deploy
-#       order: 110
-#     properties:
-#       gitUrl: https://github.com/mhus-info/mhus-micro.git
-#   - name: mhus-cluster
-#     path: ../mhus-cluster
-#     labels:
-#       group: bundle
-#       order: 120
-#     properties:
-#       gitUrl: https://github.com/mhus/mhus-cluster.git
 #   - name: mhus-osgi-dev
 #     path: ../mhus-osgi-dev
 #     labels:
@@ -206,15 +165,3 @@ projects:
        order: 210
      properties:
        gitUrl: https://github.com/mhus-info/mhus-vault.git
-   - name: mhus-web
-     path: ../mhus-web
-     labels:
-       group: 
-       - cherry
-       - bundle
-       - prepare
-       - deploy
-       order: 220
-     properties:
-       gitUrl: https://github.com/mhus-info/mhus-web.git
-     
