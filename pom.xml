@@ -100,7 +100,7 @@
         <felix.healthcheck.webconsoleplugin.version>2.0.0</felix.healthcheck.webconsoleplugin.version>
 
 		<maven.version>3.5.0</maven.version>
-		<jackson.version>2.12.3</jackson.version>
+		<jackson.version>2.12.6.1</jackson.version>
 
 		<javax.mail.version>1.6.2</javax.mail.version>
 		<jline.version>3.19.0</jline.version>
