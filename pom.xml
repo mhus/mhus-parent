@@ -55,20 +55,20 @@
         <mhus-ports-vaadin.version>${mhus-ports.version}</mhus-ports-vaadin.version>
     	<mhus-osgi-tools.version>7.9.0-SNAPSHOT</mhus-osgi-tools.version>
         <mhus-vaadin.version>7.7.0-SNAPSHOT</mhus-vaadin.version>
-        <mhus-mongo.version>7.8.0-SNAPSHOT</mhus-mongo.version>
-    	<mhus-transform.version>7.6.0-SNAPSHOT</mhus-transform.version>
         <mhus-osgi-servlets.version>7.5.0-SNAPSHOT</mhus-osgi-servlets.version>
     	<mhus-crypt.version>7.7.0-SNAPSHOT</mhus-crypt.version>
     	<mhus-rest.version>7.9.0-SNAPSHOT</mhus-rest.version>
     	<!-- 
+    	<mhus-transform.version>7.6.0-SNAPSHOT</mhus-transform.version>
+        <mhus-mongo.version>7.8.0-SNAPSHOT</mhus-mongo.version>
         <mhus-micro.version>7.1.0-SNAPSHOT</mhus-micro.version>
     	<mhus-cluster.version>7.0.0-SNAPSHOT</mhus-cluster.version>
+    	<mhus-web.version>7.6.0-SNAPSHOT</mhus-web.version>
     	 -->
     	<mhus-osgi-dev.version>7.3.0-SNAPSHOT</mhus-osgi-dev.version>
         <mhus-db.version>7.8.0-SNAPSHOT</mhus-db.version>
         <mhus-jms.version>7.8.0-SNAPSHOT</mhus-jms.version>
     	
-    	<mhus-web.version>7.6.0-SNAPSHOT</mhus-web.version>
     	<mhus-reactive.version>7.10.0-SNAPSHOT</mhus-reactive.version>
         <mhus-reactive.plugin>${mhus-reactive.version}</mhus-reactive.plugin>
         <mhus-vault.version>7.8.0-SNAPSHOT</mhus-vault.version>
@@ -228,11 +228,6 @@
            </dependency>
             <dependency>
                <groupId>de.mhus.lib</groupId>
-               <artifactId>lib-mongo</artifactId>
-               <version>${mhus-lib.version}</version>
-           </dependency>
-            <dependency>
-               <groupId>de.mhus.lib</groupId>
                <artifactId>lib-junit</artifactId>
                <version>${mhus-lib.version}</version>
                <scope>test</scope>
@@ -249,6 +244,11 @@
                 <version>${mhus-rest.version}</version>
             </dependency>
             <!-- 
+            <dependency>
+               <groupId>de.mhus.lib</groupId>
+               <artifactId>lib-mongo</artifactId>
+               <version>${mhus-lib.version}</version>
+           </dependency>
             <dependency>
                 <groupId>de.mhus.micro</groupId>
                 <artifactId>micro-core</artifactId>
@@ -285,15 +285,11 @@
                 <version>${mhus-db.version}</version>
             </dependency>
 
+        <!--
         <dependency>
             <groupId>de.mhus.osgi</groupId>
             <artifactId>transform-api</artifactId>
             <version>${mhus-transform.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>de.mhus.crypt</groupId>
-            <artifactId>crypt-api</artifactId>
-            <version>${mhus-crypt.version}</version>
         </dependency>
         <dependency>
             <groupId>de.mhus.app</groupId>
@@ -304,6 +300,12 @@
             <groupId>de.mhus.app</groupId>
             <artifactId>web-util</artifactId>
             <version>${mhus-web.version}</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>de.mhus.crypt</groupId>
+            <artifactId>crypt-api</artifactId>
+            <version>${mhus-crypt.version}</version>
         </dependency>
 
         <dependency>
