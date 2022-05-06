@@ -1217,21 +1217,11 @@
             </build>
         </profile>
         <profile>
-            <id>release-ngnetwork</id>
+            <id>deploy-ngnetwork</id>
             <distributionManagement>
-            <!--
-                <snapshotRepository>
-                    <id>nexus_gammanetwork</id>
-                    <url>https://nexus.sta.gammanetwork.de/repository/maven-snapshots</url>
-                </snapshotRepository>
                 <repository>
                     <id>nexus_gammanetwork</id>
-                    <url>https://nexus.sta.gammanetwork.de/repository/maven-releases</url>
-                </repository>
-                -->
-                <repository>
-                    <id>bsonexus</id>
-                    <url>http://nexus.ngnetwork.de:8080/nexus/content/repositories/releases/</url>
+                    <url>https://nexus.gammanetwork.de/repository/maven-snapshots</url>
                 </repository>
             </distributionManagement>
 		    <build>
