@@ -14,8 +14,8 @@ spec:
     env:
     - name: CONTAINER_ENV_VAR
       value: maven
-    volumes:
-    - name: config-settings
-      secret:
-        secretName: maven-settings-xml
+  volumes:
+  - name: config-settings
+    secret:
+      secretName: maven-settings-xml
         
