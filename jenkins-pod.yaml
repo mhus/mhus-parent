@@ -10,7 +10,7 @@ spec:
     tty: true
     volumeMounts:
       - name: config-settings
-        mountPath: /usr/share/maven/ref/settings.xml
+        mountPath: /root/.m2/settings.xml
         subPath: settings.xml
     env:
     - name: CONTAINER_ENV_VAR
