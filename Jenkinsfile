@@ -12,5 +12,12 @@ pipeline {
         }
       }
     }
+    stage('Run deploy') {
+      steps {
+        container('maven') {
+          sh 'mvn deploy -P deploy-ngnetwork'
+        }
+      }
+    }
   }
 }
