@@ -131,7 +131,7 @@
         <vaadin.addon-test-helpers.version>1.2</vaadin.addon-test-helpers.version>
         <slf4j.version>1.7.6</slf4j.version>
         <javax.xml.rpc.version>1.1.1</javax.xml.rpc.version>
-        <bouncycastle.version>1.67</bouncycastle.version>
+        <bouncycastle.version>1.70</bouncycastle.version>
         <bouncycastle.mail.version>1.46</bouncycastle.mail.version>
         <commons-net.version>3.6</commons-net.version>
         <commons-pool.version>1.6</commons-pool.version>
@@ -164,7 +164,7 @@
         <javax.servlet.version>1.0.0</javax.servlet.version>
         
         <shiro.version>1.6.0</shiro.version>
-        <jjwt.version>0.11.2</jjwt.version>
+        <jjwt.version>0.11.5</jjwt.version>
         <docker-java.version>3.2.5</docker-java.version>
         
         <!-- features -->
